@@ -408,16 +408,16 @@
           <locales>default,es,ja,fr,zh_CN,ko</locales>
         </configuration>
       </plugin>
-      <plugin>
-        <groupId>org.jacoco</groupId>
-        <artifactId>jacoco-maven-plugin</artifactId>
-        <configuration>
-          <excludes>
-            <exclude>org.apache.ibatis.ognl.*</exclude>
-            <exclude>org.apache.ibatis.javassist.*</exclude>
-          </excludes>
-        </configuration>
-      </plugin>
+<!--      <plugin>-->
+<!--        <groupId>org.jacoco</groupId>-->
+<!--        <artifactId>jacoco-maven-plugin</artifactId>-->
+<!--        <configuration>-->
+<!--          <excludes>-->
+<!--            <exclude>org.apache.ibatis.ognl.*</exclude>-->
+<!--            <exclude>org.apache.ibatis.javassist.*</exclude>-->
+<!--          </excludes>-->
+<!--        </configuration>-->
+<!--      </plugin>-->
 
       <!-- Remove enforcer entirely after parent 49 release -->
       <plugin>
@@ -429,6 +429,9 @@
               <maxJdkVersion>${java.version}</maxJdkVersion>
               <ignoredScopes>provided,test</ignoredScopes>
             </enforceBytecodeVersion>
+            <requireMavenVersion>
+              <version>[3.6.0,)</version> <!-- override mvn version -->
+            </requireMavenVersion>
           </rules>
         </configuration>
       </plugin>
@@ -446,6 +449,26 @@
           <execution>
             <goals>
               <goal>install</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.jacoco</groupId>
+        <artifactId>jacoco-maven-plugin</artifactId>
+        <version>0.8.14</version>
+        <executions>
+          <execution>
+            <id>prepare-agent</id>
+            <goals>
+              <goal>prepare-agent</goal>
+            </goals>
+          </execution>
+          <execution>
+            <id>report</id>
+            <phase>test</phase>
+            <goals>
+              <goal>report</goal>
             </goals>
           </execution>
         </executions>
