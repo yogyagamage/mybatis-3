@@ -1,5 +1,5 @@
 /*
- *    Copyright 2009-2025 the original author or authors.
+ *    Copyright 2009-2026 the original author or authors.
  *
  *    Licensed under the Apache License, Version 2.0 (the "License");
  *    you may not use this file except in compliance with the License.
@@ -50,7 +50,10 @@ public class SimpleTypeRegistry {
 
   /**
    * Tells us if the class passed in is a known common type
-   * @param clazz The class to check
+   *
+   * @param clazz
+   *          The class to check
+   *
    * @return True if the class is known
    */
   public static boolean isSimpleType(Class<?> clazz) {

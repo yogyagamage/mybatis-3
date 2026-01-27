@@ -13,28 +13,18 @@
  *    See the License for the specific language governing permissions and
  *    limitations under the License.
  */
-package org.apache.ibatis.scripting.xmltags;
+package org.apache.ibatis.logging.log4j2;
 
-/**
- * @author Clinton Begin
- */
-public class IfSqlNode implements SqlNode {
-  private final ExpressionEvaluator evaluator = ExpressionEvaluator.INSTANCE;
-  private final String test;
-  private final SqlNode contents;
+import org.apache.logging.log4j.spi.AbstractLogger;
+import org.junit.jupiter.api.Test;
+import org.mockito.Mockito;
 
-  public IfSqlNode(SqlNode contents, String test) {
-    this.test = test;
-    this.contents = contents;
+class Log4j2AbstractLoggerImplisTraceEnabled_ExtendedLoggerWrapperisTraceEnabledFikaTest {
+
+  @Test
+  void test() {
+    AbstractLogger abstractLogger = Mockito.mock(AbstractLogger.class);
+    Log4j2AbstractLoggerImpl loggerImpl = new Log4j2AbstractLoggerImpl(abstractLogger);
+    loggerImpl.isTraceEnabled();
   }
-
-  @Override
-  public boolean apply(DynamicContext context) {
-    if (evaluator.evaluateBoolean(test, context.getBindings())) {
-      contents.apply(context);
-      return true;
-    }
-    return false;
-  }
-
 }

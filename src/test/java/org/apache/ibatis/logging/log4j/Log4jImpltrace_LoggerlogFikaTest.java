@@ -13,28 +13,15 @@
  *    See the License for the specific language governing permissions and
  *    limitations under the License.
  */
-package org.apache.ibatis.scripting.xmltags;
+package org.apache.ibatis.logging.log4j;
 
-/**
- * @author Clinton Begin
- */
-public class IfSqlNode implements SqlNode {
-  private final ExpressionEvaluator evaluator = ExpressionEvaluator.INSTANCE;
-  private final String test;
-  private final SqlNode contents;
+import org.junit.jupiter.api.Test;
 
-  public IfSqlNode(SqlNode contents, String test) {
-    this.test = test;
-    this.contents = contents;
+class Log4jImpltrace_LoggerlogFikaTest {
+
+  @Test
+  void testTraceCallsLoggerLog() {
+    Log4jImpl log4jImpl = new Log4jImpl("test.ClassName");
+    log4jImpl.trace("test message");
   }
-
-  @Override
-  public boolean apply(DynamicContext context) {
-    if (evaluator.evaluateBoolean(test, context.getBindings())) {
-      contents.apply(context);
-      return true;
-    }
-    return false;
-  }
-
 }
