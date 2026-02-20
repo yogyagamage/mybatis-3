@@ -1,0 +1,2239 @@
+
+====================================================================================================
+PROMPTS LOG SESSION STARTED: 2026-02-20T12:10:58.241703
+====================================================================================================
+
+====================================================================================================
+TEST CASE 1/46 — ITERATION 1
+Entry Point: org.apache.ibatis.logging.log4j2.Log4j2LoggerImpl.isTraceEnabled()
+Third Party Method: org.apache.logging.log4j.Logger.isTraceEnabled()
+====================================================================================================
+You are an expert Java developer who writes good unit tests in order to maximize code coverage. You are specialized in Maven and JUnit 5 testing framework.
+
+Generate a JUnit 5 test that executes the given method and reaches the specified third-party method within it. No assertions, inspections, or verifications are required. The test’s only goal is to try invoking the given third-party method during execution. 
+
+You are provided with:
+thirdPartyMethod: Fully qualified third-party method that must be invoked.
+methodSources: Complete and exact source code for the method that contains the target third-party method.
+
+thirdPartyMethod: org.apache.logging.log4j.Logger.isTraceEnabled()
+methodSources:
+@Override
+public boolean isTraceEnabled() {
+    // PATH: Test should invoke the next Logger.isTraceEnabled(...) [step in execution path]
+    return log.isTraceEnabled();
+}
+
+Hard constraints:
+- The test class MUST NOT extend any other class (no 'extends' keyword).
+- The test class MUST NOT override any methods (no @Override annotations).
+- Do NOT create anonymous inner classes (e.g., new ClassName() { ... }).
+- Use real objects whenever possible.
+- Use mocks only when necessary, provided those objects are not directly related to the target method call.
+- Do NOT mock or spy on the class under test.
+- Do NOT alter, stub, or control the behavior of ANY method in the call path.
+- Use only the following test-related libraries: junit-jupiter, mockito-core, and mockito-junit-jupiter. Do not use any other testing or mocking libraries.
+- Do NOT add any assertions, verifications, or inspections of state/logs/output.
+- package declaration MUST be: org.apache.ibatis.logging.log4j2
+- class name MUST be: Log4j2LoggerImplisTraceEnabled_LoggerisTraceEnabledFikaTest
+- exactly ONE @Test method
+- Return ONLY the complete Java source code.
+- Do NOT include explanations, markdown, or extra text.
+
+
+Previous Maven test output (if any; fix compilation/runtime issues while keeping ALL constraints):
+
+
+
+====================================================================================================
+TEST CASE 2/46 — ITERATION 1
+Entry Point: org.apache.ibatis.logging.log4j2.Log4j2LoggerImpl.trace(java.lang.String)
+Third Party Method: org.apache.logging.log4j.Logger.trace(org.apache.logging.log4j.Marker, java.lang.String)
+====================================================================================================
+You are an expert Java developer who writes good unit tests in order to maximize code coverage. You are specialized in Maven and JUnit 5 testing framework.
+
+Generate a JUnit 5 test that executes the given method and reaches the specified third-party method within it. No assertions, inspections, or verifications are required. The test’s only goal is to try invoking the given third-party method during execution. 
+
+You are provided with:
+thirdPartyMethod: Fully qualified third-party method that must be invoked.
+methodSources: Complete and exact source code for the method that contains the target third-party method.
+
+thirdPartyMethod: org.apache.logging.log4j.Logger.trace(org.apache.logging.log4j.Marker, java.lang.String)
+methodSources:
+@Override
+public void trace(String s) // PATH: Test should invoke the next Logger.trace(...) [step in execution path]
+{
+    log.trace(MARKER, s);
+}
+
+Hard constraints:
+- The test class MUST NOT extend any other class (no 'extends' keyword).
+- The test class MUST NOT override any methods (no @Override annotations).
+- Do NOT create anonymous inner classes (e.g., new ClassName() { ... }).
+- Use real objects whenever possible.
+- Use mocks only when necessary, provided those objects are not directly related to the target method call.
+- Do NOT mock or spy on the class under test.
+- Do NOT alter, stub, or control the behavior of ANY method in the call path.
+- Use only the following test-related libraries: junit-jupiter, mockito-core, and mockito-junit-jupiter. Do not use any other testing or mocking libraries.
+- Do NOT add any assertions, verifications, or inspections of state/logs/output.
+- package declaration MUST be: org.apache.ibatis.logging.log4j2
+- class name MUST be: Log4j2LoggerImpltrace_LoggertraceFikaTest
+- exactly ONE @Test method
+- Return ONLY the complete Java source code.
+- Do NOT include explanations, markdown, or extra text.
+
+
+Previous Maven test output (if any; fix compilation/runtime issues while keeping ALL constraints):
+
+
+
+====================================================================================================
+TEST CASE 3/46 — ITERATION 1
+Entry Point: org.apache.ibatis.logging.log4j2.Log4j2AbstractLoggerImpl.trace(java.lang.String)
+Third Party Method: org.apache.logging.log4j.message.SimpleMessage.<init>(java.lang.String)
+====================================================================================================
+You are an expert Java developer who writes good unit tests in order to maximize code coverage. You are specialized in Maven and JUnit 5 testing framework.
+
+Generate a JUnit 5 test that executes the given method and reaches the specified third-party method within it. No assertions, inspections, or verifications are required. The test’s only goal is to try invoking the given third-party method during execution. 
+
+You are provided with:
+thirdPartyMethod: Fully qualified third-party method that must be invoked.
+methodSources: Complete and exact source code for the method that contains the target third-party method.
+
+thirdPartyMethod: org.apache.logging.log4j.message.SimpleMessage.<init>(java.lang.String)
+methodSources:
+@Override
+public void trace(String s) {
+    log.logIfEnabled(FQCN, Level.TRACE, MARKER, ((Message) (new SimpleMessage(s))), null);
+}
+
+Hard constraints:
+- The test class MUST NOT extend any other class (no 'extends' keyword).
+- The test class MUST NOT override any methods (no @Override annotations).
+- Do NOT create anonymous inner classes (e.g., new ClassName() { ... }).
+- Use real objects whenever possible.
+- Use mocks only when necessary, provided those objects are not directly related to the target method call.
+- Do NOT mock or spy on the class under test.
+- Do NOT alter, stub, or control the behavior of ANY method in the call path.
+- Use only the following test-related libraries: junit-jupiter, mockito-core, and mockito-junit-jupiter. Do not use any other testing or mocking libraries.
+- Do NOT add any assertions, verifications, or inspections of state/logs/output.
+- package declaration MUST be: org.apache.ibatis.logging.log4j2
+- class name MUST be: Log4j2AbstractLoggerImpltrace_SimpleMessagemethodFikaTest
+- exactly ONE @Test method
+- Return ONLY the complete Java source code.
+- Do NOT include explanations, markdown, or extra text.
+
+
+Previous Maven test output (if any; fix compilation/runtime issues while keeping ALL constraints):
+
+
+
+====================================================================================================
+TEST CASE 4/46 — ITERATION 1
+Entry Point: org.apache.ibatis.logging.commons.JakartaCommonsLoggingImpl.debug(java.lang.String)
+Third Party Method: org.apache.commons.logging.Log.debug(java.lang.Object)
+====================================================================================================
+You are an expert Java developer who writes good unit tests in order to maximize code coverage. You are specialized in Maven and JUnit 5 testing framework.
+
+Generate a JUnit 5 test that executes the given method and reaches the specified third-party method within it. No assertions, inspections, or verifications are required. The test’s only goal is to try invoking the given third-party method during execution. 
+
+You are provided with:
+thirdPartyMethod: Fully qualified third-party method that must be invoked.
+methodSources: Complete and exact source code for the method that contains the target third-party method.
+
+thirdPartyMethod: org.apache.commons.logging.Log.debug(java.lang.Object)
+methodSources:
+@Override
+public void debug(String s) // PATH: Test should invoke the next Log.debug(...) [step in execution path]
+{
+    log.debug(s);
+}
+
+Hard constraints:
+- The test class MUST NOT extend any other class (no 'extends' keyword).
+- The test class MUST NOT override any methods (no @Override annotations).
+- Do NOT create anonymous inner classes (e.g., new ClassName() { ... }).
+- Use real objects whenever possible.
+- Use mocks only when necessary, provided those objects are not directly related to the target method call.
+- Do NOT mock or spy on the class under test.
+- Do NOT alter, stub, or control the behavior of ANY method in the call path.
+- Use only the following test-related libraries: junit-jupiter, mockito-core, and mockito-junit-jupiter. Do not use any other testing or mocking libraries.
+- Do NOT add any assertions, verifications, or inspections of state/logs/output.
+- package declaration MUST be: org.apache.ibatis.logging.commons
+- class name MUST be: JakartaCommonsLoggingImpldebug_LogdebugFikaTest
+- exactly ONE @Test method
+- Return ONLY the complete Java source code.
+- Do NOT include explanations, markdown, or extra text.
+
+
+Previous Maven test output (if any; fix compilation/runtime issues while keeping ALL constraints):
+
+
+
+====================================================================================================
+TEST CASE 5/46 — ITERATION 1
+Entry Point: org.apache.ibatis.logging.log4j2.Log4j2LoggerImpl.debug(java.lang.String)
+Third Party Method: org.apache.logging.log4j.Logger.debug(org.apache.logging.log4j.Marker, java.lang.String)
+====================================================================================================
+You are an expert Java developer who writes good unit tests in order to maximize code coverage. You are specialized in Maven and JUnit 5 testing framework.
+
+Generate a JUnit 5 test that executes the given method and reaches the specified third-party method within it. No assertions, inspections, or verifications are required. The test’s only goal is to try invoking the given third-party method during execution. 
+
+You are provided with:
+thirdPartyMethod: Fully qualified third-party method that must be invoked.
+methodSources: Complete and exact source code for the method that contains the target third-party method.
+
+thirdPartyMethod: org.apache.logging.log4j.Logger.debug(org.apache.logging.log4j.Marker, java.lang.String)
+methodSources:
+@Override
+public void debug(String s) // PATH: Test should invoke the next Logger.debug(...) [step in execution path]
+{
+    log.debug(MARKER, s);
+}
+
+Hard constraints:
+- The test class MUST NOT extend any other class (no 'extends' keyword).
+- The test class MUST NOT override any methods (no @Override annotations).
+- Do NOT create anonymous inner classes (e.g., new ClassName() { ... }).
+- Use real objects whenever possible.
+- Use mocks only when necessary, provided those objects are not directly related to the target method call.
+- Do NOT mock or spy on the class under test.
+- Do NOT alter, stub, or control the behavior of ANY method in the call path.
+- Use only the following test-related libraries: junit-jupiter, mockito-core, and mockito-junit-jupiter. Do not use any other testing or mocking libraries.
+- Do NOT add any assertions, verifications, or inspections of state/logs/output.
+- package declaration MUST be: org.apache.ibatis.logging.log4j2
+- class name MUST be: Log4j2LoggerImpldebug_LoggerdebugFikaTest
+- exactly ONE @Test method
+- Return ONLY the complete Java source code.
+- Do NOT include explanations, markdown, or extra text.
+
+
+Previous Maven test output (if any; fix compilation/runtime issues while keeping ALL constraints):
+
+
+
+====================================================================================================
+TEST CASE 6/46 — ITERATION 1
+Entry Point: org.apache.ibatis.logging.commons.JakartaCommonsLoggingImpl.<init>(java.lang.String)
+Third Party Method: org.apache.commons.logging.LogFactory.getLog(java.lang.String)
+====================================================================================================
+You are an expert Java developer who writes good unit tests in order to maximize code coverage. You are specialized in Maven and JUnit 5 testing framework.
+
+Generate a JUnit 5 test that executes the given method and reaches the specified third-party method within it. No assertions, inspections, or verifications are required. The test’s only goal is to try invoking the given third-party method during execution. 
+
+You are provided with:
+thirdPartyMethod: Fully qualified third-party method that must be invoked.
+methodSources: Complete and exact source code for the method that contains the target third-party method.
+
+thirdPartyMethod: org.apache.commons.logging.LogFactory.getLog(java.lang.String)
+methodSources:
+public (String clazz) {
+    // PATH: Test should invoke the next LogFactory.getLog(...) [step in execution path]
+    log = LogFactory.getLog(clazz);
+}
+
+Hard constraints:
+- The test class MUST NOT extend any other class (no 'extends' keyword).
+- The test class MUST NOT override any methods (no @Override annotations).
+- Do NOT create anonymous inner classes (e.g., new ClassName() { ... }).
+- Use real objects whenever possible.
+- Use mocks only when necessary, provided those objects are not directly related to the target method call.
+- Do NOT mock or spy on the class under test.
+- Do NOT alter, stub, or control the behavior of ANY method in the call path.
+- Use only the following test-related libraries: junit-jupiter, mockito-core, and mockito-junit-jupiter. Do not use any other testing or mocking libraries.
+- Do NOT add any assertions, verifications, or inspections of state/logs/output.
+- package declaration MUST be: org.apache.ibatis.logging.commons
+- class name MUST be: JakartaCommonsLoggingImplmethod_LogFactorygetLogFikaTest
+- exactly ONE @Test method
+- Return ONLY the complete Java source code.
+- Do NOT include explanations, markdown, or extra text.
+
+
+Previous Maven test output (if any; fix compilation/runtime issues while keeping ALL constraints):
+
+
+
+====================================================================================================
+TEST CASE 7/46 — ITERATION 1
+Entry Point: org.apache.ibatis.logging.log4j2.Log4j2AbstractLoggerImpl.trace(java.lang.String)
+Third Party Method: org.apache.logging.log4j.spi.ExtendedLoggerWrapper.logIfEnabled(java.lang.String, org.apache.logging.log4j.Level, org.apache.logging.log4j.Marker, org.apache.logging.log4j.message.Message, java.lang.Throwable)
+====================================================================================================
+You are an expert Java developer who writes good unit tests in order to maximize code coverage. You are specialized in Maven and JUnit 5 testing framework.
+
+Generate a JUnit 5 test that executes the given method and reaches the specified third-party method within it. No assertions, inspections, or verifications are required. The test’s only goal is to try invoking the given third-party method during execution. 
+
+You are provided with:
+thirdPartyMethod: Fully qualified third-party method that must be invoked.
+methodSources: Complete and exact source code for the method that contains the target third-party method.
+
+thirdPartyMethod: org.apache.logging.log4j.spi.ExtendedLoggerWrapper.logIfEnabled(java.lang.String, org.apache.logging.log4j.Level, org.apache.logging.log4j.Marker, org.apache.logging.log4j.message.Message, java.lang.Throwable)
+methodSources:
+@Override
+public void trace(String s) {
+    log.logIfEnabled(FQCN, Level.TRACE, MARKER, ((Message) (new SimpleMessage(s))), null);
+}
+
+Hard constraints:
+- The test class MUST NOT extend any other class (no 'extends' keyword).
+- The test class MUST NOT override any methods (no @Override annotations).
+- Do NOT create anonymous inner classes (e.g., new ClassName() { ... }).
+- Use real objects whenever possible.
+- Use mocks only when necessary, provided those objects are not directly related to the target method call.
+- Do NOT mock or spy on the class under test.
+- Do NOT alter, stub, or control the behavior of ANY method in the call path.
+- Use only the following test-related libraries: junit-jupiter, mockito-core, and mockito-junit-jupiter. Do not use any other testing or mocking libraries.
+- Do NOT add any assertions, verifications, or inspections of state/logs/output.
+- package declaration MUST be: org.apache.ibatis.logging.log4j2
+- class name MUST be: Log4j2AbstractLoggerImpltrace_ExtendedLoggerWrapperlogIfEnabledFikaTest
+- exactly ONE @Test method
+- Return ONLY the complete Java source code.
+- Do NOT include explanations, markdown, or extra text.
+
+
+Previous Maven test output (if any; fix compilation/runtime issues while keeping ALL constraints):
+
+
+
+====================================================================================================
+TEST CASE 8/46 — ITERATION 1
+Entry Point: org.apache.ibatis.logging.log4j2.Log4j2LoggerImpl.isDebugEnabled()
+Third Party Method: org.apache.logging.log4j.Logger.isDebugEnabled()
+====================================================================================================
+You are an expert Java developer who writes good unit tests in order to maximize code coverage. You are specialized in Maven and JUnit 5 testing framework.
+
+Generate a JUnit 5 test that executes the given method and reaches the specified third-party method within it. No assertions, inspections, or verifications are required. The test’s only goal is to try invoking the given third-party method during execution. 
+
+You are provided with:
+thirdPartyMethod: Fully qualified third-party method that must be invoked.
+methodSources: Complete and exact source code for the method that contains the target third-party method.
+
+thirdPartyMethod: org.apache.logging.log4j.Logger.isDebugEnabled()
+methodSources:
+@Override
+public boolean isDebugEnabled() {
+    // PATH: Test should invoke the next Logger.isDebugEnabled(...) [step in execution path]
+    return log.isDebugEnabled();
+}
+
+Hard constraints:
+- The test class MUST NOT extend any other class (no 'extends' keyword).
+- The test class MUST NOT override any methods (no @Override annotations).
+- Do NOT create anonymous inner classes (e.g., new ClassName() { ... }).
+- Use real objects whenever possible.
+- Use mocks only when necessary, provided those objects are not directly related to the target method call.
+- Do NOT mock or spy on the class under test.
+- Do NOT alter, stub, or control the behavior of ANY method in the call path.
+- Use only the following test-related libraries: junit-jupiter, mockito-core, and mockito-junit-jupiter. Do not use any other testing or mocking libraries.
+- Do NOT add any assertions, verifications, or inspections of state/logs/output.
+- package declaration MUST be: org.apache.ibatis.logging.log4j2
+- class name MUST be: Log4j2LoggerImplisDebugEnabled_LoggerisDebugEnabledFikaTest
+- exactly ONE @Test method
+- Return ONLY the complete Java source code.
+- Do NOT include explanations, markdown, or extra text.
+
+
+Previous Maven test output (if any; fix compilation/runtime issues while keeping ALL constraints):
+
+
+
+====================================================================================================
+TEST CASE 9/46 — ITERATION 1
+Entry Point: org.apache.ibatis.logging.log4j2.Log4j2LoggerImpl.error(java.lang.String, java.lang.Throwable)
+Third Party Method: org.apache.logging.log4j.Logger.error(org.apache.logging.log4j.Marker, java.lang.String, java.lang.Throwable)
+====================================================================================================
+You are an expert Java developer who writes good unit tests in order to maximize code coverage. You are specialized in Maven and JUnit 5 testing framework.
+
+Generate a JUnit 5 test that executes the given method and reaches the specified third-party method within it. No assertions, inspections, or verifications are required. The test’s only goal is to try invoking the given third-party method during execution. 
+
+You are provided with:
+thirdPartyMethod: Fully qualified third-party method that must be invoked.
+methodSources: Complete and exact source code for the method that contains the target third-party method.
+
+thirdPartyMethod: org.apache.logging.log4j.Logger.error(org.apache.logging.log4j.Marker, java.lang.String, java.lang.Throwable)
+methodSources:
+@Override
+public void error(String s, Throwable e) // PATH: Test should invoke the next Logger.error(...) [step in execution path]
+{
+    log.error(MARKER, s, e);
+}
+
+Hard constraints:
+- The test class MUST NOT extend any other class (no 'extends' keyword).
+- The test class MUST NOT override any methods (no @Override annotations).
+- Do NOT create anonymous inner classes (e.g., new ClassName() { ... }).
+- Use real objects whenever possible.
+- Use mocks only when necessary, provided those objects are not directly related to the target method call.
+- Do NOT mock or spy on the class under test.
+- Do NOT alter, stub, or control the behavior of ANY method in the call path.
+- Use only the following test-related libraries: junit-jupiter, mockito-core, and mockito-junit-jupiter. Do not use any other testing or mocking libraries.
+- Do NOT add any assertions, verifications, or inspections of state/logs/output.
+- package declaration MUST be: org.apache.ibatis.logging.log4j2
+- class name MUST be: Log4j2LoggerImplerror_LoggererrorFikaTest
+- exactly ONE @Test method
+- Return ONLY the complete Java source code.
+- Do NOT include explanations, markdown, or extra text.
+
+
+Previous Maven test output (if any; fix compilation/runtime issues while keeping ALL constraints):
+
+
+
+====================================================================================================
+TEST CASE 10/46 — ITERATION 1
+Entry Point: org.apache.ibatis.logging.commons.JakartaCommonsLoggingImpl.isTraceEnabled()
+Third Party Method: org.apache.commons.logging.Log.isTraceEnabled()
+====================================================================================================
+You are an expert Java developer who writes good unit tests in order to maximize code coverage. You are specialized in Maven and JUnit 5 testing framework.
+
+Generate a JUnit 5 test that executes the given method and reaches the specified third-party method within it. No assertions, inspections, or verifications are required. The test’s only goal is to try invoking the given third-party method during execution. 
+
+You are provided with:
+thirdPartyMethod: Fully qualified third-party method that must be invoked.
+methodSources: Complete and exact source code for the method that contains the target third-party method.
+
+thirdPartyMethod: org.apache.commons.logging.Log.isTraceEnabled()
+methodSources:
+@Override
+public boolean isTraceEnabled() {
+    // PATH: Test should invoke the next Log.isTraceEnabled(...) [step in execution path]
+    return log.isTraceEnabled();
+}
+
+Hard constraints:
+- The test class MUST NOT extend any other class (no 'extends' keyword).
+- The test class MUST NOT override any methods (no @Override annotations).
+- Do NOT create anonymous inner classes (e.g., new ClassName() { ... }).
+- Use real objects whenever possible.
+- Use mocks only when necessary, provided those objects are not directly related to the target method call.
+- Do NOT mock or spy on the class under test.
+- Do NOT alter, stub, or control the behavior of ANY method in the call path.
+- Use only the following test-related libraries: junit-jupiter, mockito-core, and mockito-junit-jupiter. Do not use any other testing or mocking libraries.
+- Do NOT add any assertions, verifications, or inspections of state/logs/output.
+- package declaration MUST be: org.apache.ibatis.logging.commons
+- class name MUST be: JakartaCommonsLoggingImplisTraceEnabled_LogisTraceEnabledFikaTest
+- exactly ONE @Test method
+- Return ONLY the complete Java source code.
+- Do NOT include explanations, markdown, or extra text.
+
+
+Previous Maven test output (if any; fix compilation/runtime issues while keeping ALL constraints):
+
+
+
+====================================================================================================
+TEST CASE 11/46 — ITERATION 1
+Entry Point: org.apache.ibatis.logging.log4j2.Log4j2LoggerImpl.error(java.lang.String)
+Third Party Method: org.apache.logging.log4j.Logger.error(org.apache.logging.log4j.Marker, java.lang.String)
+====================================================================================================
+You are an expert Java developer who writes good unit tests in order to maximize code coverage. You are specialized in Maven and JUnit 5 testing framework.
+
+Generate a JUnit 5 test that executes the given method and reaches the specified third-party method within it. No assertions, inspections, or verifications are required. The test’s only goal is to try invoking the given third-party method during execution. 
+
+You are provided with:
+thirdPartyMethod: Fully qualified third-party method that must be invoked.
+methodSources: Complete and exact source code for the method that contains the target third-party method.
+
+thirdPartyMethod: org.apache.logging.log4j.Logger.error(org.apache.logging.log4j.Marker, java.lang.String)
+methodSources:
+@Override
+public void error(String s) // PATH: Test should invoke the next Logger.error(...) [step in execution path]
+{
+    log.error(MARKER, s);
+}
+
+Hard constraints:
+- The test class MUST NOT extend any other class (no 'extends' keyword).
+- The test class MUST NOT override any methods (no @Override annotations).
+- Do NOT create anonymous inner classes (e.g., new ClassName() { ... }).
+- Use real objects whenever possible.
+- Use mocks only when necessary, provided those objects are not directly related to the target method call.
+- Do NOT mock or spy on the class under test.
+- Do NOT alter, stub, or control the behavior of ANY method in the call path.
+- Use only the following test-related libraries: junit-jupiter, mockito-core, and mockito-junit-jupiter. Do not use any other testing or mocking libraries.
+- Do NOT add any assertions, verifications, or inspections of state/logs/output.
+- package declaration MUST be: org.apache.ibatis.logging.log4j2
+- class name MUST be: Log4j2LoggerImplerror_LoggererrorFikaTest2
+- exactly ONE @Test method
+- Return ONLY the complete Java source code.
+- Do NOT include explanations, markdown, or extra text.
+
+
+Previous Maven test output (if any; fix compilation/runtime issues while keeping ALL constraints):
+
+
+
+====================================================================================================
+TEST CASE 12/46 — ITERATION 1
+Entry Point: org.apache.ibatis.logging.log4j2.Log4j2AbstractLoggerImpl.isTraceEnabled()
+Third Party Method: org.apache.logging.log4j.spi.ExtendedLoggerWrapper.isTraceEnabled()
+====================================================================================================
+You are an expert Java developer who writes good unit tests in order to maximize code coverage. You are specialized in Maven and JUnit 5 testing framework.
+
+Generate a JUnit 5 test that executes the given method and reaches the specified third-party method within it. No assertions, inspections, or verifications are required. The test’s only goal is to try invoking the given third-party method during execution. 
+
+You are provided with:
+thirdPartyMethod: Fully qualified third-party method that must be invoked.
+methodSources: Complete and exact source code for the method that contains the target third-party method.
+
+thirdPartyMethod: org.apache.logging.log4j.spi.ExtendedLoggerWrapper.isTraceEnabled()
+methodSources:
+@Override
+public boolean isTraceEnabled() {
+    return log.isTraceEnabled();
+}
+
+Hard constraints:
+- The test class MUST NOT extend any other class (no 'extends' keyword).
+- The test class MUST NOT override any methods (no @Override annotations).
+- Do NOT create anonymous inner classes (e.g., new ClassName() { ... }).
+- Use real objects whenever possible.
+- Use mocks only when necessary, provided those objects are not directly related to the target method call.
+- Do NOT mock or spy on the class under test.
+- Do NOT alter, stub, or control the behavior of ANY method in the call path.
+- Use only the following test-related libraries: junit-jupiter, mockito-core, and mockito-junit-jupiter. Do not use any other testing or mocking libraries.
+- Do NOT add any assertions, verifications, or inspections of state/logs/output.
+- package declaration MUST be: org.apache.ibatis.logging.log4j2
+- class name MUST be: Log4j2AbstractLoggerImplisTraceEnabled_ExtendedLoggerWrapperisTraceEnabledFikaTest
+- exactly ONE @Test method
+- Return ONLY the complete Java source code.
+- Do NOT include explanations, markdown, or extra text.
+
+
+Previous Maven test output (if any; fix compilation/runtime issues while keeping ALL constraints):
+
+
+
+====================================================================================================
+TEST CASE 13/46 — ITERATION 1
+Entry Point: org.apache.ibatis.logging.log4j2.Log4j2AbstractLoggerImpl.<init>(org.apache.logging.log4j.spi.AbstractLogger)
+Third Party Method: org.apache.logging.log4j.spi.ExtendedLoggerWrapper.<init>(org.apache.logging.log4j.spi.ExtendedLogger, java.lang.String, org.apache.logging.log4j.message.MessageFactory)
+====================================================================================================
+You are an expert Java developer who writes good unit tests in order to maximize code coverage. You are specialized in Maven and JUnit 5 testing framework.
+
+Generate a JUnit 5 test that executes the given method and reaches the specified third-party method within it. No assertions, inspections, or verifications are required. The test’s only goal is to try invoking the given third-party method during execution. 
+
+You are provided with:
+thirdPartyMethod: Fully qualified third-party method that must be invoked.
+methodSources: Complete and exact source code for the method that contains the target third-party method.
+
+thirdPartyMethod: org.apache.logging.log4j.spi.ExtendedLoggerWrapper.<init>(org.apache.logging.log4j.spi.ExtendedLogger, java.lang.String, org.apache.logging.log4j.message.MessageFactory)
+methodSources:
+public Log4j2AbstractLoggerImpl(AbstractLogger abstractLogger) {
+    log = new ExtendedLoggerWrapper(abstractLogger, abstractLogger.getName(), abstractLogger.getMessageFactory());
+}
+
+Hard constraints:
+- The test class MUST NOT extend any other class (no 'extends' keyword).
+- The test class MUST NOT override any methods (no @Override annotations).
+- Do NOT create anonymous inner classes (e.g., new ClassName() { ... }).
+- Use real objects whenever possible.
+- Use mocks only when necessary, provided those objects are not directly related to the target method call.
+- Do NOT mock or spy on the class under test.
+- Do NOT alter, stub, or control the behavior of ANY method in the call path.
+- Use only the following test-related libraries: junit-jupiter, mockito-core, and mockito-junit-jupiter. Do not use any other testing or mocking libraries.
+- Do NOT add any assertions, verifications, or inspections of state/logs/output.
+- package declaration MUST be: org.apache.ibatis.logging.log4j2
+- class name MUST be: Log4j2AbstractLoggerImplmethod_ExtendedLoggerWrappermethodFikaTest
+- exactly ONE @Test method
+- Return ONLY the complete Java source code.
+- Do NOT include explanations, markdown, or extra text.
+
+
+Previous Maven test output (if any; fix compilation/runtime issues while keeping ALL constraints):
+
+
+
+====================================================================================================
+TEST CASE 14/46 — ITERATION 1
+Entry Point: org.apache.ibatis.logging.log4j.Log4jImpl.isTraceEnabled()
+Third Party Method: org.apache.log4j.Logger.isTraceEnabled()
+====================================================================================================
+You are an expert Java developer who writes good unit tests in order to maximize code coverage. You are specialized in Maven and JUnit 5 testing framework.
+
+Generate a JUnit 5 test that executes the given method and reaches the specified third-party method within it. No assertions, inspections, or verifications are required. The test’s only goal is to try invoking the given third-party method during execution. 
+
+You are provided with:
+thirdPartyMethod: Fully qualified third-party method that must be invoked.
+methodSources: Complete and exact source code for the method that contains the target third-party method.
+
+thirdPartyMethod: org.apache.log4j.Logger.isTraceEnabled()
+methodSources:
+@Override
+public boolean isTraceEnabled() {
+    // PATH: Test should invoke the next Logger.isTraceEnabled(...) [step in execution path]
+    return log.isTraceEnabled();
+}
+
+Hard constraints:
+- The test class MUST NOT extend any other class (no 'extends' keyword).
+- The test class MUST NOT override any methods (no @Override annotations).
+- Do NOT create anonymous inner classes (e.g., new ClassName() { ... }).
+- Use real objects whenever possible.
+- Use mocks only when necessary, provided those objects are not directly related to the target method call.
+- Do NOT mock or spy on the class under test.
+- Do NOT alter, stub, or control the behavior of ANY method in the call path.
+- Use only the following test-related libraries: junit-jupiter, mockito-core, and mockito-junit-jupiter. Do not use any other testing or mocking libraries.
+- Do NOT add any assertions, verifications, or inspections of state/logs/output.
+- package declaration MUST be: org.apache.ibatis.logging.log4j
+- class name MUST be: Log4jImplisTraceEnabled_LoggerisTraceEnabledFikaTest
+- exactly ONE @Test method
+- Return ONLY the complete Java source code.
+- Do NOT include explanations, markdown, or extra text.
+
+
+Previous Maven test output (if any; fix compilation/runtime issues while keeping ALL constraints):
+
+
+
+====================================================================================================
+TEST CASE 15/46 — ITERATION 1
+Entry Point: org.apache.ibatis.logging.commons.JakartaCommonsLoggingImpl.trace(java.lang.String)
+Third Party Method: org.apache.commons.logging.Log.trace(java.lang.Object)
+====================================================================================================
+You are an expert Java developer who writes good unit tests in order to maximize code coverage. You are specialized in Maven and JUnit 5 testing framework.
+
+Generate a JUnit 5 test that executes the given method and reaches the specified third-party method within it. No assertions, inspections, or verifications are required. The test’s only goal is to try invoking the given third-party method during execution. 
+
+You are provided with:
+thirdPartyMethod: Fully qualified third-party method that must be invoked.
+methodSources: Complete and exact source code for the method that contains the target third-party method.
+
+thirdPartyMethod: org.apache.commons.logging.Log.trace(java.lang.Object)
+methodSources:
+@Override
+public void trace(String s) // PATH: Test should invoke the next Log.trace(...) [step in execution path]
+{
+    log.trace(s);
+}
+
+Hard constraints:
+- The test class MUST NOT extend any other class (no 'extends' keyword).
+- The test class MUST NOT override any methods (no @Override annotations).
+- Do NOT create anonymous inner classes (e.g., new ClassName() { ... }).
+- Use real objects whenever possible.
+- Use mocks only when necessary, provided those objects are not directly related to the target method call.
+- Do NOT mock or spy on the class under test.
+- Do NOT alter, stub, or control the behavior of ANY method in the call path.
+- Use only the following test-related libraries: junit-jupiter, mockito-core, and mockito-junit-jupiter. Do not use any other testing or mocking libraries.
+- Do NOT add any assertions, verifications, or inspections of state/logs/output.
+- package declaration MUST be: org.apache.ibatis.logging.commons
+- class name MUST be: JakartaCommonsLoggingImpltrace_LogtraceFikaTest
+- exactly ONE @Test method
+- Return ONLY the complete Java source code.
+- Do NOT include explanations, markdown, or extra text.
+
+
+Previous Maven test output (if any; fix compilation/runtime issues while keeping ALL constraints):
+
+
+
+====================================================================================================
+TEST CASE 16/46 — ITERATION 1
+Entry Point: org.apache.ibatis.logging.commons.JakartaCommonsLoggingImpl.warn(java.lang.String)
+Third Party Method: org.apache.commons.logging.Log.warn(java.lang.Object)
+====================================================================================================
+You are an expert Java developer who writes good unit tests in order to maximize code coverage. You are specialized in Maven and JUnit 5 testing framework.
+
+Generate a JUnit 5 test that executes the given method and reaches the specified third-party method within it. No assertions, inspections, or verifications are required. The test’s only goal is to try invoking the given third-party method during execution. 
+
+You are provided with:
+thirdPartyMethod: Fully qualified third-party method that must be invoked.
+methodSources: Complete and exact source code for the method that contains the target third-party method.
+
+thirdPartyMethod: org.apache.commons.logging.Log.warn(java.lang.Object)
+methodSources:
+@Override
+public void warn(String s) // PATH: Test should invoke the next Log.warn(...) [step in execution path]
+{
+    log.warn(s);
+}
+
+Hard constraints:
+- The test class MUST NOT extend any other class (no 'extends' keyword).
+- The test class MUST NOT override any methods (no @Override annotations).
+- Do NOT create anonymous inner classes (e.g., new ClassName() { ... }).
+- Use real objects whenever possible.
+- Use mocks only when necessary, provided those objects are not directly related to the target method call.
+- Do NOT mock or spy on the class under test.
+- Do NOT alter, stub, or control the behavior of ANY method in the call path.
+- Use only the following test-related libraries: junit-jupiter, mockito-core, and mockito-junit-jupiter. Do not use any other testing or mocking libraries.
+- Do NOT add any assertions, verifications, or inspections of state/logs/output.
+- package declaration MUST be: org.apache.ibatis.logging.commons
+- class name MUST be: JakartaCommonsLoggingImplwarn_LogwarnFikaTest
+- exactly ONE @Test method
+- Return ONLY the complete Java source code.
+- Do NOT include explanations, markdown, or extra text.
+
+
+Previous Maven test output (if any; fix compilation/runtime issues while keeping ALL constraints):
+
+
+
+====================================================================================================
+TEST CASE 17/46 — ITERATION 1
+Entry Point: org.apache.ibatis.logging.log4j2.Log4j2LoggerImpl.warn(java.lang.String)
+Third Party Method: org.apache.logging.log4j.Logger.warn(org.apache.logging.log4j.Marker, java.lang.String)
+====================================================================================================
+You are an expert Java developer who writes good unit tests in order to maximize code coverage. You are specialized in Maven and JUnit 5 testing framework.
+
+Generate a JUnit 5 test that executes the given method and reaches the specified third-party method within it. No assertions, inspections, or verifications are required. The test’s only goal is to try invoking the given third-party method during execution. 
+
+You are provided with:
+thirdPartyMethod: Fully qualified third-party method that must be invoked.
+methodSources: Complete and exact source code for the method that contains the target third-party method.
+
+thirdPartyMethod: org.apache.logging.log4j.Logger.warn(org.apache.logging.log4j.Marker, java.lang.String)
+methodSources:
+@Override
+public void warn(String s) // PATH: Test should invoke the next Logger.warn(...) [step in execution path]
+{
+    log.warn(MARKER, s);
+}
+
+Hard constraints:
+- The test class MUST NOT extend any other class (no 'extends' keyword).
+- The test class MUST NOT override any methods (no @Override annotations).
+- Do NOT create anonymous inner classes (e.g., new ClassName() { ... }).
+- Use real objects whenever possible.
+- Use mocks only when necessary, provided those objects are not directly related to the target method call.
+- Do NOT mock or spy on the class under test.
+- Do NOT alter, stub, or control the behavior of ANY method in the call path.
+- Use only the following test-related libraries: junit-jupiter, mockito-core, and mockito-junit-jupiter. Do not use any other testing or mocking libraries.
+- Do NOT add any assertions, verifications, or inspections of state/logs/output.
+- package declaration MUST be: org.apache.ibatis.logging.log4j2
+- class name MUST be: Log4j2LoggerImplwarn_LoggerwarnFikaTest
+- exactly ONE @Test method
+- Return ONLY the complete Java source code.
+- Do NOT include explanations, markdown, or extra text.
+
+
+Previous Maven test output (if any; fix compilation/runtime issues while keeping ALL constraints):
+
+
+
+====================================================================================================
+TEST CASE 18/46 — ITERATION 1
+Entry Point: org.apache.ibatis.logging.log4j.Log4jImpl.trace(java.lang.String)
+Third Party Method: org.apache.log4j.Logger.log(java.lang.String, org.apache.log4j.Priority, java.lang.Object, java.lang.Throwable)
+====================================================================================================
+You are an expert Java developer who writes good unit tests in order to maximize code coverage. You are specialized in Maven and JUnit 5 testing framework.
+
+Generate a JUnit 5 test that executes the given method and reaches the specified third-party method within it. No assertions, inspections, or verifications are required. The test’s only goal is to try invoking the given third-party method during execution. 
+
+You are provided with:
+thirdPartyMethod: Fully qualified third-party method that must be invoked.
+methodSources: Complete and exact source code for the method that contains the target third-party method.
+
+thirdPartyMethod: org.apache.log4j.Logger.log(java.lang.String, org.apache.log4j.Priority, java.lang.Object, java.lang.Throwable)
+methodSources:
+@Override
+public void trace(String s) {
+    log.log(FQCN, Level.TRACE, s, null);
+}
+
+Hard constraints:
+- The test class MUST NOT extend any other class (no 'extends' keyword).
+- The test class MUST NOT override any methods (no @Override annotations).
+- Do NOT create anonymous inner classes (e.g., new ClassName() { ... }).
+- Use real objects whenever possible.
+- Use mocks only when necessary, provided those objects are not directly related to the target method call.
+- Do NOT mock or spy on the class under test.
+- Do NOT alter, stub, or control the behavior of ANY method in the call path.
+- Use only the following test-related libraries: junit-jupiter, mockito-core, and mockito-junit-jupiter. Do not use any other testing or mocking libraries.
+- Do NOT add any assertions, verifications, or inspections of state/logs/output.
+- package declaration MUST be: org.apache.ibatis.logging.log4j
+- class name MUST be: Log4jImpltrace_LoggerlogFikaTest
+- exactly ONE @Test method
+- Return ONLY the complete Java source code.
+- Do NOT include explanations, markdown, or extra text.
+
+
+Previous Maven test output (if any; fix compilation/runtime issues while keeping ALL constraints):
+
+
+
+====================================================================================================
+TEST CASE 19/46 — ITERATION 1
+Entry Point: org.apache.ibatis.logging.log4j.Log4jImpl.<init>(java.lang.String)
+Third Party Method: org.apache.log4j.Logger.getLogger(java.lang.String)
+====================================================================================================
+You are an expert Java developer who writes good unit tests in order to maximize code coverage. You are specialized in Maven and JUnit 5 testing framework.
+
+Generate a JUnit 5 test that executes the given method and reaches the specified third-party method within it. No assertions, inspections, or verifications are required. The test’s only goal is to try invoking the given third-party method during execution. 
+
+You are provided with:
+thirdPartyMethod: Fully qualified third-party method that must be invoked.
+methodSources: Complete and exact source code for the method that contains the target third-party method.
+
+thirdPartyMethod: org.apache.log4j.Logger.getLogger(java.lang.String)
+methodSources:
+public (String clazz) {
+    // PATH: Test should invoke the next Logger.getLogger(...) [step in execution path]
+    log = Logger.getLogger(clazz);
+}
+
+Hard constraints:
+- The test class MUST NOT extend any other class (no 'extends' keyword).
+- The test class MUST NOT override any methods (no @Override annotations).
+- Do NOT create anonymous inner classes (e.g., new ClassName() { ... }).
+- Use real objects whenever possible.
+- Use mocks only when necessary, provided those objects are not directly related to the target method call.
+- Do NOT mock or spy on the class under test.
+- Do NOT alter, stub, or control the behavior of ANY method in the call path.
+- Use only the following test-related libraries: junit-jupiter, mockito-core, and mockito-junit-jupiter. Do not use any other testing or mocking libraries.
+- Do NOT add any assertions, verifications, or inspections of state/logs/output.
+- package declaration MUST be: org.apache.ibatis.logging.log4j
+- class name MUST be: Log4jImplmethod_LoggergetLoggerFikaTest
+- exactly ONE @Test method
+- Return ONLY the complete Java source code.
+- Do NOT include explanations, markdown, or extra text.
+
+
+Previous Maven test output (if any; fix compilation/runtime issues while keeping ALL constraints):
+
+
+
+====================================================================================================
+TEST CASE 20/46 — ITERATION 1
+Entry Point: org.apache.ibatis.executor.loader.cglib.CglibProxyFactory.EnhancedDeserializationProxyImpl.intercept(java.lang.Object, java.lang.reflect.Method, java.lang.Object[], net.sf.cglib.proxy.MethodProxy)
+Third Party Method: net.sf.cglib.proxy.MethodProxy.invokeSuper(java.lang.Object, java.lang.Object[])
+====================================================================================================
+You are an expert Java developer who writes good unit tests in order to maximize code coverage. You are specialized in Maven and JUnit 5 testing framework.
+
+Generate a JUnit 5 test that executes the given method and reaches the specified third-party method within it. No assertions, inspections, or verifications are required. The test’s only goal is to try invoking the given third-party method during execution. 
+
+You are provided with:
+thirdPartyMethod: Fully qualified third-party method that must be invoked.
+methodSources: Complete and exact source code for the method that contains the target third-party method.
+
+thirdPartyMethod: net.sf.cglib.proxy.MethodProxy.invokeSuper(java.lang.Object, java.lang.Object[])
+methodSources:
+@Override
+public Object intercept(Object enhanced, Method method, Object[] args, MethodProxy methodProxy) throws Throwable {
+    final Object o = super.invoke(enhanced, method, args);
+    // PATH: Test should invoke the next MethodProxy.invokeSuper(...) [step in execution path]
+    return o instanceof AbstractSerialStateHolder ? o : methodProxy.invokeSuper(o, args);
+}
+
+Hard constraints:
+- The test class MUST NOT extend any other class (no 'extends' keyword).
+- The test class MUST NOT override any methods (no @Override annotations).
+- Do NOT create anonymous inner classes (e.g., new ClassName() { ... }).
+- Use real objects whenever possible.
+- Use mocks only when necessary, provided those objects are not directly related to the target method call.
+- Do NOT mock or spy on the class under test.
+- Do NOT alter, stub, or control the behavior of ANY method in the call path.
+- Use only the following test-related libraries: junit-jupiter, mockito-core, and mockito-junit-jupiter. Do not use any other testing or mocking libraries.
+- Do NOT add any assertions, verifications, or inspections of state/logs/output.
+- package declaration MUST be: org.apache.ibatis.executor.loader.cglib
+- class name MUST be: EnhancedDeserializationProxyImplintercept_MethodProxyinvokeSuperFikaTest
+- exactly ONE @Test method
+- Return ONLY the complete Java source code.
+- Do NOT include explanations, markdown, or extra text.
+
+
+Previous Maven test output (if any; fix compilation/runtime issues while keeping ALL constraints):
+
+
+
+====================================================================================================
+TEST CASE 21/46 — ITERATION 1
+Entry Point: org.apache.ibatis.logging.log4j2.Log4j2Impl.<init>(java.lang.String)
+Third Party Method: org.apache.logging.log4j.LogManager.getLogger(java.lang.String)
+====================================================================================================
+You are an expert Java developer who writes good unit tests in order to maximize code coverage. You are specialized in Maven and JUnit 5 testing framework.
+
+Generate a JUnit 5 test that executes the given method and reaches the specified third-party method within it. No assertions, inspections, or verifications are required. The test’s only goal is to try invoking the given third-party method during execution. 
+
+You are provided with:
+thirdPartyMethod: Fully qualified third-party method that must be invoked.
+methodSources: Complete and exact source code for the method that contains the target third-party method.
+
+thirdPartyMethod: org.apache.logging.log4j.LogManager.getLogger(java.lang.String)
+methodSources:
+public (String clazz) {
+    // PATH: Test should invoke the next LogManager.getLogger(...) [step in execution path]
+    Logger logger = LogManager.getLogger(clazz);
+    if (logger instanceof AbstractLogger) {
+        log = new Log4j2AbstractLoggerImpl(((AbstractLogger) (logger)));
+    } else {
+        log = new Log4j2LoggerImpl(logger);
+    }
+}
+
+Hard constraints:
+- The test class MUST NOT extend any other class (no 'extends' keyword).
+- The test class MUST NOT override any methods (no @Override annotations).
+- Do NOT create anonymous inner classes (e.g., new ClassName() { ... }).
+- Use real objects whenever possible.
+- Use mocks only when necessary, provided those objects are not directly related to the target method call.
+- Do NOT mock or spy on the class under test.
+- Do NOT alter, stub, or control the behavior of ANY method in the call path.
+- Use only the following test-related libraries: junit-jupiter, mockito-core, and mockito-junit-jupiter. Do not use any other testing or mocking libraries.
+- Do NOT add any assertions, verifications, or inspections of state/logs/output.
+- package declaration MUST be: org.apache.ibatis.logging.log4j2
+- class name MUST be: Log4j2Implmethod_LogManagergetLoggerFikaTest
+- exactly ONE @Test method
+- Return ONLY the complete Java source code.
+- Do NOT include explanations, markdown, or extra text.
+
+
+Previous Maven test output (if any; fix compilation/runtime issues while keeping ALL constraints):
+
+
+
+====================================================================================================
+TEST CASE 22/46 — ITERATION 1
+Entry Point: org.apache.ibatis.executor.loader.cglib.CglibProxyFactory.EnhancedResultObjectProxyImpl.intercept(java.lang.Object, java.lang.reflect.Method, java.lang.Object[], net.sf.cglib.proxy.MethodProxy)
+Third Party Method: net.sf.cglib.proxy.MethodProxy.invokeSuper(java.lang.Object, java.lang.Object[])
+====================================================================================================
+You are an expert Java developer who writes good unit tests in order to maximize code coverage. You are specialized in Maven and JUnit 5 testing framework.
+
+Generate a JUnit 5 test that executes the given method and reaches the specified third-party method within it. No assertions, inspections, or verifications are required. The test’s only goal is to try invoking the given third-party method during execution. 
+
+You are provided with:
+thirdPartyMethod: Fully qualified third-party method that must be invoked.
+methodSources: Complete and exact source code for the method that contains the target third-party method.
+
+thirdPartyMethod: net.sf.cglib.proxy.MethodProxy.invokeSuper(java.lang.Object, java.lang.Object[])
+methodSources:
+@Override
+public Object intercept(Object enhanced, Method method, Object[] args, MethodProxy methodProxy) throws Throwable {
+    final String methodName = method.getName();
+    lock.lock();
+    try {
+        if (WRITE_REPLACE_METHOD.equals(methodName)) {
+            Object original;
+            if (constructorArgTypes.isEmpty()) {
+                original = objectFactory.create(type);
+            } else {
+                original = objectFactory.create(type, constructorArgTypes, constructorArgs);
+            }
+            PropertyCopier.copyBeanProperties(type, enhanced, original);
+            if (lazyLoader.size() > 0) {
+                return new CglibSerialStateHolder(original, lazyLoader.getProperties(), objectFactory, constructorArgTypes, constructorArgs);
+            } else {
+                return original;
+            }
+        }
+        if ((lazyLoader.size() > 0) && (!FINALIZE_METHOD.equals(methodName))) {
+            if (aggressive || lazyLoadTriggerMethods.contains(methodName)) {
+                lazyLoader.loadAll();
+            } else if (PropertyNamer.isSetter(methodName)) {
+                final String property = PropertyNamer.methodToProperty(methodName);
+                lazyLoader.remove(property);
+            } else if (PropertyNamer.isGetter(methodName)) {
+                final String property = PropertyNamer.methodToProperty(methodName);
+                if (lazyLoader.hasLoader(property)) {
+                    lazyLoader.load(property);
+                }
+            }
+        }
+        // PATH: Test should invoke the next MethodProxy.invokeSuper(...) [step in execution path]
+        return methodProxy.invokeSuper(enhanced, args);
+    } catch (Throwable t) {
+        throw ExceptionUtil.unwrapThrowable(t);
+    } finally {
+        lock.unlock();
+    }
+}
+
+Hard constraints:
+- The test class MUST NOT extend any other class (no 'extends' keyword).
+- The test class MUST NOT override any methods (no @Override annotations).
+- Do NOT create anonymous inner classes (e.g., new ClassName() { ... }).
+- Use real objects whenever possible.
+- Use mocks only when necessary, provided those objects are not directly related to the target method call.
+- Do NOT mock or spy on the class under test.
+- Do NOT alter, stub, or control the behavior of ANY method in the call path.
+- Use only the following test-related libraries: junit-jupiter, mockito-core, and mockito-junit-jupiter. Do not use any other testing or mocking libraries.
+- Do NOT add any assertions, verifications, or inspections of state/logs/output.
+- package declaration MUST be: org.apache.ibatis.executor.loader.cglib
+- class name MUST be: EnhancedResultObjectProxyImplintercept_MethodProxyinvokeSuperFikaTest
+- exactly ONE @Test method
+- Return ONLY the complete Java source code.
+- Do NOT include explanations, markdown, or extra text.
+
+
+Previous Maven test output (if any; fix compilation/runtime issues while keeping ALL constraints):
+
+
+
+====================================================================================================
+TEST CASE 23/46 — ITERATION 1
+Entry Point: org.apache.ibatis.logging.log4j2.Log4j2AbstractLoggerImpl.trace(java.lang.String)
+Third Party Method: org.apache.logging.log4j.MarkerManager.getMarker(java.lang.String)
+====================================================================================================
+You are an expert Java developer who writes good unit tests in order to maximize code coverage. You are specialized in Maven and JUnit 5 testing framework.
+
+Generate a JUnit 5 test that executes the given method and reaches the specified third-party method within it. No assertions, inspections, or verifications are required. The test’s only goal is to try invoking the given third-party method during execution. 
+
+You are provided with:
+thirdPartyMethod: Fully qualified third-party method that must be invoked.
+methodSources: Complete and exact source code for the method that contains the target third-party method.
+
+thirdPartyMethod: org.apache.logging.log4j.MarkerManager.getMarker(java.lang.String)
+methodSources:
+org.apache.ibatis.logging.log4j2.Log4j2AbstractLoggerImpl
+
+// Static field initializations
+private static final Marker MARKER = MarkerManager.getMarker(LogFactory.MARKER);
+private static final String FQCN = Log4j2Impl.class.getName();
+
+
+Hard constraints:
+- The test class MUST NOT extend any other class (no 'extends' keyword).
+- The test class MUST NOT override any methods (no @Override annotations).
+- Do NOT create anonymous inner classes (e.g., new ClassName() { ... }).
+- Use real objects whenever possible.
+- Use mocks only when necessary, provided those objects are not directly related to the target method call.
+- Do NOT mock or spy on the class under test.
+- Do NOT alter, stub, or control the behavior of ANY method in the call path.
+- Use only the following test-related libraries: junit-jupiter, mockito-core, and mockito-junit-jupiter. Do not use any other testing or mocking libraries.
+- Do NOT add any assertions, verifications, or inspections of state/logs/output.
+- package declaration MUST be: org.apache.ibatis.logging.log4j2
+- class name MUST be: Log4j2AbstractLoggerImplmethod_MarkerManagergetMarkerFikaTest
+- exactly ONE @Test method
+- Return ONLY the complete Java source code.
+- Do NOT include explanations, markdown, or extra text.
+
+
+Previous Maven test output (if any; fix compilation/runtime issues while keeping ALL constraints):
+
+
+
+====================================================================================================
+TEST CASE 24/46 — ITERATION 1
+Entry Point: org.apache.ibatis.logging.log4j2.Log4j2AbstractLoggerImpl.error(java.lang.String, java.lang.Throwable)
+Third Party Method: org.apache.logging.log4j.MarkerManager.getMarker(java.lang.String)
+====================================================================================================
+You are an expert Java developer who writes good unit tests in order to maximize code coverage. You are specialized in Maven and JUnit 5 testing framework.
+
+Generate a JUnit 5 test that executes the given method and reaches the specified third-party method within it. No assertions, inspections, or verifications are required. The test’s only goal is to try invoking the given third-party method during execution. 
+
+You are provided with:
+thirdPartyMethod: Fully qualified third-party method that must be invoked.
+methodSources: Complete and exact source code for the method that contains the target third-party method.
+
+thirdPartyMethod: org.apache.logging.log4j.MarkerManager.getMarker(java.lang.String)
+methodSources:
+org.apache.ibatis.logging.log4j2.Log4j2AbstractLoggerImpl
+
+// Static field initializations
+private static final Marker MARKER = MarkerManager.getMarker(LogFactory.MARKER);
+private static final String FQCN = Log4j2Impl.class.getName();
+
+
+Hard constraints:
+- The test class MUST NOT extend any other class (no 'extends' keyword).
+- The test class MUST NOT override any methods (no @Override annotations).
+- Do NOT create anonymous inner classes (e.g., new ClassName() { ... }).
+- Use real objects whenever possible.
+- Use mocks only when necessary, provided those objects are not directly related to the target method call.
+- Do NOT mock or spy on the class under test.
+- Do NOT alter, stub, or control the behavior of ANY method in the call path.
+- Use only the following test-related libraries: junit-jupiter, mockito-core, and mockito-junit-jupiter. Do not use any other testing or mocking libraries.
+- Do NOT add any assertions, verifications, or inspections of state/logs/output.
+- package declaration MUST be: org.apache.ibatis.logging.log4j2
+- class name MUST be: Log4j2AbstractLoggerImplmethod_MarkerManagergetMarkerFikaTest2
+- exactly ONE @Test method
+- Return ONLY the complete Java source code.
+- Do NOT include explanations, markdown, or extra text.
+
+
+Previous Maven test output (if any; fix compilation/runtime issues while keeping ALL constraints):
+
+
+
+====================================================================================================
+TEST CASE 25/46 — ITERATION 1
+Entry Point: org.apache.ibatis.logging.log4j2.Log4j2AbstractLoggerImpl.debug(java.lang.String)
+Third Party Method: org.apache.logging.log4j.MarkerManager.getMarker(java.lang.String)
+====================================================================================================
+You are an expert Java developer who writes good unit tests in order to maximize code coverage. You are specialized in Maven and JUnit 5 testing framework.
+
+Generate a JUnit 5 test that executes the given method and reaches the specified third-party method within it. No assertions, inspections, or verifications are required. The test’s only goal is to try invoking the given third-party method during execution. 
+
+You are provided with:
+thirdPartyMethod: Fully qualified third-party method that must be invoked.
+methodSources: Complete and exact source code for the method that contains the target third-party method.
+
+thirdPartyMethod: org.apache.logging.log4j.MarkerManager.getMarker(java.lang.String)
+methodSources:
+org.apache.ibatis.logging.log4j2.Log4j2AbstractLoggerImpl
+
+// Static field initializations
+private static final Marker MARKER = MarkerManager.getMarker(LogFactory.MARKER);
+private static final String FQCN = Log4j2Impl.class.getName();
+
+
+Hard constraints:
+- The test class MUST NOT extend any other class (no 'extends' keyword).
+- The test class MUST NOT override any methods (no @Override annotations).
+- Do NOT create anonymous inner classes (e.g., new ClassName() { ... }).
+- Use real objects whenever possible.
+- Use mocks only when necessary, provided those objects are not directly related to the target method call.
+- Do NOT mock or spy on the class under test.
+- Do NOT alter, stub, or control the behavior of ANY method in the call path.
+- Use only the following test-related libraries: junit-jupiter, mockito-core, and mockito-junit-jupiter. Do not use any other testing or mocking libraries.
+- Do NOT add any assertions, verifications, or inspections of state/logs/output.
+- package declaration MUST be: org.apache.ibatis.logging.log4j2
+- class name MUST be: Log4j2AbstractLoggerImplmethod_MarkerManagergetMarkerFikaTest3
+- exactly ONE @Test method
+- Return ONLY the complete Java source code.
+- Do NOT include explanations, markdown, or extra text.
+
+
+Previous Maven test output (if any; fix compilation/runtime issues while keeping ALL constraints):
+
+
+
+====================================================================================================
+TEST CASE 26/46 — ITERATION 1
+Entry Point: org.apache.ibatis.logging.log4j2.Log4j2AbstractLoggerImpl.warn(java.lang.String)
+Third Party Method: org.apache.logging.log4j.MarkerManager.getMarker(java.lang.String)
+====================================================================================================
+You are an expert Java developer who writes good unit tests in order to maximize code coverage. You are specialized in Maven and JUnit 5 testing framework.
+
+Generate a JUnit 5 test that executes the given method and reaches the specified third-party method within it. No assertions, inspections, or verifications are required. The test’s only goal is to try invoking the given third-party method during execution. 
+
+You are provided with:
+thirdPartyMethod: Fully qualified third-party method that must be invoked.
+methodSources: Complete and exact source code for the method that contains the target third-party method.
+
+thirdPartyMethod: org.apache.logging.log4j.MarkerManager.getMarker(java.lang.String)
+methodSources:
+org.apache.ibatis.logging.log4j2.Log4j2AbstractLoggerImpl
+
+// Static field initializations
+private static final Marker MARKER = MarkerManager.getMarker(LogFactory.MARKER);
+private static final String FQCN = Log4j2Impl.class.getName();
+
+
+Hard constraints:
+- The test class MUST NOT extend any other class (no 'extends' keyword).
+- The test class MUST NOT override any methods (no @Override annotations).
+- Do NOT create anonymous inner classes (e.g., new ClassName() { ... }).
+- Use real objects whenever possible.
+- Use mocks only when necessary, provided those objects are not directly related to the target method call.
+- Do NOT mock or spy on the class under test.
+- Do NOT alter, stub, or control the behavior of ANY method in the call path.
+- Use only the following test-related libraries: junit-jupiter, mockito-core, and mockito-junit-jupiter. Do not use any other testing or mocking libraries.
+- Do NOT add any assertions, verifications, or inspections of state/logs/output.
+- package declaration MUST be: org.apache.ibatis.logging.log4j2
+- class name MUST be: Log4j2AbstractLoggerImplmethod_MarkerManagergetMarkerFikaTest4
+- exactly ONE @Test method
+- Return ONLY the complete Java source code.
+- Do NOT include explanations, markdown, or extra text.
+
+
+Previous Maven test output (if any; fix compilation/runtime issues while keeping ALL constraints):
+
+
+
+====================================================================================================
+TEST CASE 27/46 — ITERATION 1
+Entry Point: org.apache.ibatis.logging.log4j2.Log4j2AbstractLoggerImpl.error(java.lang.String)
+Third Party Method: org.apache.logging.log4j.MarkerManager.getMarker(java.lang.String)
+====================================================================================================
+You are an expert Java developer who writes good unit tests in order to maximize code coverage. You are specialized in Maven and JUnit 5 testing framework.
+
+Generate a JUnit 5 test that executes the given method and reaches the specified third-party method within it. No assertions, inspections, or verifications are required. The test’s only goal is to try invoking the given third-party method during execution. 
+
+You are provided with:
+thirdPartyMethod: Fully qualified third-party method that must be invoked.
+methodSources: Complete and exact source code for the method that contains the target third-party method.
+
+thirdPartyMethod: org.apache.logging.log4j.MarkerManager.getMarker(java.lang.String)
+methodSources:
+org.apache.ibatis.logging.log4j2.Log4j2AbstractLoggerImpl
+
+// Static field initializations
+private static final Marker MARKER = MarkerManager.getMarker(LogFactory.MARKER);
+private static final String FQCN = Log4j2Impl.class.getName();
+
+
+Hard constraints:
+- The test class MUST NOT extend any other class (no 'extends' keyword).
+- The test class MUST NOT override any methods (no @Override annotations).
+- Do NOT create anonymous inner classes (e.g., new ClassName() { ... }).
+- Use real objects whenever possible.
+- Use mocks only when necessary, provided those objects are not directly related to the target method call.
+- Do NOT mock or spy on the class under test.
+- Do NOT alter, stub, or control the behavior of ANY method in the call path.
+- Use only the following test-related libraries: junit-jupiter, mockito-core, and mockito-junit-jupiter. Do not use any other testing or mocking libraries.
+- Do NOT add any assertions, verifications, or inspections of state/logs/output.
+- package declaration MUST be: org.apache.ibatis.logging.log4j2
+- class name MUST be: Log4j2AbstractLoggerImplmethod_MarkerManagergetMarkerFikaTest5
+- exactly ONE @Test method
+- Return ONLY the complete Java source code.
+- Do NOT include explanations, markdown, or extra text.
+
+
+Previous Maven test output (if any; fix compilation/runtime issues while keeping ALL constraints):
+
+
+
+====================================================================================================
+TEST CASE 28/46 — ITERATION 1
+Entry Point: org.apache.ibatis.logging.log4j2.Log4j2LoggerImpl.debug(java.lang.String)
+Third Party Method: org.apache.logging.log4j.MarkerManager.getMarker(java.lang.String)
+====================================================================================================
+You are an expert Java developer who writes good unit tests in order to maximize code coverage. You are specialized in Maven and JUnit 5 testing framework.
+
+Generate a JUnit 5 test that executes the given method and reaches the specified third-party method within it. No assertions, inspections, or verifications are required. The test’s only goal is to try invoking the given third-party method during execution. 
+
+You are provided with:
+thirdPartyMethod: Fully qualified third-party method that must be invoked.
+methodSources: Complete and exact source code for the method that contains the target third-party method.
+
+thirdPartyMethod: org.apache.logging.log4j.MarkerManager.getMarker(java.lang.String)
+methodSources:
+org.apache.ibatis.logging.log4j2.Log4j2LoggerImpl
+
+// Static field initializations
+private static final Marker MARKER = MarkerManager.getMarker(LogFactory.MARKER);
+
+
+Hard constraints:
+- The test class MUST NOT extend any other class (no 'extends' keyword).
+- The test class MUST NOT override any methods (no @Override annotations).
+- Do NOT create anonymous inner classes (e.g., new ClassName() { ... }).
+- Use real objects whenever possible.
+- Use mocks only when necessary, provided those objects are not directly related to the target method call.
+- Do NOT mock or spy on the class under test.
+- Do NOT alter, stub, or control the behavior of ANY method in the call path.
+- Use only the following test-related libraries: junit-jupiter, mockito-core, and mockito-junit-jupiter. Do not use any other testing or mocking libraries.
+- Do NOT add any assertions, verifications, or inspections of state/logs/output.
+- package declaration MUST be: org.apache.ibatis.logging.log4j2
+- class name MUST be: Log4j2LoggerImplmethod_MarkerManagergetMarkerFikaTest
+- exactly ONE @Test method
+- Return ONLY the complete Java source code.
+- Do NOT include explanations, markdown, or extra text.
+
+
+Previous Maven test output (if any; fix compilation/runtime issues while keeping ALL constraints):
+
+
+
+====================================================================================================
+TEST CASE 29/46 — ITERATION 1
+Entry Point: org.apache.ibatis.logging.log4j2.Log4j2LoggerImpl.error(java.lang.String)
+Third Party Method: org.apache.logging.log4j.MarkerManager.getMarker(java.lang.String)
+====================================================================================================
+You are an expert Java developer who writes good unit tests in order to maximize code coverage. You are specialized in Maven and JUnit 5 testing framework.
+
+Generate a JUnit 5 test that executes the given method and reaches the specified third-party method within it. No assertions, inspections, or verifications are required. The test’s only goal is to try invoking the given third-party method during execution. 
+
+You are provided with:
+thirdPartyMethod: Fully qualified third-party method that must be invoked.
+methodSources: Complete and exact source code for the method that contains the target third-party method.
+
+thirdPartyMethod: org.apache.logging.log4j.MarkerManager.getMarker(java.lang.String)
+methodSources:
+org.apache.ibatis.logging.log4j2.Log4j2LoggerImpl
+
+// Static field initializations
+private static final Marker MARKER = MarkerManager.getMarker(LogFactory.MARKER);
+
+
+Hard constraints:
+- The test class MUST NOT extend any other class (no 'extends' keyword).
+- The test class MUST NOT override any methods (no @Override annotations).
+- Do NOT create anonymous inner classes (e.g., new ClassName() { ... }).
+- Use real objects whenever possible.
+- Use mocks only when necessary, provided those objects are not directly related to the target method call.
+- Do NOT mock or spy on the class under test.
+- Do NOT alter, stub, or control the behavior of ANY method in the call path.
+- Use only the following test-related libraries: junit-jupiter, mockito-core, and mockito-junit-jupiter. Do not use any other testing or mocking libraries.
+- Do NOT add any assertions, verifications, or inspections of state/logs/output.
+- package declaration MUST be: org.apache.ibatis.logging.log4j2
+- class name MUST be: Log4j2LoggerImplmethod_MarkerManagergetMarkerFikaTest2
+- exactly ONE @Test method
+- Return ONLY the complete Java source code.
+- Do NOT include explanations, markdown, or extra text.
+
+
+Previous Maven test output (if any; fix compilation/runtime issues while keeping ALL constraints):
+
+
+
+====================================================================================================
+TEST CASE 30/46 — ITERATION 1
+Entry Point: org.apache.ibatis.logging.log4j2.Log4j2LoggerImpl.warn(java.lang.String)
+Third Party Method: org.apache.logging.log4j.MarkerManager.getMarker(java.lang.String)
+====================================================================================================
+You are an expert Java developer who writes good unit tests in order to maximize code coverage. You are specialized in Maven and JUnit 5 testing framework.
+
+Generate a JUnit 5 test that executes the given method and reaches the specified third-party method within it. No assertions, inspections, or verifications are required. The test’s only goal is to try invoking the given third-party method during execution. 
+
+You are provided with:
+thirdPartyMethod: Fully qualified third-party method that must be invoked.
+methodSources: Complete and exact source code for the method that contains the target third-party method.
+
+thirdPartyMethod: org.apache.logging.log4j.MarkerManager.getMarker(java.lang.String)
+methodSources:
+org.apache.ibatis.logging.log4j2.Log4j2LoggerImpl
+
+// Static field initializations
+private static final Marker MARKER = MarkerManager.getMarker(LogFactory.MARKER);
+
+
+Hard constraints:
+- The test class MUST NOT extend any other class (no 'extends' keyword).
+- The test class MUST NOT override any methods (no @Override annotations).
+- Do NOT create anonymous inner classes (e.g., new ClassName() { ... }).
+- Use real objects whenever possible.
+- Use mocks only when necessary, provided those objects are not directly related to the target method call.
+- Do NOT mock or spy on the class under test.
+- Do NOT alter, stub, or control the behavior of ANY method in the call path.
+- Use only the following test-related libraries: junit-jupiter, mockito-core, and mockito-junit-jupiter. Do not use any other testing or mocking libraries.
+- Do NOT add any assertions, verifications, or inspections of state/logs/output.
+- package declaration MUST be: org.apache.ibatis.logging.log4j2
+- class name MUST be: Log4j2LoggerImplmethod_MarkerManagergetMarkerFikaTest3
+- exactly ONE @Test method
+- Return ONLY the complete Java source code.
+- Do NOT include explanations, markdown, or extra text.
+
+
+Previous Maven test output (if any; fix compilation/runtime issues while keeping ALL constraints):
+
+
+
+====================================================================================================
+TEST CASE 31/46 — ITERATION 1
+Entry Point: org.apache.ibatis.logging.log4j2.Log4j2LoggerImpl.trace(java.lang.String)
+Third Party Method: org.apache.logging.log4j.MarkerManager.getMarker(java.lang.String)
+====================================================================================================
+You are an expert Java developer who writes good unit tests in order to maximize code coverage. You are specialized in Maven and JUnit 5 testing framework.
+
+Generate a JUnit 5 test that executes the given method and reaches the specified third-party method within it. No assertions, inspections, or verifications are required. The test’s only goal is to try invoking the given third-party method during execution. 
+
+You are provided with:
+thirdPartyMethod: Fully qualified third-party method that must be invoked.
+methodSources: Complete and exact source code for the method that contains the target third-party method.
+
+thirdPartyMethod: org.apache.logging.log4j.MarkerManager.getMarker(java.lang.String)
+methodSources:
+org.apache.ibatis.logging.log4j2.Log4j2LoggerImpl
+
+// Static field initializations
+private static final Marker MARKER = MarkerManager.getMarker(LogFactory.MARKER);
+
+
+Hard constraints:
+- The test class MUST NOT extend any other class (no 'extends' keyword).
+- The test class MUST NOT override any methods (no @Override annotations).
+- Do NOT create anonymous inner classes (e.g., new ClassName() { ... }).
+- Use real objects whenever possible.
+- Use mocks only when necessary, provided those objects are not directly related to the target method call.
+- Do NOT mock or spy on the class under test.
+- Do NOT alter, stub, or control the behavior of ANY method in the call path.
+- Use only the following test-related libraries: junit-jupiter, mockito-core, and mockito-junit-jupiter. Do not use any other testing or mocking libraries.
+- Do NOT add any assertions, verifications, or inspections of state/logs/output.
+- package declaration MUST be: org.apache.ibatis.logging.log4j2
+- class name MUST be: Log4j2LoggerImplmethod_MarkerManagergetMarkerFikaTest4
+- exactly ONE @Test method
+- Return ONLY the complete Java source code.
+- Do NOT include explanations, markdown, or extra text.
+
+
+Previous Maven test output (if any; fix compilation/runtime issues while keeping ALL constraints):
+
+
+
+====================================================================================================
+TEST CASE 32/46 — ITERATION 1
+Entry Point: org.apache.ibatis.logging.log4j2.Log4j2LoggerImpl.error(java.lang.String, java.lang.Throwable)
+Third Party Method: org.apache.logging.log4j.MarkerManager.getMarker(java.lang.String)
+====================================================================================================
+You are an expert Java developer who writes good unit tests in order to maximize code coverage. You are specialized in Maven and JUnit 5 testing framework.
+
+Generate a JUnit 5 test that executes the given method and reaches the specified third-party method within it. No assertions, inspections, or verifications are required. The test’s only goal is to try invoking the given third-party method during execution. 
+
+You are provided with:
+thirdPartyMethod: Fully qualified third-party method that must be invoked.
+methodSources: Complete and exact source code for the method that contains the target third-party method.
+
+thirdPartyMethod: org.apache.logging.log4j.MarkerManager.getMarker(java.lang.String)
+methodSources:
+org.apache.ibatis.logging.log4j2.Log4j2LoggerImpl
+
+// Static field initializations
+private static final Marker MARKER = MarkerManager.getMarker(LogFactory.MARKER);
+
+
+Hard constraints:
+- The test class MUST NOT extend any other class (no 'extends' keyword).
+- The test class MUST NOT override any methods (no @Override annotations).
+- Do NOT create anonymous inner classes (e.g., new ClassName() { ... }).
+- Use real objects whenever possible.
+- Use mocks only when necessary, provided those objects are not directly related to the target method call.
+- Do NOT mock or spy on the class under test.
+- Do NOT alter, stub, or control the behavior of ANY method in the call path.
+- Use only the following test-related libraries: junit-jupiter, mockito-core, and mockito-junit-jupiter. Do not use any other testing or mocking libraries.
+- Do NOT add any assertions, verifications, or inspections of state/logs/output.
+- package declaration MUST be: org.apache.ibatis.logging.log4j2
+- class name MUST be: Log4j2LoggerImplmethod_MarkerManagergetMarkerFikaTest5
+- exactly ONE @Test method
+- Return ONLY the complete Java source code.
+- Do NOT include explanations, markdown, or extra text.
+
+
+Previous Maven test output (if any; fix compilation/runtime issues while keeping ALL constraints):
+
+
+
+====================================================================================================
+TEST CASE 33/46 — ITERATION 1
+Entry Point: org.apache.ibatis.logging.log4j2.Log4j2Impl.<init>(java.lang.String)
+Third Party Method: org.apache.logging.log4j.MarkerManager.getMarker(java.lang.String)
+====================================================================================================
+You are an expert Java developer who writes good unit tests in order to maximize code coverage. You are specialized in Maven and JUnit 5 testing framework.
+
+Generate a JUnit 5 test that executes the given method and reaches the specified third-party method within it. No assertions, inspections, or verifications are required. The test’s only goal is to try invoking the given third-party method during execution. 
+
+You are provided with:
+thirdPartyMethod: Fully qualified third-party method that must be invoked.
+methodSources: Complete and exact source code for the method that contains the target third-party method.
+
+thirdPartyMethod: org.apache.logging.log4j.MarkerManager.getMarker(java.lang.String)
+methodSources:
+org.apache.ibatis.logging.log4j2.Log4j2AbstractLoggerImpl
+
+// Static field initializations
+private static final Marker MARKER = MarkerManager.getMarker(LogFactory.MARKER);
+private static final String FQCN = Log4j2Impl.class.getName();
+
+
+Hard constraints:
+- The test class MUST NOT extend any other class (no 'extends' keyword).
+- The test class MUST NOT override any methods (no @Override annotations).
+- Do NOT create anonymous inner classes (e.g., new ClassName() { ... }).
+- Use real objects whenever possible.
+- Use mocks only when necessary, provided those objects are not directly related to the target method call.
+- Do NOT mock or spy on the class under test.
+- Do NOT alter, stub, or control the behavior of ANY method in the call path.
+- Use only the following test-related libraries: junit-jupiter, mockito-core, and mockito-junit-jupiter. Do not use any other testing or mocking libraries.
+- Do NOT add any assertions, verifications, or inspections of state/logs/output.
+- package declaration MUST be: org.apache.ibatis.logging.log4j2
+- class name MUST be: Log4j2Impl_Log4j2AbstractLoggerImplmethod_MarkerManagergetMarkerFikaTest
+- exactly ONE @Test method
+- Return ONLY the complete Java source code.
+- Do NOT include explanations, markdown, or extra text.
+
+
+Previous Maven test output (if any; fix compilation/runtime issues while keeping ALL constraints):
+
+
+
+====================================================================================================
+TEST CASE 34/46 — ITERATION 1
+Entry Point: org.apache.ibatis.logging.log4j2.Log4j2Impl.<init>(java.lang.String)
+Third Party Method: org.apache.logging.log4j.MarkerManager.getMarker(java.lang.String)
+====================================================================================================
+You are an expert Java developer who writes good unit tests in order to maximize code coverage. You are specialized in Maven and JUnit 5 testing framework.
+
+Generate a JUnit 5 test that executes the given method and reaches the specified third-party method within it. No assertions, inspections, or verifications are required. The test’s only goal is to try invoking the given third-party method during execution. 
+
+You are provided with:
+thirdPartyMethod: Fully qualified third-party method that must be invoked.
+methodSources: Complete and exact source code for the method that contains the target third-party method.
+
+thirdPartyMethod: org.apache.logging.log4j.MarkerManager.getMarker(java.lang.String)
+methodSources:
+org.apache.ibatis.logging.log4j2.Log4j2LoggerImpl
+
+// Static field initializations
+private static final Marker MARKER = MarkerManager.getMarker(LogFactory.MARKER);
+
+
+Hard constraints:
+- The test class MUST NOT extend any other class (no 'extends' keyword).
+- The test class MUST NOT override any methods (no @Override annotations).
+- Do NOT create anonymous inner classes (e.g., new ClassName() { ... }).
+- Use real objects whenever possible.
+- Use mocks only when necessary, provided those objects are not directly related to the target method call.
+- Do NOT mock or spy on the class under test.
+- Do NOT alter, stub, or control the behavior of ANY method in the call path.
+- Use only the following test-related libraries: junit-jupiter, mockito-core, and mockito-junit-jupiter. Do not use any other testing or mocking libraries.
+- Do NOT add any assertions, verifications, or inspections of state/logs/output.
+- package declaration MUST be: org.apache.ibatis.logging.log4j2
+- class name MUST be: Log4j2Impl_Log4j2LoggerImplmethod_MarkerManagergetMarkerFikaTest
+- exactly ONE @Test method
+- Return ONLY the complete Java source code.
+- Do NOT include explanations, markdown, or extra text.
+
+
+Previous Maven test output (if any; fix compilation/runtime issues while keeping ALL constraints):
+
+
+
+====================================================================================================
+TEST CASE 35/46 — ITERATION 1
+Entry Point: org.apache.ibatis.executor.loader.cglib.CglibProxyFactory.EnhancedResultObjectProxyImpl.createProxy(java.lang.Object, org.apache.ibatis.executor.loader.ResultLoaderMap, org.apache.ibatis.session.Configuration, org.apache.ibatis.reflection.factory.ObjectFactory, java.util.List, java.util.List)
+Third Party Method: net.sf.cglib.proxy.Enhancer.setCallback(net.sf.cglib.proxy.Callback)
+====================================================================================================
+You are an expert Java developer who writes good unit tests in order to maximize code coverage. You are specialized in Maven and JUnit 5 testing framework.
+
+Generate a JUnit 5 test that executes the given method and reaches the specified third-party method within it. No assertions, inspections, or verifications are required. The test’s only goal is to try invoking the given third-party method during execution. 
+
+You are provided with:
+thirdPartyMethod: Fully qualified third-party method that must be invoked.
+methodSources: Complete and exact source code for the method that contains the target third-party method.
+
+thirdPartyMethod: net.sf.cglib.proxy.Enhancer.setCallback(net.sf.cglib.proxy.Callback)
+methodSources:
+static Object createStaticProxy(Class<?> type, Callback callback, List<Class<?>> constructorArgTypes, List<Object> constructorArgs) // PATH: Test should invoke the next Enhancer.setCallback(...) [step in execution path]
+{
+    LogHolder.log.warn("CglibProxyFactory is deprecated. Use another proxy factory implementation.");
+    Enhancer enhancer = new Enhancer();
+    enhancer.setCallback(callback);
+    enhancer.setSuperclass(type);
+    try {
+        type.getDeclaredMethod(WRITE_REPLACE_METHOD);
+        // ObjectOutputStream will call writeReplace of objects returned by writeReplace
+        if (LogHolder.log.isDebugEnabled()) {
+            LogHolder.log.debug(((WRITE_REPLACE_METHOD + " method was found on bean ") + type) + ", make sure it returns this");
+        }
+    } catch (NoSuchMethodException e) {
+        enhancer.setInterfaces(new Class[]{ WriteReplaceInterface.class });
+    } catch (SecurityException e) {
+        // nothing to do here
+    }
+    Object enhanced;
+    if (constructorArgTypes.isEmpty()) {
+        enhanced = enhancer.create();
+    } else {
+        Class<?>[] typesArray = constructorArgTypes.toArray(new Class[constructorArgTypes.size()]);
+        Object[] valuesArray = constructorArgs.toArray(new Object[constructorArgs.size()]);
+        enhanced = enhancer.create(typesArray, valuesArray);
+    }
+    return enhanced;
+}
+
+Hard constraints:
+- The test class MUST NOT extend any other class (no 'extends' keyword).
+- The test class MUST NOT override any methods (no @Override annotations).
+- Do NOT create anonymous inner classes (e.g., new ClassName() { ... }).
+- Use real objects whenever possible.
+- Use mocks only when necessary, provided those objects are not directly related to the target method call.
+- Do NOT mock or spy on the class under test.
+- Do NOT alter, stub, or control the behavior of ANY method in the call path.
+- Use only the following test-related libraries: junit-jupiter, mockito-core, and mockito-junit-jupiter. Do not use any other testing or mocking libraries.
+- Do NOT add any assertions, verifications, or inspections of state/logs/output.
+- package declaration MUST be: org.apache.ibatis.executor.loader.cglib
+- class name MUST be: EnhancedResultObjectProxyImpl_CglibProxyFactorycreateStaticProxy_EnhancersetCallbackFikaTest
+- exactly ONE @Test method
+- Return ONLY the complete Java source code.
+- Do NOT include explanations, markdown, or extra text.
+
+
+Previous Maven test output (if any; fix compilation/runtime issues while keeping ALL constraints):
+
+
+
+====================================================================================================
+TEST CASE 36/46 — ITERATION 1
+Entry Point: org.apache.ibatis.executor.loader.cglib.CglibProxyFactory.EnhancedDeserializationProxyImpl.createProxy(java.lang.Object, java.util.Map, org.apache.ibatis.reflection.factory.ObjectFactory, java.util.List, java.util.List)
+Third Party Method: net.sf.cglib.proxy.Enhancer.setCallback(net.sf.cglib.proxy.Callback)
+====================================================================================================
+You are an expert Java developer who writes good unit tests in order to maximize code coverage. You are specialized in Maven and JUnit 5 testing framework.
+
+Generate a JUnit 5 test that executes the given method and reaches the specified third-party method within it. No assertions, inspections, or verifications are required. The test’s only goal is to try invoking the given third-party method during execution. 
+
+You are provided with:
+thirdPartyMethod: Fully qualified third-party method that must be invoked.
+methodSources: Complete and exact source code for the method that contains the target third-party method.
+
+thirdPartyMethod: net.sf.cglib.proxy.Enhancer.setCallback(net.sf.cglib.proxy.Callback)
+methodSources:
+static Object createStaticProxy(Class<?> type, Callback callback, List<Class<?>> constructorArgTypes, List<Object> constructorArgs) // PATH: Test should invoke the next Enhancer.setCallback(...) [step in execution path]
+{
+    LogHolder.log.warn("CglibProxyFactory is deprecated. Use another proxy factory implementation.");
+    Enhancer enhancer = new Enhancer();
+    enhancer.setCallback(callback);
+    enhancer.setSuperclass(type);
+    try {
+        type.getDeclaredMethod(WRITE_REPLACE_METHOD);
+        // ObjectOutputStream will call writeReplace of objects returned by writeReplace
+        if (LogHolder.log.isDebugEnabled()) {
+            LogHolder.log.debug(((WRITE_REPLACE_METHOD + " method was found on bean ") + type) + ", make sure it returns this");
+        }
+    } catch (NoSuchMethodException e) {
+        enhancer.setInterfaces(new Class[]{ WriteReplaceInterface.class });
+    } catch (SecurityException e) {
+        // nothing to do here
+    }
+    Object enhanced;
+    if (constructorArgTypes.isEmpty()) {
+        enhanced = enhancer.create();
+    } else {
+        Class<?>[] typesArray = constructorArgTypes.toArray(new Class[constructorArgTypes.size()]);
+        Object[] valuesArray = constructorArgs.toArray(new Object[constructorArgs.size()]);
+        enhanced = enhancer.create(typesArray, valuesArray);
+    }
+    return enhanced;
+}
+
+Hard constraints:
+- The test class MUST NOT extend any other class (no 'extends' keyword).
+- The test class MUST NOT override any methods (no @Override annotations).
+- Do NOT create anonymous inner classes (e.g., new ClassName() { ... }).
+- Use real objects whenever possible.
+- Use mocks only when necessary, provided those objects are not directly related to the target method call.
+- Do NOT mock or spy on the class under test.
+- Do NOT alter, stub, or control the behavior of ANY method in the call path.
+- Use only the following test-related libraries: junit-jupiter, mockito-core, and mockito-junit-jupiter. Do not use any other testing or mocking libraries.
+- Do NOT add any assertions, verifications, or inspections of state/logs/output.
+- package declaration MUST be: org.apache.ibatis.executor.loader.cglib
+- class name MUST be: EnhancedDeserializationProxyImpl_CglibProxyFactorycreateStaticProxy_EnhancersetCallbackFikaTest
+- exactly ONE @Test method
+- Return ONLY the complete Java source code.
+- Do NOT include explanations, markdown, or extra text.
+
+
+Previous Maven test output (if any; fix compilation/runtime issues while keeping ALL constraints):
+
+
+
+====================================================================================================
+TEST CASE 37/46 — ITERATION 1
+Entry Point: org.apache.ibatis.executor.loader.cglib.CglibProxyFactory.EnhancedResultObjectProxyImpl.createProxy(java.lang.Object, org.apache.ibatis.executor.loader.ResultLoaderMap, org.apache.ibatis.session.Configuration, org.apache.ibatis.reflection.factory.ObjectFactory, java.util.List, java.util.List)
+Third Party Method: net.sf.cglib.proxy.Enhancer.create(java.lang.Class[], java.lang.Object[])
+====================================================================================================
+You are an expert Java developer who writes good unit tests in order to maximize code coverage. You are specialized in Maven and JUnit 5 testing framework.
+
+Generate a JUnit 5 test that executes the given method and reaches the specified third-party method within it. No assertions, inspections, or verifications are required. The test’s only goal is to try invoking the given third-party method during execution. 
+
+You are provided with:
+thirdPartyMethod: Fully qualified third-party method that must be invoked.
+methodSources: Complete and exact source code for the method that contains the target third-party method.
+
+thirdPartyMethod: net.sf.cglib.proxy.Enhancer.create(java.lang.Class[], java.lang.Object[])
+methodSources:
+static Object createStaticProxy(Class<?> type, Callback callback, List<Class<?>> constructorArgTypes, List<Object> constructorArgs) {
+    LogHolder.log.warn("CglibProxyFactory is deprecated. Use another proxy factory implementation.");
+    Enhancer enhancer = new Enhancer();
+    enhancer.setCallback(callback);
+    enhancer.setSuperclass(type);
+    try {
+        type.getDeclaredMethod(WRITE_REPLACE_METHOD);
+        // ObjectOutputStream will call writeReplace of objects returned by writeReplace
+        if (LogHolder.log.isDebugEnabled()) {
+            LogHolder.log.debug(((WRITE_REPLACE_METHOD + " method was found on bean ") + type) + ", make sure it returns this");
+        }
+    } catch (NoSuchMethodException e) {
+        enhancer.setInterfaces(new Class[]{ WriteReplaceInterface.class });
+    } catch (SecurityException e) {
+        // nothing to do here
+    }
+    Object enhanced;
+    if (constructorArgTypes.isEmpty()) {
+        // PATH: Test should invoke the next Enhancer.create(...) [step in execution path]
+        enhanced = enhancer.create();
+    } else {
+        Class<?>[] typesArray = constructorArgTypes.toArray(new Class[constructorArgTypes.size()]);
+        Object[] valuesArray = constructorArgs.toArray(new Object[constructorArgs.size()]);
+        enhanced = enhancer.create(typesArray, valuesArray);
+    }
+    return enhanced;
+}
+
+Hard constraints:
+- The test class MUST NOT extend any other class (no 'extends' keyword).
+- The test class MUST NOT override any methods (no @Override annotations).
+- Do NOT create anonymous inner classes (e.g., new ClassName() { ... }).
+- Use real objects whenever possible.
+- Use mocks only when necessary, provided those objects are not directly related to the target method call.
+- Do NOT mock or spy on the class under test.
+- Do NOT alter, stub, or control the behavior of ANY method in the call path.
+- Use only the following test-related libraries: junit-jupiter, mockito-core, and mockito-junit-jupiter. Do not use any other testing or mocking libraries.
+- Do NOT add any assertions, verifications, or inspections of state/logs/output.
+- package declaration MUST be: org.apache.ibatis.executor.loader.cglib
+- class name MUST be: EnhancedResultObjectProxyImpl_CglibProxyFactorycreateStaticProxy_EnhancercreateFikaTest
+- exactly ONE @Test method
+- Return ONLY the complete Java source code.
+- Do NOT include explanations, markdown, or extra text.
+
+
+Previous Maven test output (if any; fix compilation/runtime issues while keeping ALL constraints):
+
+
+
+====================================================================================================
+TEST CASE 38/46 — ITERATION 1
+Entry Point: org.apache.ibatis.executor.loader.cglib.CglibProxyFactory.EnhancedDeserializationProxyImpl.createProxy(java.lang.Object, java.util.Map, org.apache.ibatis.reflection.factory.ObjectFactory, java.util.List, java.util.List)
+Third Party Method: net.sf.cglib.proxy.Enhancer.create(java.lang.Class[], java.lang.Object[])
+====================================================================================================
+You are an expert Java developer who writes good unit tests in order to maximize code coverage. You are specialized in Maven and JUnit 5 testing framework.
+
+Generate a JUnit 5 test that executes the given method and reaches the specified third-party method within it. No assertions, inspections, or verifications are required. The test’s only goal is to try invoking the given third-party method during execution. 
+
+You are provided with:
+thirdPartyMethod: Fully qualified third-party method that must be invoked.
+methodSources: Complete and exact source code for the method that contains the target third-party method.
+
+thirdPartyMethod: net.sf.cglib.proxy.Enhancer.create(java.lang.Class[], java.lang.Object[])
+methodSources:
+static Object createStaticProxy(Class<?> type, Callback callback, List<Class<?>> constructorArgTypes, List<Object> constructorArgs) {
+    LogHolder.log.warn("CglibProxyFactory is deprecated. Use another proxy factory implementation.");
+    Enhancer enhancer = new Enhancer();
+    enhancer.setCallback(callback);
+    enhancer.setSuperclass(type);
+    try {
+        type.getDeclaredMethod(WRITE_REPLACE_METHOD);
+        // ObjectOutputStream will call writeReplace of objects returned by writeReplace
+        if (LogHolder.log.isDebugEnabled()) {
+            LogHolder.log.debug(((WRITE_REPLACE_METHOD + " method was found on bean ") + type) + ", make sure it returns this");
+        }
+    } catch (NoSuchMethodException e) {
+        enhancer.setInterfaces(new Class[]{ WriteReplaceInterface.class });
+    } catch (SecurityException e) {
+        // nothing to do here
+    }
+    Object enhanced;
+    if (constructorArgTypes.isEmpty()) {
+        // PATH: Test should invoke the next Enhancer.create(...) [step in execution path]
+        enhanced = enhancer.create();
+    } else {
+        Class<?>[] typesArray = constructorArgTypes.toArray(new Class[constructorArgTypes.size()]);
+        Object[] valuesArray = constructorArgs.toArray(new Object[constructorArgs.size()]);
+        enhanced = enhancer.create(typesArray, valuesArray);
+    }
+    return enhanced;
+}
+
+Hard constraints:
+- The test class MUST NOT extend any other class (no 'extends' keyword).
+- The test class MUST NOT override any methods (no @Override annotations).
+- Do NOT create anonymous inner classes (e.g., new ClassName() { ... }).
+- Use real objects whenever possible.
+- Use mocks only when necessary, provided those objects are not directly related to the target method call.
+- Do NOT mock or spy on the class under test.
+- Do NOT alter, stub, or control the behavior of ANY method in the call path.
+- Use only the following test-related libraries: junit-jupiter, mockito-core, and mockito-junit-jupiter. Do not use any other testing or mocking libraries.
+- Do NOT add any assertions, verifications, or inspections of state/logs/output.
+- package declaration MUST be: org.apache.ibatis.executor.loader.cglib
+- class name MUST be: EnhancedDeserializationProxyImpl_CglibProxyFactorycreateStaticProxy_EnhancercreateFikaTest
+- exactly ONE @Test method
+- Return ONLY the complete Java source code.
+- Do NOT include explanations, markdown, or extra text.
+
+
+Previous Maven test output (if any; fix compilation/runtime issues while keeping ALL constraints):
+
+
+
+====================================================================================================
+TEST CASE 39/46 — ITERATION 1
+Entry Point: org.apache.ibatis.executor.loader.cglib.CglibProxyFactory.EnhancedResultObjectProxyImpl.createProxy(java.lang.Object, org.apache.ibatis.executor.loader.ResultLoaderMap, org.apache.ibatis.session.Configuration, org.apache.ibatis.reflection.factory.ObjectFactory, java.util.List, java.util.List)
+Third Party Method: net.sf.cglib.proxy.Enhancer.create()
+====================================================================================================
+You are an expert Java developer who writes good unit tests in order to maximize code coverage. You are specialized in Maven and JUnit 5 testing framework.
+
+Generate a JUnit 5 test that executes the given method and reaches the specified third-party method within it. No assertions, inspections, or verifications are required. The test’s only goal is to try invoking the given third-party method during execution. 
+
+You are provided with:
+thirdPartyMethod: Fully qualified third-party method that must be invoked.
+methodSources: Complete and exact source code for the method that contains the target third-party method.
+
+thirdPartyMethod: net.sf.cglib.proxy.Enhancer.create()
+methodSources:
+static Object createStaticProxy(Class<?> type, Callback callback, List<Class<?>> constructorArgTypes, List<Object> constructorArgs) {
+    LogHolder.log.warn("CglibProxyFactory is deprecated. Use another proxy factory implementation.");
+    Enhancer enhancer = new Enhancer();
+    enhancer.setCallback(callback);
+    enhancer.setSuperclass(type);
+    try {
+        type.getDeclaredMethod(WRITE_REPLACE_METHOD);
+        // ObjectOutputStream will call writeReplace of objects returned by writeReplace
+        if (LogHolder.log.isDebugEnabled()) {
+            LogHolder.log.debug(((WRITE_REPLACE_METHOD + " method was found on bean ") + type) + ", make sure it returns this");
+        }
+    } catch (NoSuchMethodException e) {
+        enhancer.setInterfaces(new Class[]{ WriteReplaceInterface.class });
+    } catch (SecurityException e) {
+        // nothing to do here
+    }
+    Object enhanced;
+    if (constructorArgTypes.isEmpty()) {
+        // PATH: Test should invoke the next Enhancer.create(...) [step in execution path]
+        enhanced = enhancer.create();
+    } else {
+        Class<?>[] typesArray = constructorArgTypes.toArray(new Class[constructorArgTypes.size()]);
+        Object[] valuesArray = constructorArgs.toArray(new Object[constructorArgs.size()]);
+        enhanced = enhancer.create(typesArray, valuesArray);
+    }
+    return enhanced;
+}
+
+Hard constraints:
+- The test class MUST NOT extend any other class (no 'extends' keyword).
+- The test class MUST NOT override any methods (no @Override annotations).
+- Do NOT create anonymous inner classes (e.g., new ClassName() { ... }).
+- Use real objects whenever possible.
+- Use mocks only when necessary, provided those objects are not directly related to the target method call.
+- Do NOT mock or spy on the class under test.
+- Do NOT alter, stub, or control the behavior of ANY method in the call path.
+- Use only the following test-related libraries: junit-jupiter, mockito-core, and mockito-junit-jupiter. Do not use any other testing or mocking libraries.
+- Do NOT add any assertions, verifications, or inspections of state/logs/output.
+- package declaration MUST be: org.apache.ibatis.executor.loader.cglib
+- class name MUST be: EnhancedResultObjectProxyImpl_CglibProxyFactorycreateStaticProxy_EnhancercreateFikaTest2
+- exactly ONE @Test method
+- Return ONLY the complete Java source code.
+- Do NOT include explanations, markdown, or extra text.
+
+
+Previous Maven test output (if any; fix compilation/runtime issues while keeping ALL constraints):
+
+
+
+====================================================================================================
+TEST CASE 40/46 — ITERATION 1
+Entry Point: org.apache.ibatis.executor.loader.cglib.CglibProxyFactory.EnhancedDeserializationProxyImpl.createProxy(java.lang.Object, java.util.Map, org.apache.ibatis.reflection.factory.ObjectFactory, java.util.List, java.util.List)
+Third Party Method: net.sf.cglib.proxy.Enhancer.create()
+====================================================================================================
+You are an expert Java developer who writes good unit tests in order to maximize code coverage. You are specialized in Maven and JUnit 5 testing framework.
+
+Generate a JUnit 5 test that executes the given method and reaches the specified third-party method within it. No assertions, inspections, or verifications are required. The test’s only goal is to try invoking the given third-party method during execution. 
+
+You are provided with:
+thirdPartyMethod: Fully qualified third-party method that must be invoked.
+methodSources: Complete and exact source code for the method that contains the target third-party method.
+
+thirdPartyMethod: net.sf.cglib.proxy.Enhancer.create()
+methodSources:
+static Object createStaticProxy(Class<?> type, Callback callback, List<Class<?>> constructorArgTypes, List<Object> constructorArgs) {
+    LogHolder.log.warn("CglibProxyFactory is deprecated. Use another proxy factory implementation.");
+    Enhancer enhancer = new Enhancer();
+    enhancer.setCallback(callback);
+    enhancer.setSuperclass(type);
+    try {
+        type.getDeclaredMethod(WRITE_REPLACE_METHOD);
+        // ObjectOutputStream will call writeReplace of objects returned by writeReplace
+        if (LogHolder.log.isDebugEnabled()) {
+            LogHolder.log.debug(((WRITE_REPLACE_METHOD + " method was found on bean ") + type) + ", make sure it returns this");
+        }
+    } catch (NoSuchMethodException e) {
+        enhancer.setInterfaces(new Class[]{ WriteReplaceInterface.class });
+    } catch (SecurityException e) {
+        // nothing to do here
+    }
+    Object enhanced;
+    if (constructorArgTypes.isEmpty()) {
+        // PATH: Test should invoke the next Enhancer.create(...) [step in execution path]
+        enhanced = enhancer.create();
+    } else {
+        Class<?>[] typesArray = constructorArgTypes.toArray(new Class[constructorArgTypes.size()]);
+        Object[] valuesArray = constructorArgs.toArray(new Object[constructorArgs.size()]);
+        enhanced = enhancer.create(typesArray, valuesArray);
+    }
+    return enhanced;
+}
+
+Hard constraints:
+- The test class MUST NOT extend any other class (no 'extends' keyword).
+- The test class MUST NOT override any methods (no @Override annotations).
+- Do NOT create anonymous inner classes (e.g., new ClassName() { ... }).
+- Use real objects whenever possible.
+- Use mocks only when necessary, provided those objects are not directly related to the target method call.
+- Do NOT mock or spy on the class under test.
+- Do NOT alter, stub, or control the behavior of ANY method in the call path.
+- Use only the following test-related libraries: junit-jupiter, mockito-core, and mockito-junit-jupiter. Do not use any other testing or mocking libraries.
+- Do NOT add any assertions, verifications, or inspections of state/logs/output.
+- package declaration MUST be: org.apache.ibatis.executor.loader.cglib
+- class name MUST be: EnhancedDeserializationProxyImpl_CglibProxyFactorycreateStaticProxy_EnhancercreateFikaTest2
+- exactly ONE @Test method
+- Return ONLY the complete Java source code.
+- Do NOT include explanations, markdown, or extra text.
+
+
+Previous Maven test output (if any; fix compilation/runtime issues while keeping ALL constraints):
+
+
+
+====================================================================================================
+TEST CASE 41/46 — ITERATION 1
+Entry Point: org.apache.ibatis.executor.loader.cglib.CglibProxyFactory.EnhancedResultObjectProxyImpl.createProxy(java.lang.Object, org.apache.ibatis.executor.loader.ResultLoaderMap, org.apache.ibatis.session.Configuration, org.apache.ibatis.reflection.factory.ObjectFactory, java.util.List, java.util.List)
+Third Party Method: net.sf.cglib.proxy.Enhancer.<init>()
+====================================================================================================
+You are an expert Java developer who writes good unit tests in order to maximize code coverage. You are specialized in Maven and JUnit 5 testing framework.
+
+Generate a JUnit 5 test that executes the given method and reaches the specified third-party method within it. No assertions, inspections, or verifications are required. The test’s only goal is to try invoking the given third-party method during execution. 
+
+You are provided with:
+thirdPartyMethod: Fully qualified third-party method that must be invoked.
+methodSources: Complete and exact source code for the method that contains the target third-party method.
+
+thirdPartyMethod: net.sf.cglib.proxy.Enhancer.<init>()
+methodSources:
+static Object createStaticProxy(Class<?> type, Callback callback, List<Class<?>> constructorArgTypes, List<Object> constructorArgs) // PATH: Test should invoke the next new Enhancer(...) [step in execution path]
+{
+    LogHolder.log.warn("CglibProxyFactory is deprecated. Use another proxy factory implementation.");
+    Enhancer enhancer = new Enhancer();
+    enhancer.setCallback(callback);
+    enhancer.setSuperclass(type);
+    try {
+        type.getDeclaredMethod(WRITE_REPLACE_METHOD);
+        // ObjectOutputStream will call writeReplace of objects returned by writeReplace
+        if (LogHolder.log.isDebugEnabled()) {
+            LogHolder.log.debug(((WRITE_REPLACE_METHOD + " method was found on bean ") + type) + ", make sure it returns this");
+        }
+    } catch (NoSuchMethodException e) {
+        enhancer.setInterfaces(new Class[]{ WriteReplaceInterface.class });
+    } catch (SecurityException e) {
+        // nothing to do here
+    }
+    Object enhanced;
+    if (constructorArgTypes.isEmpty()) {
+        enhanced = enhancer.create();
+    } else {
+        Class<?>[] typesArray = constructorArgTypes.toArray(new Class[constructorArgTypes.size()]);
+        Object[] valuesArray = constructorArgs.toArray(new Object[constructorArgs.size()]);
+        enhanced = enhancer.create(typesArray, valuesArray);
+    }
+    return enhanced;
+}
+
+Hard constraints:
+- The test class MUST NOT extend any other class (no 'extends' keyword).
+- The test class MUST NOT override any methods (no @Override annotations).
+- Do NOT create anonymous inner classes (e.g., new ClassName() { ... }).
+- Use real objects whenever possible.
+- Use mocks only when necessary, provided those objects are not directly related to the target method call.
+- Do NOT mock or spy on the class under test.
+- Do NOT alter, stub, or control the behavior of ANY method in the call path.
+- Use only the following test-related libraries: junit-jupiter, mockito-core, and mockito-junit-jupiter. Do not use any other testing or mocking libraries.
+- Do NOT add any assertions, verifications, or inspections of state/logs/output.
+- package declaration MUST be: org.apache.ibatis.executor.loader.cglib
+- class name MUST be: EnhancedResultObjectProxyImpl_CglibProxyFactorycreateStaticProxy_EnhancermethodFikaTest
+- exactly ONE @Test method
+- Return ONLY the complete Java source code.
+- Do NOT include explanations, markdown, or extra text.
+
+
+Previous Maven test output (if any; fix compilation/runtime issues while keeping ALL constraints):
+
+
+
+====================================================================================================
+TEST CASE 42/46 — ITERATION 1
+Entry Point: org.apache.ibatis.executor.loader.cglib.CglibProxyFactory.EnhancedDeserializationProxyImpl.createProxy(java.lang.Object, java.util.Map, org.apache.ibatis.reflection.factory.ObjectFactory, java.util.List, java.util.List)
+Third Party Method: net.sf.cglib.proxy.Enhancer.<init>()
+====================================================================================================
+You are an expert Java developer who writes good unit tests in order to maximize code coverage. You are specialized in Maven and JUnit 5 testing framework.
+
+Generate a JUnit 5 test that executes the given method and reaches the specified third-party method within it. No assertions, inspections, or verifications are required. The test’s only goal is to try invoking the given third-party method during execution. 
+
+You are provided with:
+thirdPartyMethod: Fully qualified third-party method that must be invoked.
+methodSources: Complete and exact source code for the method that contains the target third-party method.
+
+thirdPartyMethod: net.sf.cglib.proxy.Enhancer.<init>()
+methodSources:
+static Object createStaticProxy(Class<?> type, Callback callback, List<Class<?>> constructorArgTypes, List<Object> constructorArgs) // PATH: Test should invoke the next new Enhancer(...) [step in execution path]
+{
+    LogHolder.log.warn("CglibProxyFactory is deprecated. Use another proxy factory implementation.");
+    Enhancer enhancer = new Enhancer();
+    enhancer.setCallback(callback);
+    enhancer.setSuperclass(type);
+    try {
+        type.getDeclaredMethod(WRITE_REPLACE_METHOD);
+        // ObjectOutputStream will call writeReplace of objects returned by writeReplace
+        if (LogHolder.log.isDebugEnabled()) {
+            LogHolder.log.debug(((WRITE_REPLACE_METHOD + " method was found on bean ") + type) + ", make sure it returns this");
+        }
+    } catch (NoSuchMethodException e) {
+        enhancer.setInterfaces(new Class[]{ WriteReplaceInterface.class });
+    } catch (SecurityException e) {
+        // nothing to do here
+    }
+    Object enhanced;
+    if (constructorArgTypes.isEmpty()) {
+        enhanced = enhancer.create();
+    } else {
+        Class<?>[] typesArray = constructorArgTypes.toArray(new Class[constructorArgTypes.size()]);
+        Object[] valuesArray = constructorArgs.toArray(new Object[constructorArgs.size()]);
+        enhanced = enhancer.create(typesArray, valuesArray);
+    }
+    return enhanced;
+}
+
+Hard constraints:
+- The test class MUST NOT extend any other class (no 'extends' keyword).
+- The test class MUST NOT override any methods (no @Override annotations).
+- Do NOT create anonymous inner classes (e.g., new ClassName() { ... }).
+- Use real objects whenever possible.
+- Use mocks only when necessary, provided those objects are not directly related to the target method call.
+- Do NOT mock or spy on the class under test.
+- Do NOT alter, stub, or control the behavior of ANY method in the call path.
+- Use only the following test-related libraries: junit-jupiter, mockito-core, and mockito-junit-jupiter. Do not use any other testing or mocking libraries.
+- Do NOT add any assertions, verifications, or inspections of state/logs/output.
+- package declaration MUST be: org.apache.ibatis.executor.loader.cglib
+- class name MUST be: EnhancedDeserializationProxyImpl_CglibProxyFactorycreateStaticProxy_EnhancermethodFikaTest
+- exactly ONE @Test method
+- Return ONLY the complete Java source code.
+- Do NOT include explanations, markdown, or extra text.
+
+
+Previous Maven test output (if any; fix compilation/runtime issues while keeping ALL constraints):
+
+
+
+====================================================================================================
+TEST CASE 43/46 — ITERATION 1
+Entry Point: org.apache.ibatis.executor.loader.cglib.CglibProxyFactory.EnhancedResultObjectProxyImpl.createProxy(java.lang.Object, org.apache.ibatis.executor.loader.ResultLoaderMap, org.apache.ibatis.session.Configuration, org.apache.ibatis.reflection.factory.ObjectFactory, java.util.List, java.util.List)
+Third Party Method: net.sf.cglib.proxy.Enhancer.setInterfaces(java.lang.Class[])
+====================================================================================================
+You are an expert Java developer who writes good unit tests in order to maximize code coverage. You are specialized in Maven and JUnit 5 testing framework.
+
+Generate a JUnit 5 test that executes the given method and reaches the specified third-party method within it. No assertions, inspections, or verifications are required. The test’s only goal is to try invoking the given third-party method during execution. 
+
+You are provided with:
+thirdPartyMethod: Fully qualified third-party method that must be invoked.
+methodSources: Complete and exact source code for the method that contains the target third-party method.
+
+thirdPartyMethod: net.sf.cglib.proxy.Enhancer.setInterfaces(java.lang.Class[])
+methodSources:
+static Object createStaticProxy(Class<?> type, Callback callback, List<Class<?>> constructorArgTypes, List<Object> constructorArgs) {
+    LogHolder.log.warn("CglibProxyFactory is deprecated. Use another proxy factory implementation.");
+    Enhancer enhancer = new Enhancer();
+    enhancer.setCallback(callback);
+    enhancer.setSuperclass(type);
+    try {
+        type.getDeclaredMethod(WRITE_REPLACE_METHOD);
+        // ObjectOutputStream will call writeReplace of objects returned by writeReplace
+        if (LogHolder.log.isDebugEnabled()) {
+            LogHolder.log.debug(((WRITE_REPLACE_METHOD + " method was found on bean ") + type) + ", make sure it returns this");
+        }
+    } catch (NoSuchMethodException e) // PATH: Test should invoke the next Enhancer.setInterfaces(...) [step in execution path]
+    {
+        enhancer.setInterfaces(new Class[]{ WriteReplaceInterface.class });
+    } catch (SecurityException e) {
+        // nothing to do here
+    }
+    Object enhanced;
+    if (constructorArgTypes.isEmpty()) {
+        enhanced = enhancer.create();
+    } else {
+        Class<?>[] typesArray = constructorArgTypes.toArray(new Class[constructorArgTypes.size()]);
+        Object[] valuesArray = constructorArgs.toArray(new Object[constructorArgs.size()]);
+        enhanced = enhancer.create(typesArray, valuesArray);
+    }
+    return enhanced;
+}
+
+Hard constraints:
+- The test class MUST NOT extend any other class (no 'extends' keyword).
+- The test class MUST NOT override any methods (no @Override annotations).
+- Do NOT create anonymous inner classes (e.g., new ClassName() { ... }).
+- Use real objects whenever possible.
+- Use mocks only when necessary, provided those objects are not directly related to the target method call.
+- Do NOT mock or spy on the class under test.
+- Do NOT alter, stub, or control the behavior of ANY method in the call path.
+- Use only the following test-related libraries: junit-jupiter, mockito-core, and mockito-junit-jupiter. Do not use any other testing or mocking libraries.
+- Do NOT add any assertions, verifications, or inspections of state/logs/output.
+- package declaration MUST be: org.apache.ibatis.executor.loader.cglib
+- class name MUST be: EnhancedResultObjectProxyImpl_CglibProxyFactorycreateStaticProxy_EnhancersetInterfacesFikaTest
+- exactly ONE @Test method
+- Return ONLY the complete Java source code.
+- Do NOT include explanations, markdown, or extra text.
+
+
+Previous Maven test output (if any; fix compilation/runtime issues while keeping ALL constraints):
+
+
+
+====================================================================================================
+TEST CASE 44/46 — ITERATION 1
+Entry Point: org.apache.ibatis.executor.loader.cglib.CglibProxyFactory.EnhancedDeserializationProxyImpl.createProxy(java.lang.Object, java.util.Map, org.apache.ibatis.reflection.factory.ObjectFactory, java.util.List, java.util.List)
+Third Party Method: net.sf.cglib.proxy.Enhancer.setInterfaces(java.lang.Class[])
+====================================================================================================
+You are an expert Java developer who writes good unit tests in order to maximize code coverage. You are specialized in Maven and JUnit 5 testing framework.
+
+Generate a JUnit 5 test that executes the given method and reaches the specified third-party method within it. No assertions, inspections, or verifications are required. The test’s only goal is to try invoking the given third-party method during execution. 
+
+You are provided with:
+thirdPartyMethod: Fully qualified third-party method that must be invoked.
+methodSources: Complete and exact source code for the method that contains the target third-party method.
+
+thirdPartyMethod: net.sf.cglib.proxy.Enhancer.setInterfaces(java.lang.Class[])
+methodSources:
+static Object createStaticProxy(Class<?> type, Callback callback, List<Class<?>> constructorArgTypes, List<Object> constructorArgs) {
+    LogHolder.log.warn("CglibProxyFactory is deprecated. Use another proxy factory implementation.");
+    Enhancer enhancer = new Enhancer();
+    enhancer.setCallback(callback);
+    enhancer.setSuperclass(type);
+    try {
+        type.getDeclaredMethod(WRITE_REPLACE_METHOD);
+        // ObjectOutputStream will call writeReplace of objects returned by writeReplace
+        if (LogHolder.log.isDebugEnabled()) {
+            LogHolder.log.debug(((WRITE_REPLACE_METHOD + " method was found on bean ") + type) + ", make sure it returns this");
+        }
+    } catch (NoSuchMethodException e) // PATH: Test should invoke the next Enhancer.setInterfaces(...) [step in execution path]
+    {
+        enhancer.setInterfaces(new Class[]{ WriteReplaceInterface.class });
+    } catch (SecurityException e) {
+        // nothing to do here
+    }
+    Object enhanced;
+    if (constructorArgTypes.isEmpty()) {
+        enhanced = enhancer.create();
+    } else {
+        Class<?>[] typesArray = constructorArgTypes.toArray(new Class[constructorArgTypes.size()]);
+        Object[] valuesArray = constructorArgs.toArray(new Object[constructorArgs.size()]);
+        enhanced = enhancer.create(typesArray, valuesArray);
+    }
+    return enhanced;
+}
+
+Hard constraints:
+- The test class MUST NOT extend any other class (no 'extends' keyword).
+- The test class MUST NOT override any methods (no @Override annotations).
+- Do NOT create anonymous inner classes (e.g., new ClassName() { ... }).
+- Use real objects whenever possible.
+- Use mocks only when necessary, provided those objects are not directly related to the target method call.
+- Do NOT mock or spy on the class under test.
+- Do NOT alter, stub, or control the behavior of ANY method in the call path.
+- Use only the following test-related libraries: junit-jupiter, mockito-core, and mockito-junit-jupiter. Do not use any other testing or mocking libraries.
+- Do NOT add any assertions, verifications, or inspections of state/logs/output.
+- package declaration MUST be: org.apache.ibatis.executor.loader.cglib
+- class name MUST be: EnhancedDeserializationProxyImpl_CglibProxyFactorycreateStaticProxy_EnhancersetInterfacesFikaTest
+- exactly ONE @Test method
+- Return ONLY the complete Java source code.
+- Do NOT include explanations, markdown, or extra text.
+
+
+Previous Maven test output (if any; fix compilation/runtime issues while keeping ALL constraints):
+
+
+
+====================================================================================================
+TEST CASE 45/46 — ITERATION 1
+Entry Point: org.apache.ibatis.executor.loader.cglib.CglibProxyFactory.EnhancedResultObjectProxyImpl.createProxy(java.lang.Object, org.apache.ibatis.executor.loader.ResultLoaderMap, org.apache.ibatis.session.Configuration, org.apache.ibatis.reflection.factory.ObjectFactory, java.util.List, java.util.List)
+Third Party Method: net.sf.cglib.proxy.Enhancer.setSuperclass(java.lang.Class)
+====================================================================================================
+You are an expert Java developer who writes good unit tests in order to maximize code coverage. You are specialized in Maven and JUnit 5 testing framework.
+
+Generate a JUnit 5 test that executes the given method and reaches the specified third-party method within it. No assertions, inspections, or verifications are required. The test’s only goal is to try invoking the given third-party method during execution. 
+
+You are provided with:
+thirdPartyMethod: Fully qualified third-party method that must be invoked.
+methodSources: Complete and exact source code for the method that contains the target third-party method.
+
+thirdPartyMethod: net.sf.cglib.proxy.Enhancer.setSuperclass(java.lang.Class)
+methodSources:
+static Object createStaticProxy(Class<?> type, Callback callback, List<Class<?>> constructorArgTypes, List<Object> constructorArgs) // PATH: Test should invoke the next Enhancer.setSuperclass(...) [step in execution path]
+{
+    LogHolder.log.warn("CglibProxyFactory is deprecated. Use another proxy factory implementation.");
+    Enhancer enhancer = new Enhancer();
+    enhancer.setCallback(callback);
+    enhancer.setSuperclass(type);
+    try {
+        type.getDeclaredMethod(WRITE_REPLACE_METHOD);
+        // ObjectOutputStream will call writeReplace of objects returned by writeReplace
+        if (LogHolder.log.isDebugEnabled()) {
+            LogHolder.log.debug(((WRITE_REPLACE_METHOD + " method was found on bean ") + type) + ", make sure it returns this");
+        }
+    } catch (NoSuchMethodException e) {
+        enhancer.setInterfaces(new Class[]{ WriteReplaceInterface.class });
+    } catch (SecurityException e) {
+        // nothing to do here
+    }
+    Object enhanced;
+    if (constructorArgTypes.isEmpty()) {
+        enhanced = enhancer.create();
+    } else {
+        Class<?>[] typesArray = constructorArgTypes.toArray(new Class[constructorArgTypes.size()]);
+        Object[] valuesArray = constructorArgs.toArray(new Object[constructorArgs.size()]);
+        enhanced = enhancer.create(typesArray, valuesArray);
+    }
+    return enhanced;
+}
+
+Hard constraints:
+- The test class MUST NOT extend any other class (no 'extends' keyword).
+- The test class MUST NOT override any methods (no @Override annotations).
+- Do NOT create anonymous inner classes (e.g., new ClassName() { ... }).
+- Use real objects whenever possible.
+- Use mocks only when necessary, provided those objects are not directly related to the target method call.
+- Do NOT mock or spy on the class under test.
+- Do NOT alter, stub, or control the behavior of ANY method in the call path.
+- Use only the following test-related libraries: junit-jupiter, mockito-core, and mockito-junit-jupiter. Do not use any other testing or mocking libraries.
+- Do NOT add any assertions, verifications, or inspections of state/logs/output.
+- package declaration MUST be: org.apache.ibatis.executor.loader.cglib
+- class name MUST be: EnhancedResultObjectProxyImpl_CglibProxyFactorycreateStaticProxy_EnhancersetSuperclassFikaTest
+- exactly ONE @Test method
+- Return ONLY the complete Java source code.
+- Do NOT include explanations, markdown, or extra text.
+
+
+Previous Maven test output (if any; fix compilation/runtime issues while keeping ALL constraints):
+
+
+
+====================================================================================================
+TEST CASE 46/46 — ITERATION 1
+Entry Point: org.apache.ibatis.executor.loader.cglib.CglibProxyFactory.EnhancedDeserializationProxyImpl.createProxy(java.lang.Object, java.util.Map, org.apache.ibatis.reflection.factory.ObjectFactory, java.util.List, java.util.List)
+Third Party Method: net.sf.cglib.proxy.Enhancer.setSuperclass(java.lang.Class)
+====================================================================================================
+You are an expert Java developer who writes good unit tests in order to maximize code coverage. You are specialized in Maven and JUnit 5 testing framework.
+
+Generate a JUnit 5 test that executes the given method and reaches the specified third-party method within it. No assertions, inspections, or verifications are required. The test’s only goal is to try invoking the given third-party method during execution. 
+
+You are provided with:
+thirdPartyMethod: Fully qualified third-party method that must be invoked.
+methodSources: Complete and exact source code for the method that contains the target third-party method.
+
+thirdPartyMethod: net.sf.cglib.proxy.Enhancer.setSuperclass(java.lang.Class)
+methodSources:
+static Object createStaticProxy(Class<?> type, Callback callback, List<Class<?>> constructorArgTypes, List<Object> constructorArgs) // PATH: Test should invoke the next Enhancer.setSuperclass(...) [step in execution path]
+{
+    LogHolder.log.warn("CglibProxyFactory is deprecated. Use another proxy factory implementation.");
+    Enhancer enhancer = new Enhancer();
+    enhancer.setCallback(callback);
+    enhancer.setSuperclass(type);
+    try {
+        type.getDeclaredMethod(WRITE_REPLACE_METHOD);
+        // ObjectOutputStream will call writeReplace of objects returned by writeReplace
+        if (LogHolder.log.isDebugEnabled()) {
+            LogHolder.log.debug(((WRITE_REPLACE_METHOD + " method was found on bean ") + type) + ", make sure it returns this");
+        }
+    } catch (NoSuchMethodException e) {
+        enhancer.setInterfaces(new Class[]{ WriteReplaceInterface.class });
+    } catch (SecurityException e) {
+        // nothing to do here
+    }
+    Object enhanced;
+    if (constructorArgTypes.isEmpty()) {
+        enhanced = enhancer.create();
+    } else {
+        Class<?>[] typesArray = constructorArgTypes.toArray(new Class[constructorArgTypes.size()]);
+        Object[] valuesArray = constructorArgs.toArray(new Object[constructorArgs.size()]);
+        enhanced = enhancer.create(typesArray, valuesArray);
+    }
+    return enhanced;
+}
+
+Hard constraints:
+- The test class MUST NOT extend any other class (no 'extends' keyword).
+- The test class MUST NOT override any methods (no @Override annotations).
+- Do NOT create anonymous inner classes (e.g., new ClassName() { ... }).
+- Use real objects whenever possible.
+- Use mocks only when necessary, provided those objects are not directly related to the target method call.
+- Do NOT mock or spy on the class under test.
+- Do NOT alter, stub, or control the behavior of ANY method in the call path.
+- Use only the following test-related libraries: junit-jupiter, mockito-core, and mockito-junit-jupiter. Do not use any other testing or mocking libraries.
+- Do NOT add any assertions, verifications, or inspections of state/logs/output.
+- package declaration MUST be: org.apache.ibatis.executor.loader.cglib
+- class name MUST be: EnhancedDeserializationProxyImpl_CglibProxyFactorycreateStaticProxy_EnhancersetSuperclassFikaTest
+- exactly ONE @Test method
+- Return ONLY the complete Java source code.
+- Do NOT include explanations, markdown, or extra text.
+
+
+Previous Maven test output (if any; fix compilation/runtime issues while keeping ALL constraints):
+
+
+
