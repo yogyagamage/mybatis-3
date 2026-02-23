@@ -1,0 +1,193 @@
+[ {
+  "caller" : "org.apache.ibatis.logging.log4j.Log4jImpl.isDebugEnabled()",
+  "covered" : true,
+  "thirdPartyMethod" : "org.apache.log4j.Logger.isDebugEnabled()"
+}, {
+  "caller" : "org.apache.ibatis.logging.log4j2.Log4j2LoggerImpl.isTraceEnabled()",
+  "covered" : false,
+  "thirdPartyMethod" : "org.apache.logging.log4j.Logger.isTraceEnabled()"
+}, {
+  "caller" : "org.apache.ibatis.logging.log4j2.Log4j2LoggerImpl.isDebugEnabled()",
+  "covered" : false,
+  "thirdPartyMethod" : "org.apache.logging.log4j.Logger.isDebugEnabled()"
+}, {
+  "caller" : "org.apache.ibatis.logging.log4j.Log4jImpl.isTraceEnabled()",
+  "covered" : false,
+  "thirdPartyMethod" : "org.apache.log4j.Logger.isTraceEnabled()"
+}, {
+  "caller" : "org.apache.ibatis.logging.commons.JakartaCommonsLoggingImpl.isTraceEnabled()",
+  "covered" : false,
+  "thirdPartyMethod" : "org.apache.commons.logging.Log.isTraceEnabled()"
+}, {
+  "caller" : "org.apache.ibatis.logging.log4j2.Log4j2AbstractLoggerImpl.error(java.lang.String)",
+  "covered" : true,
+  "thirdPartyMethod" : "org.apache.logging.log4j.message.SimpleMessage.<init>(java.lang.String)"
+}, {
+  "caller" : "org.apache.ibatis.logging.log4j2.Log4j2AbstractLoggerImpl.error(java.lang.String)",
+  "covered" : true,
+  "thirdPartyMethod" : "org.apache.logging.log4j.spi.ExtendedLoggerWrapper.logIfEnabled(java.lang.String, org.apache.logging.log4j.Level, org.apache.logging.log4j.Marker, org.apache.logging.log4j.message.Message, java.lang.Throwable)"
+}, {
+  "caller" : "org.apache.ibatis.logging.log4j2.Log4j2AbstractLoggerImpl.<clinit>()",
+  "covered" : false,
+  "thirdPartyMethod" : "org.apache.logging.log4j.MarkerManager.getMarker(java.lang.String)"
+}, {
+  "caller" : "org.apache.ibatis.executor.loader.cglib.CglibProxyFactory.EnhancedResultObjectProxyImpl.intercept(java.lang.Object, java.lang.reflect.Method, java.lang.Object[], net.sf.cglib.proxy.MethodProxy)",
+  "covered" : false,
+  "thirdPartyMethod" : "net.sf.cglib.proxy.MethodProxy.invokeSuper(java.lang.Object, java.lang.Object[])"
+}, {
+  "caller" : "org.apache.ibatis.logging.log4j2.Log4j2LoggerImpl.error(java.lang.String, java.lang.Throwable)",
+  "covered" : false,
+  "thirdPartyMethod" : "org.apache.logging.log4j.Logger.error(org.apache.logging.log4j.Marker, java.lang.String, java.lang.Throwable)"
+}, {
+  "caller" : "org.apache.ibatis.logging.log4j2.Log4j2AbstractLoggerImpl.isDebugEnabled()",
+  "covered" : true,
+  "thirdPartyMethod" : "org.apache.logging.log4j.spi.ExtendedLoggerWrapper.isDebugEnabled()"
+}, {
+  "caller" : "org.apache.ibatis.logging.log4j2.Log4j2LoggerImpl.<clinit>()",
+  "covered" : false,
+  "thirdPartyMethod" : "org.apache.logging.log4j.MarkerManager.getMarker(java.lang.String)"
+}, {
+  "caller" : "org.apache.ibatis.logging.log4j2.Log4j2AbstractLoggerImpl.warn(java.lang.String)",
+  "covered" : true,
+  "thirdPartyMethod" : "org.apache.logging.log4j.message.SimpleMessage.<init>(java.lang.String)"
+}, {
+  "caller" : "org.apache.ibatis.logging.log4j2.Log4j2AbstractLoggerImpl.warn(java.lang.String)",
+  "covered" : true,
+  "thirdPartyMethod" : "org.apache.logging.log4j.spi.ExtendedLoggerWrapper.logIfEnabled(java.lang.String, org.apache.logging.log4j.Level, org.apache.logging.log4j.Marker, org.apache.logging.log4j.message.Message, java.lang.Throwable)"
+}, {
+  "caller" : "org.apache.ibatis.logging.log4j2.Log4j2LoggerImpl.error(java.lang.String)",
+  "covered" : false,
+  "thirdPartyMethod" : "org.apache.logging.log4j.Logger.error(org.apache.logging.log4j.Marker, java.lang.String)"
+}, {
+  "caller" : "org.apache.ibatis.logging.log4j2.Log4j2AbstractLoggerImpl.isTraceEnabled()",
+  "covered" : false,
+  "thirdPartyMethod" : "org.apache.logging.log4j.spi.ExtendedLoggerWrapper.isTraceEnabled()"
+}, {
+  "caller" : "org.apache.ibatis.logging.log4j.Log4jImpl.error(java.lang.String)",
+  "covered" : true,
+  "thirdPartyMethod" : "org.apache.log4j.Logger.log(java.lang.String, org.apache.log4j.Priority, java.lang.Object, java.lang.Throwable)"
+}, {
+  "caller" : "org.apache.ibatis.logging.commons.JakartaCommonsLoggingImpl.<init>(java.lang.String)",
+  "covered" : false,
+  "thirdPartyMethod" : "org.apache.commons.logging.LogFactory.getLog(java.lang.String)"
+}, {
+  "caller" : "org.apache.ibatis.logging.log4j2.Log4j2LoggerImpl.trace(java.lang.String)",
+  "covered" : false,
+  "thirdPartyMethod" : "org.apache.logging.log4j.Logger.trace(org.apache.logging.log4j.Marker, java.lang.String)"
+}, {
+  "caller" : "org.apache.ibatis.logging.commons.JakartaCommonsLoggingImpl.warn(java.lang.String)",
+  "covered" : false,
+  "thirdPartyMethod" : "org.apache.commons.logging.Log.warn(java.lang.Object)"
+}, {
+  "caller" : "org.apache.ibatis.logging.log4j.Log4jImpl.debug(java.lang.String)",
+  "covered" : true,
+  "thirdPartyMethod" : "org.apache.log4j.Logger.log(java.lang.String, org.apache.log4j.Priority, java.lang.Object, java.lang.Throwable)"
+}, {
+  "caller" : "org.apache.ibatis.logging.log4j.Log4jImpl.trace(java.lang.String)",
+  "covered" : false,
+  "thirdPartyMethod" : "org.apache.log4j.Logger.log(java.lang.String, org.apache.log4j.Priority, java.lang.Object, java.lang.Throwable)"
+}, {
+  "caller" : "org.apache.ibatis.logging.log4j2.Log4j2LoggerImpl.warn(java.lang.String)",
+  "covered" : false,
+  "thirdPartyMethod" : "org.apache.logging.log4j.Logger.warn(org.apache.logging.log4j.Marker, java.lang.String)"
+}, {
+  "caller" : "org.apache.ibatis.logging.log4j2.Log4j2LoggerImpl.debug(java.lang.String)",
+  "covered" : false,
+  "thirdPartyMethod" : "org.apache.logging.log4j.Logger.debug(org.apache.logging.log4j.Marker, java.lang.String)"
+}, {
+  "caller" : "org.apache.ibatis.logging.commons.JakartaCommonsLoggingImpl.debug(java.lang.String)",
+  "covered" : false,
+  "thirdPartyMethod" : "org.apache.commons.logging.Log.debug(java.lang.Object)"
+}, {
+  "caller" : "org.apache.ibatis.logging.log4j.Log4jImpl.warn(java.lang.String)",
+  "covered" : true,
+  "thirdPartyMethod" : "org.apache.log4j.Logger.log(java.lang.String, org.apache.log4j.Priority, java.lang.Object, java.lang.Throwable)"
+}, {
+  "caller" : "org.apache.ibatis.logging.commons.JakartaCommonsLoggingImpl.trace(java.lang.String)",
+  "covered" : false,
+  "thirdPartyMethod" : "org.apache.commons.logging.Log.trace(java.lang.Object)"
+}, {
+  "caller" : "org.apache.ibatis.logging.log4j2.Log4j2AbstractLoggerImpl.error(java.lang.String, java.lang.Throwable)",
+  "covered" : true,
+  "thirdPartyMethod" : "org.apache.logging.log4j.message.SimpleMessage.<init>(java.lang.String)"
+}, {
+  "caller" : "org.apache.ibatis.logging.log4j2.Log4j2AbstractLoggerImpl.error(java.lang.String, java.lang.Throwable)",
+  "covered" : true,
+  "thirdPartyMethod" : "org.apache.logging.log4j.spi.ExtendedLoggerWrapper.logIfEnabled(java.lang.String, org.apache.logging.log4j.Level, org.apache.logging.log4j.Marker, org.apache.logging.log4j.message.Message, java.lang.Throwable)"
+}, {
+  "caller" : "org.apache.ibatis.executor.loader.cglib.CglibProxyFactory.createStaticProxy(java.lang.Class, net.sf.cglib.proxy.Callback, java.util.List, java.util.List)",
+  "covered" : false,
+  "thirdPartyMethod" : "net.sf.cglib.proxy.Enhancer.<init>()"
+}, {
+  "caller" : "org.apache.ibatis.executor.loader.cglib.CglibProxyFactory.createStaticProxy(java.lang.Class, net.sf.cglib.proxy.Callback, java.util.List, java.util.List)",
+  "covered" : false,
+  "thirdPartyMethod" : "net.sf.cglib.proxy.Enhancer.setCallback(net.sf.cglib.proxy.Callback)"
+}, {
+  "caller" : "org.apache.ibatis.executor.loader.cglib.CglibProxyFactory.createStaticProxy(java.lang.Class, net.sf.cglib.proxy.Callback, java.util.List, java.util.List)",
+  "covered" : false,
+  "thirdPartyMethod" : "net.sf.cglib.proxy.Enhancer.setSuperclass(java.lang.Class)"
+}, {
+  "caller" : "org.apache.ibatis.executor.loader.cglib.CglibProxyFactory.createStaticProxy(java.lang.Class, net.sf.cglib.proxy.Callback, java.util.List, java.util.List)",
+  "covered" : false,
+  "thirdPartyMethod" : "net.sf.cglib.proxy.Enhancer.create()"
+}, {
+  "caller" : "org.apache.ibatis.executor.loader.cglib.CglibProxyFactory.createStaticProxy(java.lang.Class, net.sf.cglib.proxy.Callback, java.util.List, java.util.List)",
+  "covered" : false,
+  "thirdPartyMethod" : "net.sf.cglib.proxy.Enhancer.create(java.lang.Class[], java.lang.Object[])"
+}, {
+  "caller" : "org.apache.ibatis.executor.loader.cglib.CglibProxyFactory.createStaticProxy(java.lang.Class, net.sf.cglib.proxy.Callback, java.util.List, java.util.List)",
+  "covered" : false,
+  "thirdPartyMethod" : "net.sf.cglib.proxy.Enhancer.setInterfaces(java.lang.Class[])"
+}, {
+  "caller" : "org.apache.ibatis.logging.log4j.Log4jImpl.<init>(java.lang.String)",
+  "covered" : false,
+  "thirdPartyMethod" : "org.apache.log4j.Logger.getLogger(java.lang.String)"
+}, {
+  "caller" : "org.apache.ibatis.logging.log4j2.Log4j2Impl.<init>(java.lang.String)",
+  "covered" : false,
+  "thirdPartyMethod" : "org.apache.logging.log4j.LogManager.getLogger(java.lang.String)"
+}, {
+  "caller" : "org.apache.ibatis.logging.log4j.Log4jImpl.error(java.lang.String, java.lang.Throwable)",
+  "covered" : true,
+  "thirdPartyMethod" : "org.apache.log4j.Logger.log(java.lang.String, org.apache.log4j.Priority, java.lang.Object, java.lang.Throwable)"
+}, {
+  "caller" : "org.apache.ibatis.logging.log4j2.Log4j2AbstractLoggerImpl.debug(java.lang.String)",
+  "covered" : true,
+  "thirdPartyMethod" : "org.apache.logging.log4j.message.SimpleMessage.<init>(java.lang.String)"
+}, {
+  "caller" : "org.apache.ibatis.logging.log4j2.Log4j2AbstractLoggerImpl.debug(java.lang.String)",
+  "covered" : true,
+  "thirdPartyMethod" : "org.apache.logging.log4j.spi.ExtendedLoggerWrapper.logIfEnabled(java.lang.String, org.apache.logging.log4j.Level, org.apache.logging.log4j.Marker, org.apache.logging.log4j.message.Message, java.lang.Throwable)"
+}, {
+  "caller" : "org.apache.ibatis.logging.log4j2.Log4j2AbstractLoggerImpl.trace(java.lang.String)",
+  "covered" : false,
+  "thirdPartyMethod" : "org.apache.logging.log4j.message.SimpleMessage.<init>(java.lang.String)"
+}, {
+  "caller" : "org.apache.ibatis.logging.log4j2.Log4j2AbstractLoggerImpl.trace(java.lang.String)",
+  "covered" : false,
+  "thirdPartyMethod" : "org.apache.logging.log4j.spi.ExtendedLoggerWrapper.logIfEnabled(java.lang.String, org.apache.logging.log4j.Level, org.apache.logging.log4j.Marker, org.apache.logging.log4j.message.Message, java.lang.Throwable)"
+}, {
+  "caller" : "org.apache.ibatis.logging.commons.JakartaCommonsLoggingImpl.error(java.lang.String)",
+  "covered" : true,
+  "thirdPartyMethod" : "org.apache.commons.logging.Log.error(java.lang.Object)"
+}, {
+  "caller" : "org.apache.ibatis.logging.commons.JakartaCommonsLoggingImpl.error(java.lang.String, java.lang.Throwable)",
+  "covered" : true,
+  "thirdPartyMethod" : "org.apache.commons.logging.Log.error(java.lang.Object, java.lang.Throwable)"
+}, {
+  "caller" : "org.apache.ibatis.logging.commons.JakartaCommonsLoggingImpl.isDebugEnabled()",
+  "covered" : true,
+  "thirdPartyMethod" : "org.apache.commons.logging.Log.isDebugEnabled()"
+}, {
+  "caller" : "org.apache.ibatis.logging.log4j2.Log4j2AbstractLoggerImpl.<init>(org.apache.logging.log4j.spi.AbstractLogger)",
+  "covered" : true,
+  "thirdPartyMethod" : "org.apache.logging.log4j.spi.AbstractLogger.getName()"
+}, {
+  "caller" : "org.apache.ibatis.logging.log4j2.Log4j2AbstractLoggerImpl.<init>(org.apache.logging.log4j.spi.AbstractLogger)",
+  "covered" : true,
+  "thirdPartyMethod" : "org.apache.logging.log4j.spi.AbstractLogger.getMessageFactory()"
+}, {
+  "caller" : "org.apache.ibatis.logging.log4j2.Log4j2AbstractLoggerImpl.<init>(org.apache.logging.log4j.spi.AbstractLogger)",
+  "covered" : false,
+  "thirdPartyMethod" : "org.apache.logging.log4j.spi.ExtendedLoggerWrapper.<init>(org.apache.logging.log4j.spi.ExtendedLogger, java.lang.String, org.apache.logging.log4j.message.MessageFactory)"
+} ]

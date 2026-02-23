@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
 
-       Copyright 2009-2025 the original author or authors.
+       Copyright 2009-2026 the original author or authors.
 
        Licensed under the Apache License, Version 2.0 (the "License");
        you may not use this file except in compliance with the License.
@@ -408,16 +408,16 @@
           <locales>default,es,ja,fr,zh_CN,ko</locales>
         </configuration>
       </plugin>
-<!--      <plugin>-->
-<!--        <groupId>org.jacoco</groupId>-->
-<!--        <artifactId>jacoco-maven-plugin</artifactId>-->
-<!--        <configuration>-->
-<!--          <excludes>-->
-<!--            <exclude>org.apache.ibatis.ognl.*</exclude>-->
-<!--            <exclude>org.apache.ibatis.javassist.*</exclude>-->
-<!--          </excludes>-->
-<!--        </configuration>-->
-<!--      </plugin>-->
+      <!--      <plugin>-->
+      <!--        <groupId>org.jacoco</groupId>-->
+      <!--        <artifactId>jacoco-maven-plugin</artifactId>-->
+      <!--        <configuration>-->
+      <!--          <excludes>-->
+      <!--            <exclude>org.apache.ibatis.ognl.*</exclude>-->
+      <!--            <exclude>org.apache.ibatis.javassist.*</exclude>-->
+      <!--          </excludes>-->
+      <!--        </configuration>-->
+      <!--      </plugin>-->
 
       <!-- Remove enforcer entirely after parent 49 release -->
       <plugin>
@@ -430,7 +430,8 @@
               <ignoredScopes>provided,test</ignoredScopes>
             </enforceBytecodeVersion>
             <requireMavenVersion>
-              <version>[3.6.0,)</version> <!-- override mvn version -->
+              <version>[3.6.0,)</version>
+              <!-- override mvn version -->
             </requireMavenVersion>
           </rules>
         </configuration>
@@ -466,10 +467,10 @@
           </execution>
           <execution>
             <id>report</id>
-            <phase>test</phase>
             <goals>
               <goal>report</goal>
             </goals>
+            <phase>test</phase>
           </execution>
         </executions>
       </plugin>
