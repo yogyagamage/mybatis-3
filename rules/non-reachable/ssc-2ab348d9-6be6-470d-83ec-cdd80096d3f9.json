@@ -1,0 +1,126 @@
+{
+  "advisories": [
+    {
+      "ruleId": "ssc-2ab348d9-6be6-470d-83ec-cdd80096d3f9",
+      "title": "Allocation of Resources Without Limits or Throttling in org.apache.commons:commons-compress",
+      "description": "Affected versions of org.apache.commons:commons-compress are vulnerable to Resource Exhaustion. Specifically, it is Allocation of Resources Without Limits or Throttling. Excessive consumption of resources can lead to DoS.",
+      "ecosystem": "maven",
+      "severity": "MEDIUM",
+      "references": {
+        "cveIds": [
+          "CVE-2024-26308"
+        ],
+        "cweIds": [
+          "CWE-770: Allocation of Resources Without Limits or Throttling"
+        ],
+        "owaspIds": [
+          "A06:2021 - Vulnerable and Outdated Components"
+        ],
+        "urls": [
+          "https://github.com/advisories/GHSA-4265-ccf5-phj5",
+          "https://nvd.nist.gov/vuln/detail/CVE-2024-26308"
+        ]
+      },
+      "announcedAt": "2024-02-19T09:30:52Z",
+      "ruleText": {
+        "id": "ssc-2ab348d9-6be6-470d-83ec-cdd80096d3f9",
+        "message": "Affected versions of org.apache.commons:commons-compress are vulnerable to Resource Exhaustion. Specifically, it is Allocation of Resources Without Limits or Throttling. Excessive consumption of resources can lead to DoS.",
+        "severity": "WARNING",
+        "metadata": {
+          "confidence": "HIGH",
+          "category": "security",
+          "cve": "CVE-2024-26308",
+          "cwe": [
+            "CWE-770: Allocation of Resources Without Limits or Throttling"
+          ],
+          "ghsa": "GHSA-4265-ccf5-phj5",
+          "owasp": [
+            "A06:2021 - Vulnerable and Outdated Components"
+          ],
+          "publish-date": "2024-02-19T09:30:52Z",
+          "references": [
+            "https://github.com/advisories/GHSA-4265-ccf5-phj5",
+            "https://nvd.nist.gov/vuln/detail/CVE-2024-26308"
+          ],
+          "sca-fix-versions": [
+            {
+              "org.apache.commons:commons-compress": "1.26.0"
+            }
+          ],
+          "sca-kind": "reachable",
+          "sca-schema": 20230302,
+          "sca-severity": "MODERATE",
+          "sca-vuln-database-identifier": "CVE-2024-26308",
+          "technology": [
+            "java",
+            "kotlin",
+            "scala"
+          ],
+          "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+          "vulnerability_class": [
+            "Other"
+          ],
+          "semgrep.dev": {
+            "rule": {
+              "r_id": 116249,
+              "rv_id": 1181260,
+              "rule_id": "qNU2v52",
+              "version_id": "9lT5Bkb",
+              "url": "https://semgrep.dev/orgs/-/supply-chain/advisories?q=ssc-2ab348d9-6be6-470d-83ec-cdd80096d3f9",
+              "origin": "custom"
+            }
+          }
+        },
+        "r2c-internal-project-depends-on": {
+          "depends-on-either": [
+            {
+              "namespace": "maven",
+              "package": "org.apache.commons:commons-compress",
+              "version": ">=1.21, <1.26.0"
+            }
+          ]
+        },
+        "languages": [
+          "java",
+          "kotlin",
+          "scala"
+        ],
+        "patterns": [
+          {
+            "pattern-either": [
+              {
+                "pattern": "org.apache.commons.compress.compressors.pack200.Pack200CompressorInputStream(...);"
+              },
+              {
+                "pattern": "new org.apache.commons.compress.compressors.pack200.Pack200CompressorInputStream(...);"
+              },
+              {
+                "pattern": "(org.apache.commons.compress.compressors.pack200.Pack200CompressorInputStream $ARG).$FUNC(...);"
+              },
+              {
+                "pattern": "(org.apache.commons.compress.compressors.CompressorStreamFactory $FACTORY).createCompressorInputStream(...);"
+              }
+            ]
+          }
+        ]
+      },
+      "reachability": "REACHABILITY",
+      "vulnerableDependencies": [
+        {
+          "name": "org.apache.commons:commons-compress",
+          "versionSpecifier": ">=1.21, <1.26.0"
+        }
+      ],
+      "safeDependencies": [
+        {
+          "name": "org.apache.commons:commons-compress",
+          "versionSpecifier": "1.26.0"
+        }
+      ],
+      "cve": "CVE-2024-26308",
+      "ghsa": "GHSA-4265-ccf5-phj5",
+      "reachableIf": ""
+    }
+  ],
+  "totalCount": "1"
+}

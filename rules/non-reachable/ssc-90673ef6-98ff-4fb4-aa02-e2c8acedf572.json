@@ -1,0 +1,132 @@
+{
+  "advisories": [
+    {
+      "ruleId": "ssc-90673ef6-98ff-4fb4-aa02-e2c8acedf572",
+      "title": "Infinite Loop in org.apache.commons:commons-compress",
+      "description": "Affected versions of org.apache.commons:commons-compress are vulnerable to Loop With Unreachable Exit Condition ('Infinite Loop'). The vulnerability in Apache Commons Compress, involves a loop with an unreachable exit condition when reading a corrupted DUMP archive file.",
+      "ecosystem": "maven",
+      "severity": "MEDIUM",
+      "references": {
+        "cveIds": [
+          "CVE-2024-25710"
+        ],
+        "cweIds": [
+          "CWE-835: Loop with Unreachable Exit Condition ('Infinite Loop')"
+        ],
+        "owaspIds": [
+          "A06:2021 - Vulnerable and Outdated Components"
+        ],
+        "urls": [
+          "https://github.com/advisories/GHSA-4g9r-vxhx-9pgx",
+          "https://nvd.nist.gov/vuln/detail/CVE-2024-25710"
+        ]
+      },
+      "announcedAt": "2024-02-19T09:30:50Z",
+      "ruleText": {
+        "id": "ssc-90673ef6-98ff-4fb4-aa02-e2c8acedf572",
+        "message": "Affected versions of org.apache.commons:commons-compress are vulnerable to Loop With Unreachable Exit Condition ('Infinite Loop'). The vulnerability in Apache Commons Compress, involves a loop with an unreachable exit condition when reading a corrupted DUMP archive file.",
+        "severity": "WARNING",
+        "metadata": {
+          "confidence": "HIGH",
+          "category": "security",
+          "cve": "CVE-2024-25710",
+          "cwe": [
+            "CWE-835: Loop with Unreachable Exit Condition ('Infinite Loop')"
+          ],
+          "ghsa": "GHSA-4g9r-vxhx-9pgx",
+          "owasp": [
+            "A06:2021 - Vulnerable and Outdated Components"
+          ],
+          "publish-date": "2024-02-19T09:30:50Z",
+          "references": [
+            "https://github.com/advisories/GHSA-4g9r-vxhx-9pgx",
+            "https://nvd.nist.gov/vuln/detail/CVE-2024-25710"
+          ],
+          "sca-fix-versions": [
+            {
+              "org.apache.commons:commons-compress": "1.26.0"
+            }
+          ],
+          "sca-kind": "reachable",
+          "sca-schema": 20230302,
+          "sca-severity": "MODERATE",
+          "sca-vuln-database-identifier": "CVE-2024-25710",
+          "technology": [
+            "java",
+            "kotlin",
+            "scala"
+          ],
+          "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+          "vulnerability_class": [
+            "Other"
+          ],
+          "semgrep.dev": {
+            "rule": {
+              "r_id": 124915,
+              "rv_id": 1181314,
+              "rule_id": "nJUxwlq",
+              "version_id": "X0T29gO",
+              "url": "https://semgrep.dev/orgs/-/supply-chain/advisories?q=ssc-90673ef6-98ff-4fb4-aa02-e2c8acedf572",
+              "origin": "custom"
+            }
+          }
+        },
+        "r2c-internal-project-depends-on": {
+          "depends-on-either": [
+            {
+              "namespace": "maven",
+              "package": "org.apache.commons:commons-compress",
+              "version": ">=1.3, <1.26.0"
+            }
+          ]
+        },
+        "languages": [
+          "java",
+          "kotlin",
+          "scala"
+        ],
+        "patterns": [
+          {
+            "pattern-either": [
+              {
+                "pattern": "org.apache.commons.compress.archivers.dump.DumpArchiveInputStream"
+              },
+              {
+                "pattern": "new org.apache.commons.compress.archivers.dump.DumpArchiveInputStream(...)"
+              },
+              {
+                "pattern": "(org.apache.commons.compress.archivers.dump.DumpArchiveInputStream $ANY).$FUNC(...)"
+              },
+              {
+                "pattern": "org.apache.commons.compress.archivers.dump.DumpArchiveInputStream.$FUNC(...)"
+              },
+              {
+                "pattern": "$ANY instanceof org.apache.commons.compress.archivers.dump.DumpArchiveInputStream"
+              },
+              {
+                "pattern": "(org.apache.commons.compress.archivers.ArchiveStreamFactory $FACTORY).createArchiveInputStream(...);"
+              }
+            ]
+          }
+        ]
+      },
+      "reachability": "REACHABILITY",
+      "vulnerableDependencies": [
+        {
+          "name": "org.apache.commons:commons-compress",
+          "versionSpecifier": ">=1.3, <1.26.0"
+        }
+      ],
+      "safeDependencies": [
+        {
+          "name": "org.apache.commons:commons-compress",
+          "versionSpecifier": "1.26.0"
+        }
+      ],
+      "cve": "CVE-2024-25710",
+      "ghsa": "GHSA-4g9r-vxhx-9pgx",
+      "reachableIf": ""
+    }
+  ],
+  "totalCount": "1"
+}

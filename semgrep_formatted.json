@@ -1,0 +1,2491 @@
+{
+  "version": "1.153.0",
+  "results": [
+    {
+      "check_id": "java.lang.security.audit.active-debug-code-printstacktrace.active-debug-code-printstacktrace",
+      "path": ".mvn/wrapper/MavenWrapperDownloader.java",
+      "start": {
+        "line": 55,
+        "col": 17,
+        "offset": 2151
+      },
+      "end": {
+        "line": 55,
+        "col": 36,
+        "offset": 2170
+      },
+      "extra": {
+        "metavars": {
+          "$EXCEPTION": {
+            "start": {
+              "line": 55,
+              "col": 17,
+              "offset": 2151
+            },
+            "end": {
+              "line": 55,
+              "col": 18,
+              "offset": 2152
+            },
+            "abstract_content": "e"
+          }
+        },
+        "message": "Possible active debug code detected. Deploying an application with debug code can create unintended entry points or expose sensitive information.",
+        "metadata": {
+          "likelihood": "LOW",
+          "impact": "LOW",
+          "confidence": "MEDIUM",
+          "category": "security",
+          "subcategory": [
+            "audit"
+          ],
+          "cwe": [
+            "CWE-489: Active Debug Code"
+          ],
+          "functional-categories": [
+            "debug::search::active-debug-code::java.lang"
+          ],
+          "owasp": [
+            "A10:2004 - Insecure Configuration Management",
+            "A06:2017 - Security Misconfiguration",
+            "A05:2021 - Security Misconfiguration",
+            "A02:2025 - Security Misconfiguration"
+          ],
+          "references": [
+            "https://cwe.mitre.org/data/definitions/489.html",
+            "https://www.acunetix.com/vulnerabilities/web/stack-trace-disclosure-java/",
+            "https://owasp.org/www-project-web-security-testing-guide/v41/4-Web_Application_Security_Testing/08-Testing_for_Error_Handling/02-Testing_for_Stack_Traces",
+            "https://www.securecodewarrior.com/blog/coders-conquer-security-share-learn-series-information-exposure"
+          ],
+          "technology": [
+            "java"
+          ],
+          "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+          "vulnerability_class": [
+            "Active Debug Code"
+          ],
+          "source": "https://semgrep.dev/r/java.lang.security.audit.active-debug-code-printstacktrace.active-debug-code-printstacktrace",
+          "shortlink": "https://sg.run/4K8z",
+          "semgrep.dev": {
+            "rule": {
+              "origin": "pro_rules",
+              "r_id": 27144,
+              "rule_id": "v8U0rZ",
+              "rule_name": "java.lang.security.audit.active-debug-code-printstacktrace.active-debug-code-printstacktrace",
+              "rv_id": 1236400,
+              "url": "https://semgrep.dev/playground/r/zyTb9Oq/java.lang.security.audit.active-debug-code-printstacktrace.active-debug-code-printstacktrace",
+              "version_id": "zyTb9Oq"
+            },
+            "src": "new-rule"
+          },
+          "dev.semgrep.actions": [
+            "monitor"
+          ],
+          "semgrep.policy": {
+            "id": 271716,
+            "name": "Rule Board - Audit column",
+            "slug": "rule-board-audit"
+          },
+          "semgrep.url": "https://semgrep.dev/r/java.lang.security.audit.active-debug-code-printstacktrace.active-debug-code-printstacktrace",
+          "semgrep.ruleset": "default",
+          "semgrep.ruleset_id": 3471
+        },
+        "severity": "WARNING",
+        "fingerprint": "0beb76cb51a006a2c5c598be8667deec688a028583f423684d5aa58f7f21a09b0357b66cd87e4dd36eaaba43deff3fd84a6677a259e9cd7191d372bee8f3f296_0",
+        "lines": "                e.printStackTrace();",
+        "is_ignored": false,
+        "validation_state": "NO_VALIDATOR",
+        "engine_kind": "PRO"
+      }
+    },
+    {
+      "check_id": "java.lang.security.net.http.passwordauthentication-hardcoded-password.passwordauthentication-hardcoded-password",
+      "path": ".mvn/wrapper/MavenWrapperDownloader.java",
+      "start": {
+        "line": 70,
+        "col": 65,
+        "offset": 2872
+      },
+      "end": {
+        "line": 70,
+        "col": 73,
+        "offset": 2880
+      },
+      "extra": {
+        "metavars": {
+          "$USERNAME": {
+            "start": {
+              "line": 70,
+              "col": 55,
+              "offset": 2862
+            },
+            "end": {
+              "line": 70,
+              "col": 63,
+              "offset": 2870
+            },
+            "abstract_content": "username",
+            "propagated_value": {
+              "svalue_start": {
+                "line": 65,
+                "col": 37,
+                "offset": 2530
+              },
+              "svalue_end": {
+                "line": 65,
+                "col": 67,
+                "offset": 2560
+              },
+              "svalue_abstract_content": "System.getenv(\"MVNW_USERNAME\")"
+            }
+          },
+          "$PASS": {
+            "start": {
+              "line": 70,
+              "col": 65,
+              "offset": 2872
+            },
+            "end": {
+              "line": 70,
+              "col": 73,
+              "offset": 2880
+            },
+            "abstract_content": "password",
+            "propagated_value": {
+              "svalue_start": {
+                "line": 66,
+                "col": 37,
+                "offset": 2598
+              },
+              "svalue_end": {
+                "line": 66,
+                "col": 81,
+                "offset": 2642
+              },
+              "svalue_abstract_content": "System.getenv(\"MVNW_PASSWORD\").toCharArray()"
+            }
+          }
+        },
+        "message": "A secret is hard-coded in the application. Secrets stored in source code, such as credentials, identifiers, and other types of sensitive data, can be leaked and used by internal or external malicious actors. Use environment variables to securely provide credentials and other secrets or retrieve them from a secure vault or Hardware Security Module (HSM).",
+        "metadata": {
+          "likelihood": "HIGH",
+          "impact": "MEDIUM",
+          "confidence": "HIGH",
+          "category": "security",
+          "subcategory": [
+            "vuln"
+          ],
+          "cwe": [
+            "CWE-798: Use of Hard-coded Credentials"
+          ],
+          "cwe2021-top25": true,
+          "cwe2022-top25": true,
+          "owasp": [
+            "A07:2021 - Identification and Authentication Failures",
+            "A07:2025 - Authentication Failures"
+          ],
+          "references": [
+            "https://cheatsheetseries.owasp.org/cheatsheets/Secrets_Management_Cheat_Sheet.html"
+          ],
+          "technology": [
+            "okhttp",
+            "java",
+            "secrets"
+          ],
+          "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+          "vulnerability_class": [
+            "Hard-coded Secrets"
+          ],
+          "source": "https://semgrep.dev/r/java.lang.security.net.http.passwordauthentication-hardcoded-password.passwordauthentication-hardcoded-password",
+          "shortlink": "https://sg.run/bnZq",
+          "semgrep.dev": {
+            "rule": {
+              "origin": "pro_rules",
+              "r_id": 40770,
+              "rule_id": "yyUQ3W",
+              "rule_name": "java.lang.security.net.http.passwordauthentication-hardcoded-password.passwordauthentication-hardcoded-password",
+              "rv_id": 1236407,
+              "url": "https://semgrep.dev/playground/r/yeTxzEP/java.lang.security.net.http.passwordauthentication-hardcoded-password.passwordauthentication-hardcoded-password",
+              "version_id": "yeTxzEP"
+            },
+            "src": "new-rule"
+          },
+          "dev.semgrep.actions": [
+            "monitor"
+          ],
+          "semgrep.policy": {
+            "id": 271716,
+            "name": "Rule Board - Audit column",
+            "slug": "rule-board-audit"
+          },
+          "semgrep.url": "https://semgrep.dev/r/java.lang.security.net.http.passwordauthentication-hardcoded-password.passwordauthentication-hardcoded-password",
+          "semgrep.ruleset": "comment",
+          "semgrep.ruleset_id": 9381
+        },
+        "severity": "WARNING",
+        "fingerprint": "c55b6c86fe2164d6bb4f0162adbe1230a6729017841fa0163bfcf14fe570748e382cf3c75dbd04e0e1de595ceed0155c33dd7c7ae7b9c45fe9f2c41d791ea9d0_0",
+        "lines": "                    return new PasswordAuthentication(username, password);",
+        "is_ignored": false,
+        "validation_state": "NO_VALIDATOR",
+        "engine_kind": "PRO"
+      }
+    },
+    {
+      "check_id": "ssc-2ab348d9-6be6-470d-83ec-cdd80096d3f9",
+      "path": "pom.xml",
+      "start": {
+        "line": 1,
+        "col": 1,
+        "offset": 0
+      },
+      "end": {
+        "line": 1,
+        "col": 1,
+        "offset": 0
+      },
+      "extra": {
+        "metavars": {},
+        "message": "Affected versions of org.apache.commons:commons-compress are vulnerable to Resource Exhaustion. Specifically, it is Allocation of Resources Without Limits or Throttling. Excessive consumption of resources can lead to DoS.",
+        "metadata": {
+          "confidence": "HIGH",
+          "category": "security",
+          "cve": "CVE-2024-26308",
+          "cwe": [
+            "CWE-770: Allocation of Resources Without Limits or Throttling"
+          ],
+          "ghsa": "GHSA-4265-ccf5-phj5",
+          "owasp": [
+            "A06:2021 - Vulnerable and Outdated Components"
+          ],
+          "publish-date": "2024-02-19T09:30:52Z",
+          "references": [
+            "https://github.com/advisories/GHSA-4265-ccf5-phj5",
+            "https://nvd.nist.gov/vuln/detail/CVE-2024-26308"
+          ],
+          "sca-fix-versions": [
+            {
+              "org.apache.commons:commons-compress": "1.26.0"
+            }
+          ],
+          "sca-kind": "reachable",
+          "sca-schema": 20230302,
+          "sca-severity": "MODERATE",
+          "sca-vuln-database-identifier": "CVE-2024-26308",
+          "technology": [
+            "java",
+            "kotlin",
+            "scala"
+          ],
+          "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+          "vulnerability_class": [
+            "Other"
+          ],
+          "semgrep.dev": {
+            "rule": {
+              "r_id": 116249,
+              "rv_id": 1181260,
+              "rule_id": "qNU2v52",
+              "version_id": "9lT5Bkb",
+              "url": "https://semgrep.dev/orgs/-/supply-chain/advisories?q=ssc-2ab348d9-6be6-470d-83ec-cdd80096d3f9",
+              "origin": "custom",
+              "rule_name": "ssc-2ab348d9-6be6-470d-83ec-cdd80096d3f9"
+            },
+            "src": "new-rule"
+          },
+          "source": "https://semgrep.dev/orgs/-/supply-chain/advisories?q=ssc-2ab348d9-6be6-470d-83ec-cdd80096d3f9",
+          "semgrep.url": "https://semgrep.dev/orgs/-/supply-chain/advisories?q=ssc-2ab348d9-6be6-470d-83ec-cdd80096d3f9",
+          "dev.semgrep.actions": []
+        },
+        "severity": "WARNING",
+        "fingerprint": "82f611861dee7510831ad800a903c0740b33822b7eca19395cfb4978a671b6325e76e9c842068e5a81a14b1ffe9442bc4ff74fbc1059ca60388107a822512656_0",
+        "lines": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>",
+        "is_ignored": false,
+        "sca_info": {
+          "reachability_rule": true,
+          "sca_finding_schema": 20220913,
+          "dependency_match": {
+            "dependency_pattern": {
+              "ecosystem": "maven",
+              "package": "org.apache.commons:commons-compress",
+              "semver_range": ">=1.21, <1.26.0"
+            },
+            "found_dependency": {
+              "package": "org.apache.commons:commons-compress",
+              "version": "1.24.0",
+              "ecosystem": "maven",
+              "allowed_hashes": {},
+              "transitivity": "transitive",
+              "manifest_path": "pom.xml",
+              "lockfile_path": "pom.xml",
+              "line_number": 1,
+              "children": []
+            },
+            "lockfile": "pom.xml"
+          },
+          "reachable": false
+        },
+        "engine_kind": "OSS"
+      }
+    },
+    {
+      "check_id": "ssc-646edd60-542f-3518-0c76-38258974a8f4",
+      "path": "pom.xml",
+      "start": {
+        "line": 1,
+        "col": 1,
+        "offset": 0
+      },
+      "end": {
+        "line": 1,
+        "col": 1,
+        "offset": 0
+      },
+      "extra": {
+        "metavars": {},
+        "message": "Affected versions of org.assertj:assertj-core are vulnerable to Improper Restriction of XML External Entity Reference. An XXE vulnerability exists in AssertJ's XmlStringPrettyFormatter.toXmlDocument(String), which initializes DocumentBuilderFactory with default settings (DTD and external entities enabled). If untrusted XML is passed to isXmlEqualTo(CharSequence) or xmlPrettyFormat(String), an attacker can read local files, perform SSRF, or trigger DoS via entity expansion.",
+        "metadata": {
+          "confidence": "HIGH",
+          "category": "security",
+          "cve": "CVE-2026-24400",
+          "cwe": [
+            "CWE-611: Improper Restriction of XML External Entity Reference"
+          ],
+          "ghsa": "GHSA-rqfh-9r24-8c9r",
+          "owasp": [
+            "A02:2025 - Security Misconfiguration",
+            "A04:2017 - XML External Entities (XXE)",
+            "A05:2021 - Security Misconfiguration",
+            "A06:2021 - Vulnerable and Outdated Components"
+          ],
+          "publish-date": "2026-01-26T21:31:41Z",
+          "references": [
+            "https://github.com/advisories/GHSA-rqfh-9r24-8c9r",
+            "https://nvd.nist.gov/vuln/detail/CVE-2026-24400"
+          ],
+          "sca-fix-versions": [
+            {
+              "org.assertj:assertj-core": "3.27.7"
+            }
+          ],
+          "sca-kind": "reachable",
+          "sca-schema": 20230302,
+          "sca-severity": "HIGH",
+          "sca-vuln-database-identifier": "CVE-2026-24400",
+          "technology": [
+            "java",
+            "kotlin",
+            "scala"
+          ],
+          "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+          "vulnerability_class": [
+            "XML Injection"
+          ],
+          "semgrep.dev": {
+            "rule": {
+              "r_id": 275566,
+              "rv_id": 1267631,
+              "rule_id": "L1U2zkK",
+              "version_id": "LjTkK8e",
+              "url": "https://semgrep.dev/orgs/-/supply-chain/advisories?q=ssc-646edd60-542f-3518-0c76-38258974a8f4",
+              "origin": "custom",
+              "rule_name": "ssc-646edd60-542f-3518-0c76-38258974a8f4"
+            },
+            "src": "new-rule"
+          },
+          "source": "https://semgrep.dev/orgs/-/supply-chain/advisories?q=ssc-646edd60-542f-3518-0c76-38258974a8f4",
+          "semgrep.url": "https://semgrep.dev/orgs/-/supply-chain/advisories?q=ssc-646edd60-542f-3518-0c76-38258974a8f4",
+          "dev.semgrep.actions": []
+        },
+        "severity": "ERROR",
+        "fingerprint": "c834f40018e9f6bd8be676b0cfedb15ba87ec9bc4611369d92f4786c43c3fd0e3e391777bd0d250fd28110c92a89c7ad657387852c57d786468cda3d14fcc7ac_0",
+        "lines": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>",
+        "is_ignored": false,
+        "sca_info": {
+          "reachability_rule": true,
+          "sca_finding_schema": 20220913,
+          "dependency_match": {
+            "dependency_pattern": {
+              "ecosystem": "maven",
+              "package": "org.assertj:assertj-core",
+              "semver_range": ">=1.4.0, <=3.27.6"
+            },
+            "found_dependency": {
+              "package": "org.assertj:assertj-core",
+              "version": "3.27.6",
+              "ecosystem": "maven",
+              "allowed_hashes": {},
+              "transitivity": "direct",
+              "manifest_path": "pom.xml",
+              "lockfile_path": "pom.xml",
+              "line_number": 1,
+              "children": []
+            },
+            "lockfile": "pom.xml"
+          },
+          "reachable": false
+        },
+        "engine_kind": "OSS"
+      }
+    },
+    {
+      "check_id": "ssc-90673ef6-98ff-4fb4-aa02-e2c8acedf572",
+      "path": "pom.xml",
+      "start": {
+        "line": 1,
+        "col": 1,
+        "offset": 0
+      },
+      "end": {
+        "line": 1,
+        "col": 1,
+        "offset": 0
+      },
+      "extra": {
+        "metavars": {},
+        "message": "Affected versions of org.apache.commons:commons-compress are vulnerable to Loop With Unreachable Exit Condition ('Infinite Loop'). The vulnerability in Apache Commons Compress, involves a loop with an unreachable exit condition when reading a corrupted DUMP archive file.",
+        "metadata": {
+          "confidence": "HIGH",
+          "category": "security",
+          "cve": "CVE-2024-25710",
+          "cwe": [
+            "CWE-835: Loop with Unreachable Exit Condition ('Infinite Loop')"
+          ],
+          "ghsa": "GHSA-4g9r-vxhx-9pgx",
+          "owasp": [
+            "A06:2021 - Vulnerable and Outdated Components"
+          ],
+          "publish-date": "2024-02-19T09:30:50Z",
+          "references": [
+            "https://github.com/advisories/GHSA-4g9r-vxhx-9pgx",
+            "https://nvd.nist.gov/vuln/detail/CVE-2024-25710"
+          ],
+          "sca-fix-versions": [
+            {
+              "org.apache.commons:commons-compress": "1.26.0"
+            }
+          ],
+          "sca-kind": "reachable",
+          "sca-schema": 20230302,
+          "sca-severity": "MODERATE",
+          "sca-vuln-database-identifier": "CVE-2024-25710",
+          "technology": [
+            "java",
+            "kotlin",
+            "scala"
+          ],
+          "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+          "vulnerability_class": [
+            "Other"
+          ],
+          "semgrep.dev": {
+            "rule": {
+              "r_id": 124915,
+              "rv_id": 1181314,
+              "rule_id": "nJUxwlq",
+              "version_id": "X0T29gO",
+              "url": "https://semgrep.dev/orgs/-/supply-chain/advisories?q=ssc-90673ef6-98ff-4fb4-aa02-e2c8acedf572",
+              "origin": "custom",
+              "rule_name": "ssc-90673ef6-98ff-4fb4-aa02-e2c8acedf572"
+            },
+            "src": "new-rule"
+          },
+          "source": "https://semgrep.dev/orgs/-/supply-chain/advisories?q=ssc-90673ef6-98ff-4fb4-aa02-e2c8acedf572",
+          "semgrep.url": "https://semgrep.dev/orgs/-/supply-chain/advisories?q=ssc-90673ef6-98ff-4fb4-aa02-e2c8acedf572",
+          "dev.semgrep.actions": []
+        },
+        "severity": "WARNING",
+        "fingerprint": "336465309a6c01f4fb256caa827c319fa8e2946579193bece306d6c5764fbfbc735e8937d91fc2efec36e3be4145dc499a8a2754ae07edf249d312b4bc59d7bf_0",
+        "lines": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>",
+        "is_ignored": false,
+        "sca_info": {
+          "reachability_rule": true,
+          "sca_finding_schema": 20220913,
+          "dependency_match": {
+            "dependency_pattern": {
+              "ecosystem": "maven",
+              "package": "org.apache.commons:commons-compress",
+              "semver_range": ">=1.3, <1.26.0"
+            },
+            "found_dependency": {
+              "package": "org.apache.commons:commons-compress",
+              "version": "1.24.0",
+              "ecosystem": "maven",
+              "allowed_hashes": {},
+              "transitivity": "transitive",
+              "manifest_path": "pom.xml",
+              "lockfile_path": "pom.xml",
+              "line_number": 1,
+              "children": []
+            },
+            "lockfile": "pom.xml"
+          },
+          "reachable": false
+        },
+        "engine_kind": "OSS"
+      }
+    },
+    {
+      "check_id": "ssc-c9eba998-8aee-4451-bcdd-abc2bdb30f42",
+      "path": "pom.xml",
+      "start": {
+        "line": 1,
+        "col": 1,
+        "offset": 0
+      },
+      "end": {
+        "line": 1,
+        "col": 1,
+        "offset": 0
+      },
+      "extra": {
+        "metavars": {},
+        "message": "Affected versions of org.apache.derby:derby are vulnerable to Improper Neutralization Of Special Elements In Output Used By A Downstream Component ('Injection') / Improper Control Of Generation Of Code ('Code Injection'). An attacker can supply a username that bypasses LDAP authentication checks, allowing them to perform various malicious actions such as filling up the disk with junk databases, executing malware, and accessing sensitive data, functions and procedures.",
+        "metadata": {
+          "confidence": "HIGH",
+          "category": "security",
+          "cve": "CVE-2022-46337",
+          "cwe": [
+            "CWE-74: Improper Neutralization of Special Elements in Output Used by a Downstream Component ('Injection')",
+            "CWE-94: Improper Control of Generation of Code ('Code Injection')"
+          ],
+          "ghsa": "GHSA-rcjc-c4pj-xxrp",
+          "owasp": [
+            "A03:2021 - Injection",
+            "A05:2025 - Injection",
+            "A06:2021 - Vulnerable and Outdated Components"
+          ],
+          "publish-date": "2023-11-20T09:30:31Z",
+          "references": [
+            "https://github.com/advisories/GHSA-rcjc-c4pj-xxrp",
+            "https://nvd.nist.gov/vuln/detail/CVE-2022-46337"
+          ],
+          "sca-fix-versions": [
+            {
+              "org.apache.derby:derby": "10.17.1.0"
+            },
+            {
+              "org.apache.derby:derby": "10.16.1.2"
+            },
+            {
+              "org.apache.derby:derby": "10.15.2.1"
+            },
+            {
+              "org.apache.derby:derby": "10.14.3"
+            }
+          ],
+          "sca-kind": "upgrade-only",
+          "sca-schema": 20230302,
+          "sca-severity": "CRITICAL",
+          "sca-vuln-database-identifier": "CVE-2022-46337",
+          "technology": [
+            "java",
+            "kotlin",
+            "scala"
+          ],
+          "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+          "vulnerability_class": [
+            "Code Injection",
+            "Other"
+          ],
+          "semgrep.dev": {
+            "rule": {
+              "r_id": 94131,
+              "rv_id": 1242175,
+              "rule_id": "lBU49KZ",
+              "version_id": "ZRTK193",
+              "url": "https://semgrep.dev/orgs/-/supply-chain/advisories?q=ssc-c9eba998-8aee-4451-bcdd-abc2bdb30f42",
+              "origin": "custom",
+              "rule_name": "ssc-c9eba998-8aee-4451-bcdd-abc2bdb30f42"
+            },
+            "src": "new-rule"
+          },
+          "source": "https://semgrep.dev/orgs/-/supply-chain/advisories?q=ssc-c9eba998-8aee-4451-bcdd-abc2bdb30f42",
+          "semgrep.url": "https://semgrep.dev/orgs/-/supply-chain/advisories?q=ssc-c9eba998-8aee-4451-bcdd-abc2bdb30f42",
+          "dev.semgrep.actions": []
+        },
+        "severity": "CRITICAL",
+        "fingerprint": "05e35ad15187a2d319626c3e4b96e7d80147cdeee410813fd19fb1a98809aa8e33356189e3a97344678392a8e4722ab6e2e39d7930d91b4039564629096452d2_0",
+        "lines": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>",
+        "is_ignored": false,
+        "sca_info": {
+          "reachability_rule": false,
+          "sca_finding_schema": 20220913,
+          "dependency_match": {
+            "dependency_pattern": {
+              "ecosystem": "maven",
+              "package": "org.apache.derby:derby",
+              "semver_range": ">=10.16.0.0, <10.16.1.2"
+            },
+            "found_dependency": {
+              "package": "org.apache.derby:derby",
+              "version": "10.16.1.1",
+              "ecosystem": "maven",
+              "allowed_hashes": {},
+              "transitivity": "direct",
+              "manifest_path": "pom.xml",
+              "lockfile_path": "pom.xml",
+              "line_number": 1,
+              "children": []
+            },
+            "lockfile": "pom.xml"
+          },
+          "reachable": false
+        },
+        "engine_kind": "OSS"
+      }
+    },
+    {
+      "check_id": "ssc-parity-19e744de45e3689f32722eabc2a6f673bb2ebae6",
+      "path": "pom.xml",
+      "start": {
+        "line": 1,
+        "col": 1,
+        "offset": 0
+      },
+      "end": {
+        "line": 1,
+        "col": 1,
+        "offset": 0
+      },
+      "extra": {
+        "metavars": {},
+        "message": "Affected versions of org.apache.logging.log4j:log4j-core are vulnerable to Improper Validation of Certificate with Host Mismatch.",
+        "metadata": {
+          "confidence": "LOW",
+          "category": "security",
+          "cve": "CVE-2025-68161",
+          "cwe": [
+            "CWE-297: Improper Validation of Certificate with Host Mismatch"
+          ],
+          "ghsa": "GHSA-vc5p-v9hr-52mj",
+          "owasp": [
+            "A06:2021 - Vulnerable and Outdated Components",
+            "A07:2021 - Identification and Authentication Failures",
+            "A07:2025 - Authentication Failures"
+          ],
+          "publish-date": "2025-12-18T21:31:44Z",
+          "references": [
+            "https://github.com/advisories/GHSA-vc5p-v9hr-52mj",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-68161"
+          ],
+          "sca-fix-versions": [
+            {
+              "org.apache.logging.log4j:log4j-core": "2.25.3"
+            }
+          ],
+          "sca-kind": "legacy",
+          "sca-schema": 20230302,
+          "sca-severity": "MODERATE",
+          "sca-vuln-database-identifier": "CVE-2025-68161",
+          "technology": [
+            "java",
+            "kotlin",
+            "scala"
+          ],
+          "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+          "vulnerability_class": [
+            "Improper Authentication"
+          ],
+          "semgrep.dev": {
+            "rule": {
+              "r_id": 272499,
+              "rv_id": 1259409,
+              "rule_id": "JDU369L",
+              "version_id": "QkTGrLJ",
+              "url": "https://semgrep.dev/orgs/-/supply-chain/advisories?q=ssc-parity-19e744de45e3689f32722eabc2a6f673bb2ebae6",
+              "origin": "custom",
+              "rule_name": "ssc-parity-19e744de45e3689f32722eabc2a6f673bb2ebae6"
+            },
+            "src": "new-rule"
+          },
+          "source": "https://semgrep.dev/orgs/-/supply-chain/advisories?q=ssc-parity-19e744de45e3689f32722eabc2a6f673bb2ebae6",
+          "semgrep.url": "https://semgrep.dev/orgs/-/supply-chain/advisories?q=ssc-parity-19e744de45e3689f32722eabc2a6f673bb2ebae6",
+          "dev.semgrep.actions": []
+        },
+        "severity": "WARNING",
+        "fingerprint": "3375880d491aff9913d2980a8f98aa9c53d89ba0942048593171d685032ae399424e7ffe2b5bc9ee67852cce05f27b3abf7832493a8b60242689a4e38638da44_0",
+        "lines": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>",
+        "is_ignored": false,
+        "sca_info": {
+          "reachability_rule": false,
+          "sca_finding_schema": 20220913,
+          "dependency_match": {
+            "dependency_pattern": {
+              "ecosystem": "maven",
+              "package": "org.apache.logging.log4j:log4j-core",
+              "semver_range": ">=2.0-beta9, <2.25.3"
+            },
+            "found_dependency": {
+              "package": "org.apache.logging.log4j:log4j-core",
+              "version": "2.25.2",
+              "ecosystem": "maven",
+              "allowed_hashes": {},
+              "transitivity": "direct",
+              "manifest_path": "pom.xml",
+              "lockfile_path": "pom.xml",
+              "line_number": 1,
+              "children": []
+            },
+            "lockfile": "pom.xml"
+          },
+          "reachable": false
+        },
+        "engine_kind": "OSS"
+      }
+    },
+    {
+      "check_id": "ssc-parity-206094af7a08001622e3adcd24423cbb12e2bcce",
+      "path": "pom.xml",
+      "start": {
+        "line": 1,
+        "col": 1,
+        "offset": 0
+      },
+      "end": {
+        "line": 1,
+        "col": 1,
+        "offset": 0
+      },
+      "extra": {
+        "metavars": {},
+        "message": "Affected versions of commons-lang:commons-lang and org.apache.commons:commons-lang3 are vulnerable to Uncontrolled Recursion.",
+        "metadata": {
+          "confidence": "LOW",
+          "category": "security",
+          "cve": "CVE-2025-48924",
+          "cwe": [
+            "CWE-674: Uncontrolled Recursion"
+          ],
+          "ghsa": "GHSA-j288-q9x7-2f5v",
+          "owasp": [
+            "A06:2021 - Vulnerable and Outdated Components"
+          ],
+          "publish-date": "2025-07-11T15:31:37Z",
+          "references": [
+            "https://github.com/advisories/GHSA-j288-q9x7-2f5v",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-48924"
+          ],
+          "sca-fix-versions": [
+            {
+              "org.apache.commons:commons-lang3": "3.18.0"
+            }
+          ],
+          "sca-kind": "legacy",
+          "sca-schema": 20230302,
+          "sca-severity": "MODERATE",
+          "sca-vuln-database-identifier": "CVE-2025-48924",
+          "technology": [
+            "java",
+            "kotlin",
+            "scala"
+          ],
+          "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+          "vulnerability_class": [
+            "Other"
+          ],
+          "semgrep.dev": {
+            "rule": {
+              "r_id": 204913,
+              "rv_id": 1128895,
+              "rule_id": "QrU8AO6",
+              "version_id": "X0T2L8R",
+              "url": "https://semgrep.dev/orgs/-/supply-chain/advisories?q=ssc-parity-206094af7a08001622e3adcd24423cbb12e2bcce",
+              "origin": "custom",
+              "rule_name": "ssc-parity-206094af7a08001622e3adcd24423cbb12e2bcce"
+            },
+            "src": "new-rule"
+          },
+          "source": "https://semgrep.dev/orgs/-/supply-chain/advisories?q=ssc-parity-206094af7a08001622e3adcd24423cbb12e2bcce",
+          "semgrep.url": "https://semgrep.dev/orgs/-/supply-chain/advisories?q=ssc-parity-206094af7a08001622e3adcd24423cbb12e2bcce",
+          "dev.semgrep.actions": []
+        },
+        "severity": "WARNING",
+        "fingerprint": "2beadaa9bb15eba7a5d5fb3ca4bbaa729c6b75ea31483a7ecc556441cd1bee0f9e1a23229b83223673e637ac15718dfe442da52d5d1c2fa1b892668341b7cb1a_0",
+        "lines": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>",
+        "is_ignored": false,
+        "sca_info": {
+          "reachability_rule": false,
+          "sca_finding_schema": 20220913,
+          "dependency_match": {
+            "dependency_pattern": {
+              "ecosystem": "maven",
+              "package": "org.apache.commons:commons-lang3",
+              "semver_range": ">=3.0, <3.18.0"
+            },
+            "found_dependency": {
+              "package": "org.apache.commons:commons-lang3",
+              "version": "3.17.0",
+              "ecosystem": "maven",
+              "allowed_hashes": {},
+              "transitivity": "transitive",
+              "manifest_path": "pom.xml",
+              "lockfile_path": "pom.xml",
+              "line_number": 1,
+              "children": []
+            },
+            "lockfile": "pom.xml"
+          },
+          "reachable": false
+        },
+        "engine_kind": "OSS"
+      }
+    },
+    {
+      "check_id": "ssc-parity-3df5adc2111084715c62654597cec0e926de367a",
+      "path": "pom.xml",
+      "start": {
+        "line": 1,
+        "col": 1,
+        "offset": 0
+      },
+      "end": {
+        "line": 1,
+        "col": 1,
+        "offset": 0
+      },
+      "extra": {
+        "metavars": {},
+        "message": "Affected versions of ch.qos.logback:logback-core are vulnerable to Improper Input Validation.",
+        "metadata": {
+          "confidence": "LOW",
+          "category": "security",
+          "cve": "CVE-2026-1225",
+          "cwe": [
+            "CWE-20: Improper Input Validation"
+          ],
+          "ghsa": "GHSA-qqpg-mvqg-649v",
+          "owasp": [
+            "A03:2021 - Injection",
+            "A05:2025 - Injection",
+            "A06:2021 - Vulnerable and Outdated Components"
+          ],
+          "publish-date": "2026-01-22T12:31:22Z",
+          "references": [
+            "https://github.com/advisories/GHSA-qqpg-mvqg-649v",
+            "https://nvd.nist.gov/vuln/detail/CVE-2026-1225"
+          ],
+          "sca-fix-versions": [
+            {
+              "ch.qos.logback:logback-core": "1.5.25"
+            }
+          ],
+          "sca-kind": "legacy",
+          "sca-schema": 20230302,
+          "sca-severity": "LOW",
+          "sca-vuln-database-identifier": "CVE-2026-1225",
+          "technology": [
+            "java",
+            "kotlin",
+            "scala"
+          ],
+          "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+          "vulnerability_class": [
+            "Improper Validation"
+          ],
+          "semgrep.dev": {
+            "rule": {
+              "r_id": 275124,
+              "rv_id": 1266657,
+              "rule_id": "PeUWjZ3",
+              "version_id": "pZT0WNo",
+              "url": "https://semgrep.dev/orgs/-/supply-chain/advisories?q=ssc-parity-3df5adc2111084715c62654597cec0e926de367a",
+              "origin": "custom",
+              "rule_name": "ssc-parity-3df5adc2111084715c62654597cec0e926de367a"
+            },
+            "src": "new-rule"
+          },
+          "source": "https://semgrep.dev/orgs/-/supply-chain/advisories?q=ssc-parity-3df5adc2111084715c62654597cec0e926de367a",
+          "semgrep.url": "https://semgrep.dev/orgs/-/supply-chain/advisories?q=ssc-parity-3df5adc2111084715c62654597cec0e926de367a",
+          "dev.semgrep.actions": []
+        },
+        "severity": "INFO",
+        "fingerprint": "654855323aef11756b225b56d51b6ee52c7beab2ea86d0e4b9dfa5d8cd52f86ec5eb85049681333ba39be1c0d68c53eb06e95d7cf027febc5cc30d2dc15efd2b_0",
+        "lines": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>",
+        "is_ignored": false,
+        "sca_info": {
+          "reachability_rule": false,
+          "sca_finding_schema": 20220913,
+          "dependency_match": {
+            "dependency_pattern": {
+              "ecosystem": "maven",
+              "package": "ch.qos.logback:logback-core",
+              "semver_range": "<1.5.25"
+            },
+            "found_dependency": {
+              "package": "ch.qos.logback:logback-core",
+              "version": "1.5.21",
+              "ecosystem": "maven",
+              "allowed_hashes": {},
+              "transitivity": "transitive",
+              "manifest_path": "pom.xml",
+              "lockfile_path": "pom.xml",
+              "line_number": 1,
+              "children": []
+            },
+            "lockfile": "pom.xml"
+          },
+          "reachable": false
+        },
+        "engine_kind": "OSS"
+      }
+    },
+    {
+      "check_id": "java.lang.security.audit.unsafe-reflection.unsafe-reflection",
+      "path": "src/main/java/org/apache/ibatis/datasource/unpooled/UnpooledDataSource.java",
+      "start": {
+        "line": 239,
+        "col": 26,
+        "offset": 6466
+      },
+      "end": {
+        "line": 239,
+        "col": 67,
+        "offset": 6507
+      },
+      "extra": {
+        "metavars": {
+          "$CLASS": {
+            "start": {
+              "line": 239,
+              "col": 40,
+              "offset": 6480
+            },
+            "end": {
+              "line": 239,
+              "col": 41,
+              "offset": 6481
+            },
+            "abstract_content": "x"
+          }
+        },
+        "message": "If an attacker can supply values that the application then uses to determine which class to instantiate or which method to invoke, the potential exists for the attacker to create control flow paths through the application that were not intended by the application developers. This attack vector may allow the attacker to bypass authentication or access control checks or otherwise cause the application to behave in an unexpected manner.",
+        "metadata": {
+          "cwe": [
+            "CWE-470: Use of Externally-Controlled Input to Select Classes or Code ('Unsafe Reflection')"
+          ],
+          "owasp": [
+            "A03:2021 - Injection",
+            "A05:2025 - Injection"
+          ],
+          "source-rule-url": "https://owasp.org/www-community/vulnerabilities/Unsafe_use_of_Reflection",
+          "category": "security",
+          "technology": [
+            "java"
+          ],
+          "references": [
+            "https://owasp.org/Top10/A03_2021-Injection"
+          ],
+          "subcategory": [
+            "audit"
+          ],
+          "likelihood": "LOW",
+          "impact": "LOW",
+          "confidence": "LOW",
+          "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+          "vulnerability_class": [
+            "Improper Authorization"
+          ],
+          "source": "https://semgrep.dev/r/java.lang.security.audit.unsafe-reflection.unsafe-reflection",
+          "shortlink": "https://sg.run/R8X8",
+          "semgrep.dev": {
+            "rule": {
+              "origin": "community",
+              "r_id": 9993,
+              "rule_id": "DbUW1W",
+              "rule_name": "java.lang.security.audit.unsafe-reflection.unsafe-reflection",
+              "rv_id": 1263047,
+              "url": "https://semgrep.dev/playground/r/44TEj5L/java.lang.security.audit.unsafe-reflection.unsafe-reflection",
+              "version_id": "44TEj5L"
+            },
+            "src": "new-rule"
+          },
+          "dev.semgrep.actions": [
+            "monitor"
+          ],
+          "semgrep.policy": {
+            "id": 271716,
+            "name": "Rule Board - Audit column",
+            "slug": "rule-board-audit"
+          },
+          "semgrep.url": "https://semgrep.dev/r/java.lang.security.audit.unsafe-reflection.unsafe-reflection",
+          "semgrep.ruleset": "default",
+          "semgrep.ruleset_id": 3471
+        },
+        "severity": "WARNING",
+        "fingerprint": "03274202bc97d90917d4cc547aa8c0ebffb4b5bf4238a1393a339c18de30441136abd9374b4abd60801ca6a88cead33d5a0860e39a687c77437f683cfb3ac0d6_0",
+        "lines": "            driverType = Class.forName(x, true, driverClassLoader);",
+        "is_ignored": false,
+        "validation_state": "NO_VALIDATOR",
+        "engine_kind": "PRO"
+      }
+    },
+    {
+      "check_id": "java.lang.security.audit.object-deserialization.object-deserialization",
+      "path": "src/main/java/org/apache/ibatis/executor/loader/AbstractSerialStateHolder.java",
+      "start": {
+        "line": 110,
+        "col": 10,
+        "offset": 3645
+      },
+      "end": {
+        "line": 110,
+        "col": 100,
+        "offset": 3735
+      },
+      "extra": {
+        "metavars": {},
+        "message": "Found object deserialization using ObjectInputStream. Deserializing entire Java objects is dangerous because malicious actors can create Java object streams with unintended consequences. Ensure that the objects being deserialized are not user-controlled. If this must be done, consider using HMACs to sign the data stream to make sure it is not tampered with, or consider only transmitting object fields and populating a new object.",
+        "metadata": {
+          "cwe": [
+            "CWE-502: Deserialization of Untrusted Data"
+          ],
+          "owasp": [
+            "A08:2017 - Insecure Deserialization",
+            "A08:2021 - Software and Data Integrity Failures",
+            "A08:2025 - Software or Data Integrity Failures"
+          ],
+          "source-rule-url": "https://find-sec-bugs.github.io/bugs.htm#OBJECT_DESERIALIZATION",
+          "references": [
+            "https://www.owasp.org/index.php/Deserialization_of_untrusted_data",
+            "https://www.oracle.com/java/technologies/javase/seccodeguide.html#8"
+          ],
+          "category": "security",
+          "technology": [
+            "java"
+          ],
+          "cwe2022-top25": true,
+          "cwe2021-top25": true,
+          "subcategory": [
+            "audit"
+          ],
+          "likelihood": "LOW",
+          "impact": "HIGH",
+          "confidence": "LOW",
+          "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+          "vulnerability_class": [
+            "Insecure Deserialization "
+          ],
+          "source": "https://semgrep.dev/r/java.lang.security.audit.object-deserialization.object-deserialization",
+          "shortlink": "https://sg.run/Ek0A",
+          "semgrep.dev": {
+            "rule": {
+              "origin": "community",
+              "r_id": 9181,
+              "rule_id": "GdU7py",
+              "rule_name": "java.lang.security.audit.object-deserialization.object-deserialization",
+              "rv_id": 1263030,
+              "url": "https://semgrep.dev/playground/r/NdTzyGe/java.lang.security.audit.object-deserialization.object-deserialization",
+              "version_id": "NdTzyGe"
+            },
+            "src": "new-rule"
+          },
+          "dev.semgrep.actions": [
+            "monitor"
+          ],
+          "semgrep.policy": {
+            "id": 271716,
+            "name": "Rule Board - Audit column",
+            "slug": "rule-board-audit"
+          },
+          "semgrep.url": "https://semgrep.dev/r/java.lang.security.audit.object-deserialization.object-deserialization",
+          "semgrep.ruleset": "default",
+          "semgrep.ruleset_id": 3471
+        },
+        "severity": "WARNING",
+        "fingerprint": "442a9c381df5c56ad03506a63e827ffe8cb8de61cc9bed0f0cc09eb9de7028ff99f162c93f2d9e2a3a327cfac5335cf93351a2854d3b8759284235fcb8535160_0",
+        "lines": "    try (ObjectInputStream in = new ObjectInputStream(new ByteArrayInputStream(this.userBeanBytes))) {",
+        "is_ignored": false,
+        "validation_state": "NO_VALIDATOR",
+        "engine_kind": "PRO"
+      }
+    },
+    {
+      "check_id": "java.lang.security.audit.unsafe-reflection.unsafe-reflection",
+      "path": "src/main/java/org/apache/ibatis/io/ClassLoaderWrapper.java",
+      "start": {
+        "line": 216,
+        "col": 18,
+        "offset": 5785
+      },
+      "end": {
+        "line": 216,
+        "col": 47,
+        "offset": 5814
+      },
+      "extra": {
+        "metavars": {
+          "$CLASS": {
+            "start": {
+              "line": 216,
+              "col": 32,
+              "offset": 5799
+            },
+            "end": {
+              "line": 216,
+              "col": 36,
+              "offset": 5803
+            },
+            "abstract_content": "name"
+          }
+        },
+        "message": "If an attacker can supply values that the application then uses to determine which class to instantiate or which method to invoke, the potential exists for the attacker to create control flow paths through the application that were not intended by the application developers. This attack vector may allow the attacker to bypass authentication or access control checks or otherwise cause the application to behave in an unexpected manner.",
+        "metadata": {
+          "cwe": [
+            "CWE-470: Use of Externally-Controlled Input to Select Classes or Code ('Unsafe Reflection')"
+          ],
+          "owasp": [
+            "A03:2021 - Injection",
+            "A05:2025 - Injection"
+          ],
+          "source-rule-url": "https://owasp.org/www-community/vulnerabilities/Unsafe_use_of_Reflection",
+          "category": "security",
+          "technology": [
+            "java"
+          ],
+          "references": [
+            "https://owasp.org/Top10/A03_2021-Injection"
+          ],
+          "subcategory": [
+            "audit"
+          ],
+          "likelihood": "LOW",
+          "impact": "LOW",
+          "confidence": "LOW",
+          "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+          "vulnerability_class": [
+            "Improper Authorization"
+          ],
+          "source": "https://semgrep.dev/r/java.lang.security.audit.unsafe-reflection.unsafe-reflection",
+          "shortlink": "https://sg.run/R8X8",
+          "semgrep.dev": {
+            "rule": {
+              "origin": "community",
+              "r_id": 9993,
+              "rule_id": "DbUW1W",
+              "rule_name": "java.lang.security.audit.unsafe-reflection.unsafe-reflection",
+              "rv_id": 1263047,
+              "url": "https://semgrep.dev/playground/r/44TEj5L/java.lang.security.audit.unsafe-reflection.unsafe-reflection",
+              "version_id": "44TEj5L"
+            },
+            "src": "new-rule"
+          },
+          "dev.semgrep.actions": [
+            "monitor"
+          ],
+          "semgrep.policy": {
+            "id": 271716,
+            "name": "Rule Board - Audit column",
+            "slug": "rule-board-audit"
+          },
+          "semgrep.url": "https://semgrep.dev/r/java.lang.security.audit.unsafe-reflection.unsafe-reflection",
+          "semgrep.ruleset": "default",
+          "semgrep.ruleset_id": 3471
+        },
+        "severity": "WARNING",
+        "fingerprint": "d1a6891e61a701b3cf593d098a01f940668f979d015023542a032332ddf3e5ca7668b842e11d52147b455514d1c191da340d3fd5356271f24ae3af19917c8331_0",
+        "lines": "          return Class.forName(name, true, cl);",
+        "is_ignored": false,
+        "validation_state": "NO_VALIDATOR",
+        "engine_kind": "PRO"
+      }
+    },
+    {
+      "check_id": "java.lang.security.audit.formatted-sql-string.formatted-sql-string",
+      "path": "src/main/java/org/apache/ibatis/jdbc/ScriptRunner.java",
+      "start": {
+        "line": 250,
+        "col": 30,
+        "offset": 7378
+      },
+      "end": {
+        "line": 250,
+        "col": 52,
+        "offset": 7400
+      },
+      "extra": {
+        "metavars": {
+          "$STRB": {
+            "start": {
+              "line": 228,
+              "col": 7,
+              "offset": 6605
+            },
+            "end": {
+              "line": 228,
+              "col": 14,
+              "offset": 6612
+            },
+            "abstract_content": "command"
+          },
+          "$ANNOT": {
+            "start": {
+              "line": 242,
+              "col": 11,
+              "offset": 7059
+            },
+            "end": {
+              "line": 242,
+              "col": 15,
+              "offset": 7063
+            },
+            "abstract_content": "void"
+          },
+          "$S": {
+            "start": {
+              "line": 250,
+              "col": 30,
+              "offset": 7378
+            },
+            "end": {
+              "line": 250,
+              "col": 39,
+              "offset": 7387
+            },
+            "abstract_content": "statement"
+          },
+          "$SQLFUNC": {
+            "start": {
+              "line": 250,
+              "col": 40,
+              "offset": 7388
+            },
+            "end": {
+              "line": 250,
+              "col": 47,
+              "offset": 7395
+            },
+            "abstract_content": "execute"
+          }
+        },
+        "message": "Detected a formatted string in a SQL statement. This could lead to SQL injection if variables in the SQL statement are not properly sanitized. Use a prepared statements (java.sql.PreparedStatement) instead. You can obtain a PreparedStatement using 'connection.prepareStatement'.",
+        "metadata": {
+          "cwe": [
+            "CWE-89: Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+          ],
+          "owasp": [
+            "A01:2017 - Injection",
+            "A03:2021 - Injection",
+            "A05:2025 - Injection"
+          ],
+          "source-rule-url": "https://find-sec-bugs.github.io/bugs.htm#SQL_INJECTION",
+          "asvs": {
+            "control_id": "5.3.5 Injection",
+            "control_url": "https://github.com/OWASP/ASVS/blob/master/4.0/en/0x13-V5-Validation-Sanitization-Encoding.md#v53-output-encoding-and-injection-prevention-requirements",
+            "section": "V5: Validation, Sanitization and Encoding Verification Requirements",
+            "version": "4"
+          },
+          "references": [
+            "https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html",
+            "https://docs.oracle.com/javase/tutorial/jdbc/basics/prepared.html#create_ps",
+            "https://software-security.sans.org/developer-how-to/fix-sql-injection-in-java-using-prepared-callable-statement"
+          ],
+          "category": "security",
+          "technology": [
+            "java"
+          ],
+          "cwe2022-top25": true,
+          "cwe2021-top25": true,
+          "subcategory": [
+            "vuln"
+          ],
+          "likelihood": "HIGH",
+          "impact": "MEDIUM",
+          "confidence": "MEDIUM",
+          "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+          "vulnerability_class": [
+            "SQL Injection"
+          ],
+          "source": "https://semgrep.dev/r/java.lang.security.audit.formatted-sql-string.formatted-sql-string",
+          "shortlink": "https://sg.run/OPXp",
+          "semgrep.dev": {
+            "rule": {
+              "origin": "community",
+              "r_id": 9175,
+              "rule_id": "QrUzxR",
+              "rule_name": "java.lang.security.audit.formatted-sql-string.formatted-sql-string",
+              "rv_id": 1263022,
+              "url": "https://semgrep.dev/playground/r/2KTv25G/java.lang.security.audit.formatted-sql-string.formatted-sql-string",
+              "version_id": "2KTv25G"
+            },
+            "src": "new-rule"
+          },
+          "dev.semgrep.actions": [
+            "monitor"
+          ],
+          "semgrep.policy": {
+            "id": 271716,
+            "name": "Rule Board - Audit column",
+            "slug": "rule-board-audit"
+          },
+          "semgrep.url": "https://semgrep.dev/r/java.lang.security.audit.formatted-sql-string.formatted-sql-string",
+          "semgrep.ruleset": "default",
+          "semgrep.ruleset_id": 3471
+        },
+        "severity": "ERROR",
+        "fingerprint": "89230cd881e7c248782fd80f6af80e2ffce0c150d59cae9ba30ad613195faa0fee740b11da1dc12d1705b31d63da9e3ae12f89993d76ca273030b48255acf68f_0",
+        "lines": "        boolean hasResults = statement.execute(sql);",
+        "is_ignored": false,
+        "validation_state": "NO_VALIDATOR",
+        "dataflow_trace": {
+          "taint_source": [
+            "CliLoc",
+            [
+              {
+                "path": "src/main/java/org/apache/ibatis/jdbc/ScriptRunner.java",
+                "start": {
+                  "line": 245,
+                  "col": 20,
+                  "offset": 7256
+                },
+                "end": {
+                  "line": 245,
+                  "col": 27,
+                  "offset": 7263
+                }
+              },
+              "command"
+            ]
+          ],
+          "intermediate_vars": [
+            {
+              "location": {
+                "path": "src/main/java/org/apache/ibatis/jdbc/ScriptRunner.java",
+                "start": {
+                  "line": 245,
+                  "col": 14,
+                  "offset": 7250
+                },
+                "end": {
+                  "line": 245,
+                  "col": 17,
+                  "offset": 7253
+                }
+              },
+              "content": "sql"
+            }
+          ],
+          "taint_sink": [
+            "CliLoc",
+            [
+              {
+                "path": "src/main/java/org/apache/ibatis/jdbc/ScriptRunner.java",
+                "start": {
+                  "line": 250,
+                  "col": 30,
+                  "offset": 7378
+                },
+                "end": {
+                  "line": 250,
+                  "col": 52,
+                  "offset": 7400
+                }
+              },
+              "statement.execute(sql)"
+            ]
+          ]
+        },
+        "engine_kind": [
+          "PRO_REQUIRED",
+          {
+            "interproc_taint": true,
+            "interfile_taint": false,
+            "proprietary_language": false
+          }
+        ]
+      }
+    },
+    {
+      "check_id": "java.lang.security.audit.active-debug-code-printstacktrace.active-debug-code-printstacktrace",
+      "path": "src/main/java/org/apache/ibatis/logging/stdout/StdOutImpl.java",
+      "start": {
+        "line": 42,
+        "col": 5,
+        "offset": 1094
+      },
+      "end": {
+        "line": 42,
+        "col": 34,
+        "offset": 1123
+      },
+      "extra": {
+        "metavars": {
+          "$UTIL": {
+            "start": {
+              "line": 42,
+              "col": 5,
+              "offset": 1094
+            },
+            "end": {
+              "line": 42,
+              "col": 6,
+              "offset": 1095
+            },
+            "abstract_content": "e"
+          }
+        },
+        "message": "Possible active debug code detected. Deploying an application with debug code can create unintended entry points or expose sensitive information.",
+        "metadata": {
+          "likelihood": "LOW",
+          "impact": "LOW",
+          "confidence": "MEDIUM",
+          "category": "security",
+          "subcategory": [
+            "audit"
+          ],
+          "cwe": [
+            "CWE-489: Active Debug Code"
+          ],
+          "functional-categories": [
+            "debug::search::active-debug-code::java.lang"
+          ],
+          "owasp": [
+            "A10:2004 - Insecure Configuration Management",
+            "A06:2017 - Security Misconfiguration",
+            "A05:2021 - Security Misconfiguration",
+            "A02:2025 - Security Misconfiguration"
+          ],
+          "references": [
+            "https://cwe.mitre.org/data/definitions/489.html",
+            "https://www.acunetix.com/vulnerabilities/web/stack-trace-disclosure-java/",
+            "https://owasp.org/www-project-web-security-testing-guide/v41/4-Web_Application_Security_Testing/08-Testing_for_Error_Handling/02-Testing_for_Stack_Traces",
+            "https://www.securecodewarrior.com/blog/coders-conquer-security-share-learn-series-information-exposure"
+          ],
+          "technology": [
+            "java"
+          ],
+          "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+          "vulnerability_class": [
+            "Active Debug Code"
+          ],
+          "source": "https://semgrep.dev/r/java.lang.security.audit.active-debug-code-printstacktrace.active-debug-code-printstacktrace",
+          "shortlink": "https://sg.run/4K8z",
+          "semgrep.dev": {
+            "rule": {
+              "origin": "pro_rules",
+              "r_id": 27144,
+              "rule_id": "v8U0rZ",
+              "rule_name": "java.lang.security.audit.active-debug-code-printstacktrace.active-debug-code-printstacktrace",
+              "rv_id": 1236400,
+              "url": "https://semgrep.dev/playground/r/zyTb9Oq/java.lang.security.audit.active-debug-code-printstacktrace.active-debug-code-printstacktrace",
+              "version_id": "zyTb9Oq"
+            },
+            "src": "new-rule"
+          },
+          "dev.semgrep.actions": [
+            "monitor"
+          ],
+          "semgrep.policy": {
+            "id": 271716,
+            "name": "Rule Board - Audit column",
+            "slug": "rule-board-audit"
+          },
+          "semgrep.url": "https://semgrep.dev/r/java.lang.security.audit.active-debug-code-printstacktrace.active-debug-code-printstacktrace",
+          "semgrep.ruleset": "default",
+          "semgrep.ruleset_id": 3471
+        },
+        "severity": "WARNING",
+        "fingerprint": "d2e6ecb64771624ef88d997153e8412c36fa63cf97450a884df65c2936b2332ea1dc97fac295615b790e32897c6a4119434cb246a0c2f1a0ce214a404b27fe05_0",
+        "lines": "    e.printStackTrace(System.err);",
+        "is_ignored": false,
+        "validation_state": "NO_VALIDATOR",
+        "engine_kind": "PRO"
+      }
+    },
+    {
+      "check_id": "java.lang.security.audit.xxe.documentbuilderfactory-disallow-doctype-decl-missing.documentbuilderfactory-disallow-doctype-decl-missing",
+      "path": "src/main/java/org/apache/ibatis/parsing/XPathParser.java",
+      "start": {
+        "line": 242,
+        "col": 7,
+        "offset": 7988
+      },
+      "end": {
+        "line": 242,
+        "col": 62,
+        "offset": 8043
+      },
+      "extra": {
+        "metavars": {
+          "$FACTORY": {
+            "start": {
+              "line": 232,
+              "col": 30,
+              "offset": 7596
+            },
+            "end": {
+              "line": 232,
+              "col": 37,
+              "offset": 7603
+            },
+            "abstract_content": "factory"
+          }
+        },
+        "message": "DOCTYPE declarations are enabled for this DocumentBuilderFactory. This is vulnerable to XML external entity attacks. Disable this by setting the feature \"http://apache.org/xml/features/disallow-doctype-decl\" to true. Alternatively, allow DOCTYPE declarations and only prohibit external entities declarations. This can be done by setting the features \"http://xml.org/sax/features/external-general-entities\" and \"http://xml.org/sax/features/external-parameter-entities\" to false.",
+        "fix": "factory.setFeature(\"http://apache.org/xml/features/disallow-doctype-decl\", true);\n      factory.newDocumentBuilder();",
+        "metadata": {
+          "cwe": [
+            "CWE-611: Improper Restriction of XML External Entity Reference"
+          ],
+          "owasp": [
+            "A04:2017 - XML External Entities (XXE)",
+            "A05:2021 - Security Misconfiguration",
+            "A02:2025 - Security Misconfiguration"
+          ],
+          "asvs": {
+            "control_id": "5.5.2 Insecue XML Deserialization",
+            "control_url": "https://github.com/OWASP/ASVS/blob/master/4.0/en/0x13-V5-Validation-Sanitization-Encoding.md#v55-deserialization-prevention",
+            "section": "V5 Validation, Sanitization and Encoding",
+            "version": "4"
+          },
+          "references": [
+            "https://semgrep.dev/blog/2022/xml-security-in-java",
+            "https://semgrep.dev/docs/cheat-sheets/java-xxe/",
+            "https://blog.sonarsource.com/secure-xml-processor",
+            "https://xerces.apache.org/xerces2-j/features.html"
+          ],
+          "category": "security",
+          "technology": [
+            "java",
+            "xml"
+          ],
+          "cwe2022-top25": true,
+          "cwe2021-top25": true,
+          "subcategory": [
+            "vuln"
+          ],
+          "likelihood": "LOW",
+          "impact": "HIGH",
+          "confidence": "HIGH",
+          "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+          "vulnerability_class": [
+            "XML Injection"
+          ],
+          "source": "https://semgrep.dev/r/java.lang.security.audit.xxe.documentbuilderfactory-disallow-doctype-decl-missing.documentbuilderfactory-disallow-doctype-decl-missing",
+          "shortlink": "https://sg.run/PYBz",
+          "semgrep.dev": {
+            "rule": {
+              "origin": "community",
+              "r_id": 18245,
+              "rule_id": "10UPQB",
+              "rule_name": "java.lang.security.audit.xxe.documentbuilderfactory-disallow-doctype-decl-missing.documentbuilderfactory-disallow-doctype-decl-missing",
+              "rv_id": 1263058,
+              "url": "https://semgrep.dev/playground/r/K3TKk80/java.lang.security.audit.xxe.documentbuilderfactory-disallow-doctype-decl-missing.documentbuilderfactory-disallow-doctype-decl-missing",
+              "version_id": "K3TKk80"
+            },
+            "src": "new-rule"
+          },
+          "dev.semgrep.actions": [
+            "monitor"
+          ],
+          "semgrep.policy": {
+            "id": 271716,
+            "name": "Rule Board - Audit column",
+            "slug": "rule-board-audit"
+          },
+          "semgrep.url": "https://semgrep.dev/r/java.lang.security.audit.xxe.documentbuilderfactory-disallow-doctype-decl-missing.documentbuilderfactory-disallow-doctype-decl-missing",
+          "semgrep.ruleset": "default",
+          "semgrep.ruleset_id": 3471
+        },
+        "severity": "ERROR",
+        "fingerprint": "85c4a81e83880588f5c111ff6716ccbdfbecfc7e3b0564e9fa188c607ff2086cd57eadcc01a4df9a92e2136d4468b5a6276a666e88f2f1e41014a1cf7dc70e6a_0",
+        "lines": "      DocumentBuilder builder = factory.newDocumentBuilder();",
+        "is_ignored": false,
+        "validation_state": "NO_VALIDATOR",
+        "dataflow_trace": {
+          "taint_source": [
+            "CliLoc",
+            [
+              {
+                "path": "src/main/java/org/apache/ibatis/parsing/XPathParser.java",
+                "start": {
+                  "line": 232,
+                  "col": 7,
+                  "offset": 7573
+                },
+                "end": {
+                  "line": 232,
+                  "col": 77,
+                  "offset": 7643
+                }
+              },
+              "DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();"
+            ]
+          ],
+          "intermediate_vars": [
+            {
+              "location": {
+                "path": "src/main/java/org/apache/ibatis/parsing/XPathParser.java",
+                "start": {
+                  "line": 232,
+                  "col": 30,
+                  "offset": 7596
+                },
+                "end": {
+                  "line": 232,
+                  "col": 37,
+                  "offset": 7603
+                }
+              },
+              "content": "factory"
+            }
+          ],
+          "taint_sink": [
+            "CliLoc",
+            [
+              {
+                "path": "src/main/java/org/apache/ibatis/parsing/XPathParser.java",
+                "start": {
+                  "line": 242,
+                  "col": 7,
+                  "offset": 7988
+                },
+                "end": {
+                  "line": 242,
+                  "col": 62,
+                  "offset": 8043
+                }
+              },
+              "DocumentBuilder builder = factory.newDocumentBuilder();"
+            ]
+          ]
+        },
+        "engine_kind": "PRO"
+      }
+    },
+    {
+      "check_id": "java.lang.security.audit.xml-custom-entityresolver.xml-custom-entityresolver",
+      "path": "src/main/java/org/apache/ibatis/parsing/XPathParser.java",
+      "start": {
+        "line": 243,
+        "col": 7,
+        "offset": 8050
+      },
+      "end": {
+        "line": 243,
+        "col": 49,
+        "offset": 8092
+      },
+      "extra": {
+        "metavars": {
+          "$FACTORY": {
+            "start": {
+              "line": 232,
+              "col": 30,
+              "offset": 7596
+            },
+            "end": {
+              "line": 232,
+              "col": 37,
+              "offset": 7603
+            },
+            "abstract_content": "factory"
+          },
+          "$CONFIGURE": {
+            "start": {
+              "line": 233,
+              "col": 15,
+              "offset": 7658
+            },
+            "end": {
+              "line": 233,
+              "col": 25,
+              "offset": 7668
+            },
+            "abstract_content": "setFeature"
+          },
+          "$NEWPARSER": {
+            "start": {
+              "line": 242,
+              "col": 41,
+              "offset": 8022
+            },
+            "end": {
+              "line": 242,
+              "col": 59,
+              "offset": 8040
+            },
+            "abstract_content": "newDocumentBuilder"
+          },
+          "$PARSER": {
+            "start": {
+              "line": 243,
+              "col": 7,
+              "offset": 8050
+            },
+            "end": {
+              "line": 243,
+              "col": 14,
+              "offset": 8057
+            },
+            "abstract_content": "builder",
+            "propagated_value": {
+              "svalue_start": {
+                "line": 242,
+                "col": 33,
+                "offset": 8014
+              },
+              "svalue_end": {
+                "line": 242,
+                "col": 61,
+                "offset": 8042
+              },
+              "svalue_abstract_content": "factory.newDocumentBuilder()"
+            }
+          }
+        },
+        "message": "The application is using an XML parser that has not been safely configured. This might lead to XML External Entity (XXE) vulnerabilities when parsing user-controlled input. An attacker can include document type definitions (DTDs) which can interact with internal or external hosts. XXE can lead to other vulnerabilities, such as Local File Inclusion (LFI), Remote Code Execution (RCE), and Server- side request forgery (SSRF), depending on the application configuration. An attacker can also use DTDs to expand recursively, leading to a Denial-of-Service (DoS) attack, also known as a Billion Laughs Attack. By setting a custom `EntityResolver` for all previous security configurations for are bypassed. It is your responsibility to handle security in the `EntityResolver` implementation instead. For more information, see: [Java XXE prevention](https://semgrep.dev/docs/cheat-sheets/ java-xxe/)",
+        "metadata": {
+          "likelihood": "MEDIUM",
+          "impact": "MEDIUM",
+          "confidence": "MEDIUM",
+          "category": "security",
+          "subcategory": [
+            "vuln"
+          ],
+          "cwe": [
+            "CWE-611: Improper Restriction of XML External Entity Reference",
+            "CWE-776: Improper Restriction of Recursive Entity References in DTDs ('XML Entity Expansion')"
+          ],
+          "functional-categories": [
+            "xml::sink::xml-parser::xml.sax"
+          ],
+          "owasp": [
+            "A04:2017 - XML External Entities (XXE)",
+            "A05:2021 - Security Misconfiguration",
+            "A02:2025 - Security Misconfiguration"
+          ],
+          "references": [
+            "https://docs.oracle.com/en/java/javase/13/security/java-api-xml-processing-jaxp-security-guide.html#GUID-D97A1F1D-8DDF-4D19-A7E5-99099F27346E",
+            "https://github.com/semgrep/java-xxe-research",
+            "https://cheatsheetseries.owasp.org/cheatsheets/XML_External_Entity_Prevention_Cheat_Sheet.html",
+            "https://rules.sonarsource.com/java/type/Vulnerability/RSPEC-2755",
+            "https://blog.sonarsource.com/secure-xml-processor/",
+            "https://blog.sonarsource.com/understanding-xxe-vulnerabilities/",
+            "https://cwe.mitre.org/data/definitions/776.html",
+            "https://cwe.mitre.org/data/definitions/776.html"
+          ],
+          "technology": [
+            "java"
+          ],
+          "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+          "vulnerability_class": [
+            "XML Injection"
+          ],
+          "source": "https://semgrep.dev/r/java.lang.security.audit.xml-custom-entityresolver.xml-custom-entityresolver",
+          "shortlink": "https://sg.run/JRXW",
+          "semgrep.dev": {
+            "rule": {
+              "origin": "pro_rules",
+              "r_id": 27146,
+              "rule_id": "ZqUK4E",
+              "rule_name": "java.lang.security.audit.xml-custom-entityresolver.xml-custom-entityresolver",
+              "rv_id": 1236403,
+              "url": "https://semgrep.dev/playground/r/X0Tzp1w/java.lang.security.audit.xml-custom-entityresolver.xml-custom-entityresolver",
+              "version_id": "X0Tzp1w"
+            },
+            "src": "new-rule"
+          },
+          "dev.semgrep.actions": [
+            "monitor"
+          ],
+          "semgrep.policy": {
+            "id": 271716,
+            "name": "Rule Board - Audit column",
+            "slug": "rule-board-audit"
+          },
+          "semgrep.url": "https://semgrep.dev/r/java.lang.security.audit.xml-custom-entityresolver.xml-custom-entityresolver",
+          "semgrep.ruleset": "default",
+          "semgrep.ruleset_id": 3471
+        },
+        "severity": "INFO",
+        "fingerprint": "be25eb33b893fa7e164e8c79e5b1b88b8a1b5193c7850eb447b845a3dedeb04cfde702abb7d3ec73c0608d1b91966051f33427f87c188c1be5947c20c0497702_0",
+        "lines": "      builder.setEntityResolver(entityResolver);",
+        "is_ignored": false,
+        "validation_state": "NO_VALIDATOR",
+        "engine_kind": "PRO"
+      }
+    }
+  ],
+  "errors": [
+    {
+      "code": 3,
+      "level": "warn",
+      "type": [
+        "PartialParsing",
+        [
+          {
+            "path": "mvnw",
+            "start": {
+              "line": 222,
+              "col": 5,
+              "offset": 0
+            },
+            "end": {
+              "line": 226,
+              "col": 9,
+              "offset": 86
+            }
+          },
+          {
+            "path": "mvnw",
+            "start": {
+              "line": 278,
+              "col": 3,
+              "offset": 0
+            },
+            "end": {
+              "line": 282,
+              "col": 7,
+              "offset": 84
+            }
+          }
+        ]
+      ],
+      "message": "Syntax error at line mvnw:222:\n `case \"$key\" in wrapperUrl)\n      wrapperUrl=\"$safeValue\"\n      break\n      ;;\n    esac` was unexpected",
+      "path": "mvnw",
+      "spans": [
+        {
+          "file": "mvnw",
+          "start": {
+            "line": 222,
+            "col": 5,
+            "offset": 0
+          },
+          "end": {
+            "line": 226,
+            "col": 9,
+            "offset": 86
+          }
+        },
+        {
+          "file": "mvnw",
+          "start": {
+            "line": 278,
+            "col": 3,
+            "offset": 0
+          },
+          "end": {
+            "line": 282,
+            "col": 7,
+            "offset": 84
+          }
+        }
+      ]
+    }
+  ],
+  "paths": {
+    "scanned": [
+      ".editorconfig",
+      ".gitattributes",
+      ".github/ISSUE_TEMPLATE/bug-report.yaml",
+      ".github/ISSUE_TEMPLATE/config.yml",
+      ".github/workflows/ci.yaml",
+      ".github/workflows/codeql.yml",
+      ".github/workflows/coveralls.yaml",
+      ".github/workflows/site.yaml",
+      ".github/workflows/sonar.yaml",
+      ".github/workflows/sonatype.yaml",
+      ".gitignore",
+      ".mvn/extensions.xml",
+      ".mvn/maven.config",
+      ".mvn/settings.xml",
+      ".mvn/wrapper/MavenWrapperDownloader.java",
+      ".mvn/wrapper/maven-wrapper.properties",
+      "CONTRIBUTING.md",
+      "ICLA",
+      "LICENSE",
+      "LICENSE_HEADER",
+      "NOTICE",
+      "README.md",
+      "all_pipeline_logs/mybatis/mybatis.log",
+      "all_pipeline_logs/mybatis/prompts_mybatis.log",
+      "all_third_party_call_pairs_all_third_party_calls.json",
+      "coverage.json",
+      "format.xml",
+      "hooks/pre-commit.sh",
+      "mvnw",
+      "mvnw.cmd",
+      "package-map.json",
+      "pom.xml",
+      "renovate.json",
+      "src/main/java/org/apache/ibatis/annotations/Arg.java",
+      "src/main/java/org/apache/ibatis/annotations/AutomapConstructor.java",
+      "src/main/java/org/apache/ibatis/annotations/CacheNamespace.java",
+      "src/main/java/org/apache/ibatis/annotations/CacheNamespaceRef.java",
+      "src/main/java/org/apache/ibatis/annotations/Case.java",
+      "src/main/java/org/apache/ibatis/annotations/ConstructorArgs.java",
+      "src/main/java/org/apache/ibatis/annotations/Delete.java",
+      "src/main/java/org/apache/ibatis/annotations/DeleteProvider.java",
+      "src/main/java/org/apache/ibatis/annotations/Flush.java",
+      "src/main/java/org/apache/ibatis/annotations/Insert.java",
+      "src/main/java/org/apache/ibatis/annotations/InsertProvider.java",
+      "src/main/java/org/apache/ibatis/annotations/Lang.java",
+      "src/main/java/org/apache/ibatis/annotations/Many.java",
+      "src/main/java/org/apache/ibatis/annotations/MapKey.java",
+      "src/main/java/org/apache/ibatis/annotations/Mapper.java",
+      "src/main/java/org/apache/ibatis/annotations/One.java",
+      "src/main/java/org/apache/ibatis/annotations/Options.java",
+      "src/main/java/org/apache/ibatis/annotations/Param.java",
+      "src/main/java/org/apache/ibatis/annotations/Property.java",
+      "src/main/java/org/apache/ibatis/annotations/Result.java",
+      "src/main/java/org/apache/ibatis/annotations/ResultMap.java",
+      "src/main/java/org/apache/ibatis/annotations/ResultType.java",
+      "src/main/java/org/apache/ibatis/annotations/Results.java",
+      "src/main/java/org/apache/ibatis/annotations/Select.java",
+      "src/main/java/org/apache/ibatis/annotations/SelectKey.java",
+      "src/main/java/org/apache/ibatis/annotations/SelectProvider.java",
+      "src/main/java/org/apache/ibatis/annotations/TypeDiscriminator.java",
+      "src/main/java/org/apache/ibatis/annotations/Update.java",
+      "src/main/java/org/apache/ibatis/annotations/UpdateProvider.java",
+      "src/main/java/org/apache/ibatis/annotations/package-info.java",
+      "src/main/java/org/apache/ibatis/binding/BindingException.java",
+      "src/main/java/org/apache/ibatis/binding/MapperMethod.java",
+      "src/main/java/org/apache/ibatis/binding/MapperMethodInvoker.java",
+      "src/main/java/org/apache/ibatis/binding/MapperProxy.java",
+      "src/main/java/org/apache/ibatis/binding/MapperProxyFactory.java",
+      "src/main/java/org/apache/ibatis/binding/MapperRegistry.java",
+      "src/main/java/org/apache/ibatis/binding/package-info.java",
+      "src/main/java/org/apache/ibatis/builder/BaseBuilder.java",
+      "src/main/java/org/apache/ibatis/builder/BuilderException.java",
+      "src/main/java/org/apache/ibatis/builder/CacheRefResolver.java",
+      "src/main/java/org/apache/ibatis/builder/IncompleteElementException.java",
+      "src/main/java/org/apache/ibatis/builder/InitializingObject.java",
+      "src/main/java/org/apache/ibatis/builder/MapperBuilderAssistant.java",
+      "src/main/java/org/apache/ibatis/builder/ParameterExpression.java",
+      "src/main/java/org/apache/ibatis/builder/ParameterMappingTokenHandler.java",
+      "src/main/java/org/apache/ibatis/builder/ResultMapResolver.java",
+      "src/main/java/org/apache/ibatis/builder/ResultMappingConstructorResolver.java",
+      "src/main/java/org/apache/ibatis/builder/SqlSourceBuilder.java",
+      "src/main/java/org/apache/ibatis/builder/StaticSqlSource.java",
+      "src/main/java/org/apache/ibatis/builder/annotation/MapperAnnotationBuilder.java",
+      "src/main/java/org/apache/ibatis/builder/annotation/MethodResolver.java",
+      "src/main/java/org/apache/ibatis/builder/annotation/ProviderContext.java",
+      "src/main/java/org/apache/ibatis/builder/annotation/ProviderMethodResolver.java",
+      "src/main/java/org/apache/ibatis/builder/annotation/ProviderSqlSource.java",
+      "src/main/java/org/apache/ibatis/builder/annotation/package-info.java",
+      "src/main/java/org/apache/ibatis/builder/package-info.java",
+      "src/main/java/org/apache/ibatis/builder/xml/XMLConfigBuilder.java",
+      "src/main/java/org/apache/ibatis/builder/xml/XMLIncludeTransformer.java",
+      "src/main/java/org/apache/ibatis/builder/xml/XMLMapperBuilder.java",
+      "src/main/java/org/apache/ibatis/builder/xml/XMLMapperEntityResolver.java",
+      "src/main/java/org/apache/ibatis/builder/xml/XMLStatementBuilder.java",
+      "src/main/java/org/apache/ibatis/builder/xml/package-info.java",
+      "src/main/java/org/apache/ibatis/cache/Cache.java",
+      "src/main/java/org/apache/ibatis/cache/CacheException.java",
+      "src/main/java/org/apache/ibatis/cache/CacheKey.java",
+      "src/main/java/org/apache/ibatis/cache/NullCacheKey.java",
+      "src/main/java/org/apache/ibatis/cache/TransactionalCacheManager.java",
+      "src/main/java/org/apache/ibatis/cache/decorators/BlockingCache.java",
+      "src/main/java/org/apache/ibatis/cache/decorators/FifoCache.java",
+      "src/main/java/org/apache/ibatis/cache/decorators/LoggingCache.java",
+      "src/main/java/org/apache/ibatis/cache/decorators/LruCache.java",
+      "src/main/java/org/apache/ibatis/cache/decorators/ScheduledCache.java",
+      "src/main/java/org/apache/ibatis/cache/decorators/SerializedCache.java",
+      "src/main/java/org/apache/ibatis/cache/decorators/SoftCache.java",
+      "src/main/java/org/apache/ibatis/cache/decorators/SynchronizedCache.java",
+      "src/main/java/org/apache/ibatis/cache/decorators/TransactionalCache.java",
+      "src/main/java/org/apache/ibatis/cache/decorators/WeakCache.java",
+      "src/main/java/org/apache/ibatis/cache/decorators/package-info.java",
+      "src/main/java/org/apache/ibatis/cache/impl/PerpetualCache.java",
+      "src/main/java/org/apache/ibatis/cache/impl/package-info.java",
+      "src/main/java/org/apache/ibatis/cache/package-info.java",
+      "src/main/java/org/apache/ibatis/cursor/Cursor.java",
+      "src/main/java/org/apache/ibatis/cursor/defaults/DefaultCursor.java",
+      "src/main/java/org/apache/ibatis/cursor/defaults/package-info.java",
+      "src/main/java/org/apache/ibatis/cursor/package-info.java",
+      "src/main/java/org/apache/ibatis/datasource/DataSourceException.java",
+      "src/main/java/org/apache/ibatis/datasource/DataSourceFactory.java",
+      "src/main/java/org/apache/ibatis/datasource/jndi/JndiDataSourceFactory.java",
+      "src/main/java/org/apache/ibatis/datasource/jndi/package-info.java",
+      "src/main/java/org/apache/ibatis/datasource/package-info.java",
+      "src/main/java/org/apache/ibatis/datasource/pooled/PoolState.java",
+      "src/main/java/org/apache/ibatis/datasource/pooled/PooledConnection.java",
+      "src/main/java/org/apache/ibatis/datasource/pooled/PooledDataSource.java",
+      "src/main/java/org/apache/ibatis/datasource/pooled/PooledDataSourceFactory.java",
+      "src/main/java/org/apache/ibatis/datasource/pooled/package-info.java",
+      "src/main/java/org/apache/ibatis/datasource/unpooled/UnpooledDataSource.java",
+      "src/main/java/org/apache/ibatis/datasource/unpooled/UnpooledDataSourceFactory.java",
+      "src/main/java/org/apache/ibatis/datasource/unpooled/package-info.java",
+      "src/main/java/org/apache/ibatis/exceptions/ExceptionFactory.java",
+      "src/main/java/org/apache/ibatis/exceptions/IbatisException.java",
+      "src/main/java/org/apache/ibatis/exceptions/PersistenceException.java",
+      "src/main/java/org/apache/ibatis/exceptions/TooManyResultsException.java",
+      "src/main/java/org/apache/ibatis/exceptions/package-info.java",
+      "src/main/java/org/apache/ibatis/executor/BaseExecutor.java",
+      "src/main/java/org/apache/ibatis/executor/BatchExecutor.java",
+      "src/main/java/org/apache/ibatis/executor/BatchExecutorException.java",
+      "src/main/java/org/apache/ibatis/executor/BatchResult.java",
+      "src/main/java/org/apache/ibatis/executor/CachingExecutor.java",
+      "src/main/java/org/apache/ibatis/executor/ErrorContext.java",
+      "src/main/java/org/apache/ibatis/executor/ExecutionPlaceholder.java",
+      "src/main/java/org/apache/ibatis/executor/Executor.java",
+      "src/main/java/org/apache/ibatis/executor/ExecutorException.java",
+      "src/main/java/org/apache/ibatis/executor/ResultExtractor.java",
+      "src/main/java/org/apache/ibatis/executor/ReuseExecutor.java",
+      "src/main/java/org/apache/ibatis/executor/SimpleExecutor.java",
+      "src/main/java/org/apache/ibatis/executor/keygen/Jdbc3KeyGenerator.java",
+      "src/main/java/org/apache/ibatis/executor/keygen/KeyGenerator.java",
+      "src/main/java/org/apache/ibatis/executor/keygen/NoKeyGenerator.java",
+      "src/main/java/org/apache/ibatis/executor/keygen/SelectKeyGenerator.java",
+      "src/main/java/org/apache/ibatis/executor/keygen/package-info.java",
+      "src/main/java/org/apache/ibatis/executor/loader/AbstractEnhancedDeserializationProxy.java",
+      "src/main/java/org/apache/ibatis/executor/loader/AbstractSerialStateHolder.java",
+      "src/main/java/org/apache/ibatis/executor/loader/CglibProxyFactory.java",
+      "src/main/java/org/apache/ibatis/executor/loader/JavassistProxyFactory.java",
+      "src/main/java/org/apache/ibatis/executor/loader/ProxyFactory.java",
+      "src/main/java/org/apache/ibatis/executor/loader/ResultLoader.java",
+      "src/main/java/org/apache/ibatis/executor/loader/ResultLoaderMap.java",
+      "src/main/java/org/apache/ibatis/executor/loader/WriteReplaceInterface.java",
+      "src/main/java/org/apache/ibatis/executor/loader/cglib/CglibProxyFactory.java",
+      "src/main/java/org/apache/ibatis/executor/loader/cglib/CglibSerialStateHolder.java",
+      "src/main/java/org/apache/ibatis/executor/loader/cglib/package-info.java",
+      "src/main/java/org/apache/ibatis/executor/loader/javassist/JavassistProxyFactory.java",
+      "src/main/java/org/apache/ibatis/executor/loader/javassist/JavassistSerialStateHolder.java",
+      "src/main/java/org/apache/ibatis/executor/loader/javassist/package-info.java",
+      "src/main/java/org/apache/ibatis/executor/loader/package-info.java",
+      "src/main/java/org/apache/ibatis/executor/package-info.java",
+      "src/main/java/org/apache/ibatis/executor/parameter/ParameterHandler.java",
+      "src/main/java/org/apache/ibatis/executor/parameter/package-info.java",
+      "src/main/java/org/apache/ibatis/executor/result/DefaultMapResultHandler.java",
+      "src/main/java/org/apache/ibatis/executor/result/DefaultResultContext.java",
+      "src/main/java/org/apache/ibatis/executor/result/DefaultResultHandler.java",
+      "src/main/java/org/apache/ibatis/executor/result/ResultMapException.java",
+      "src/main/java/org/apache/ibatis/executor/result/package-info.java",
+      "src/main/java/org/apache/ibatis/executor/resultset/DefaultResultSetHandler.java",
+      "src/main/java/org/apache/ibatis/executor/resultset/PendingConstructorCreation.java",
+      "src/main/java/org/apache/ibatis/executor/resultset/PendingCreationKey.java",
+      "src/main/java/org/apache/ibatis/executor/resultset/PendingCreationMetaInfo.java",
+      "src/main/java/org/apache/ibatis/executor/resultset/ResultSetHandler.java",
+      "src/main/java/org/apache/ibatis/executor/resultset/ResultSetWrapper.java",
+      "src/main/java/org/apache/ibatis/executor/resultset/package-info.java",
+      "src/main/java/org/apache/ibatis/executor/statement/BaseStatementHandler.java",
+      "src/main/java/org/apache/ibatis/executor/statement/CallableStatementHandler.java",
+      "src/main/java/org/apache/ibatis/executor/statement/PreparedStatementHandler.java",
+      "src/main/java/org/apache/ibatis/executor/statement/RoutingStatementHandler.java",
+      "src/main/java/org/apache/ibatis/executor/statement/SimpleStatementHandler.java",
+      "src/main/java/org/apache/ibatis/executor/statement/StatementHandler.java",
+      "src/main/java/org/apache/ibatis/executor/statement/StatementUtil.java",
+      "src/main/java/org/apache/ibatis/executor/statement/package-info.java",
+      "src/main/java/org/apache/ibatis/io/ClassLoaderWrapper.java",
+      "src/main/java/org/apache/ibatis/io/DefaultVFS.java",
+      "src/main/java/org/apache/ibatis/io/ExternalResources.java",
+      "src/main/java/org/apache/ibatis/io/JBoss6VFS.java",
+      "src/main/java/org/apache/ibatis/io/ResolverUtil.java",
+      "src/main/java/org/apache/ibatis/io/Resources.java",
+      "src/main/java/org/apache/ibatis/io/SerialFilterChecker.java",
+      "src/main/java/org/apache/ibatis/io/VFS.java",
+      "src/main/java/org/apache/ibatis/io/package-info.java",
+      "src/main/java/org/apache/ibatis/jdbc/AbstractSQL.java",
+      "src/main/java/org/apache/ibatis/jdbc/Null.java",
+      "src/main/java/org/apache/ibatis/jdbc/RuntimeSqlException.java",
+      "src/main/java/org/apache/ibatis/jdbc/SQL.java",
+      "src/main/java/org/apache/ibatis/jdbc/ScriptRunner.java",
+      "src/main/java/org/apache/ibatis/jdbc/SelectBuilder.java",
+      "src/main/java/org/apache/ibatis/jdbc/SqlBuilder.java",
+      "src/main/java/org/apache/ibatis/jdbc/SqlRunner.java",
+      "src/main/java/org/apache/ibatis/jdbc/package-info.java",
+      "src/main/java/org/apache/ibatis/logging/Log.java",
+      "src/main/java/org/apache/ibatis/logging/LogException.java",
+      "src/main/java/org/apache/ibatis/logging/LogFactory.java",
+      "src/main/java/org/apache/ibatis/logging/commons/JakartaCommonsLoggingImpl.java",
+      "src/main/java/org/apache/ibatis/logging/commons/package-info.java",
+      "src/main/java/org/apache/ibatis/logging/jdbc/BaseJdbcLogger.java",
+      "src/main/java/org/apache/ibatis/logging/jdbc/ConnectionLogger.java",
+      "src/main/java/org/apache/ibatis/logging/jdbc/PreparedStatementLogger.java",
+      "src/main/java/org/apache/ibatis/logging/jdbc/ResultSetLogger.java",
+      "src/main/java/org/apache/ibatis/logging/jdbc/StatementLogger.java",
+      "src/main/java/org/apache/ibatis/logging/jdbc/package-info.java",
+      "src/main/java/org/apache/ibatis/logging/jdk14/Jdk14LoggingImpl.java",
+      "src/main/java/org/apache/ibatis/logging/jdk14/package-info.java",
+      "src/main/java/org/apache/ibatis/logging/log4j/Log4jImpl.java",
+      "src/main/java/org/apache/ibatis/logging/log4j/package-info.java",
+      "src/main/java/org/apache/ibatis/logging/log4j2/Log4j2AbstractLoggerImpl.java",
+      "src/main/java/org/apache/ibatis/logging/log4j2/Log4j2Impl.java",
+      "src/main/java/org/apache/ibatis/logging/log4j2/Log4j2LoggerImpl.java",
+      "src/main/java/org/apache/ibatis/logging/log4j2/package-info.java",
+      "src/main/java/org/apache/ibatis/logging/nologging/NoLoggingImpl.java",
+      "src/main/java/org/apache/ibatis/logging/nologging/package-info.java",
+      "src/main/java/org/apache/ibatis/logging/package-info.java",
+      "src/main/java/org/apache/ibatis/logging/slf4j/Slf4jImpl.java",
+      "src/main/java/org/apache/ibatis/logging/slf4j/Slf4jLocationAwareLoggerImpl.java",
+      "src/main/java/org/apache/ibatis/logging/slf4j/Slf4jLoggerImpl.java",
+      "src/main/java/org/apache/ibatis/logging/slf4j/package-info.java",
+      "src/main/java/org/apache/ibatis/logging/stdout/StdOutImpl.java",
+      "src/main/java/org/apache/ibatis/logging/stdout/package-info.java",
+      "src/main/java/org/apache/ibatis/mapping/BoundSql.java",
+      "src/main/java/org/apache/ibatis/mapping/CacheBuilder.java",
+      "src/main/java/org/apache/ibatis/mapping/DatabaseIdProvider.java",
+      "src/main/java/org/apache/ibatis/mapping/DefaultDatabaseIdProvider.java",
+      "src/main/java/org/apache/ibatis/mapping/Discriminator.java",
+      "src/main/java/org/apache/ibatis/mapping/Environment.java",
+      "src/main/java/org/apache/ibatis/mapping/FetchType.java",
+      "src/main/java/org/apache/ibatis/mapping/MappedStatement.java",
+      "src/main/java/org/apache/ibatis/mapping/ParameterMap.java",
+      "src/main/java/org/apache/ibatis/mapping/ParameterMapping.java",
+      "src/main/java/org/apache/ibatis/mapping/ParameterMode.java",
+      "src/main/java/org/apache/ibatis/mapping/ResultFlag.java",
+      "src/main/java/org/apache/ibatis/mapping/ResultMap.java",
+      "src/main/java/org/apache/ibatis/mapping/ResultMapping.java",
+      "src/main/java/org/apache/ibatis/mapping/ResultSetType.java",
+      "src/main/java/org/apache/ibatis/mapping/SqlCommandType.java",
+      "src/main/java/org/apache/ibatis/mapping/SqlSource.java",
+      "src/main/java/org/apache/ibatis/mapping/StatementType.java",
+      "src/main/java/org/apache/ibatis/mapping/VendorDatabaseIdProvider.java",
+      "src/main/java/org/apache/ibatis/mapping/package-info.java",
+      "src/main/java/org/apache/ibatis/package-info.java",
+      "src/main/java/org/apache/ibatis/parsing/GenericTokenParser.java",
+      "src/main/java/org/apache/ibatis/parsing/ParsingException.java",
+      "src/main/java/org/apache/ibatis/parsing/PropertyParser.java",
+      "src/main/java/org/apache/ibatis/parsing/TokenHandler.java",
+      "src/main/java/org/apache/ibatis/parsing/XNode.java",
+      "src/main/java/org/apache/ibatis/parsing/XPathParser.java",
+      "src/main/java/org/apache/ibatis/parsing/package-info.java",
+      "src/main/java/org/apache/ibatis/plugin/Interceptor.java",
+      "src/main/java/org/apache/ibatis/plugin/InterceptorChain.java",
+      "src/main/java/org/apache/ibatis/plugin/Intercepts.java",
+      "src/main/java/org/apache/ibatis/plugin/Invocation.java",
+      "src/main/java/org/apache/ibatis/plugin/Plugin.java",
+      "src/main/java/org/apache/ibatis/plugin/PluginException.java",
+      "src/main/java/org/apache/ibatis/plugin/Signature.java",
+      "src/main/java/org/apache/ibatis/plugin/package-info.java",
+      "src/main/java/org/apache/ibatis/reflection/ArrayUtil.java",
+      "src/main/java/org/apache/ibatis/reflection/DefaultReflectorFactory.java",
+      "src/main/java/org/apache/ibatis/reflection/ExceptionUtil.java",
+      "src/main/java/org/apache/ibatis/reflection/Jdk.java",
+      "src/main/java/org/apache/ibatis/reflection/MetaClass.java",
+      "src/main/java/org/apache/ibatis/reflection/MetaObject.java",
+      "src/main/java/org/apache/ibatis/reflection/OptionalUtil.java",
+      "src/main/java/org/apache/ibatis/reflection/ParamNameResolver.java",
+      "src/main/java/org/apache/ibatis/reflection/ParamNameUtil.java",
+      "src/main/java/org/apache/ibatis/reflection/ReflectionException.java",
+      "src/main/java/org/apache/ibatis/reflection/Reflector.java",
+      "src/main/java/org/apache/ibatis/reflection/ReflectorFactory.java",
+      "src/main/java/org/apache/ibatis/reflection/SystemMetaObject.java",
+      "src/main/java/org/apache/ibatis/reflection/TypeParameterResolver.java",
+      "src/main/java/org/apache/ibatis/reflection/factory/DefaultObjectFactory.java",
+      "src/main/java/org/apache/ibatis/reflection/factory/ObjectFactory.java",
+      "src/main/java/org/apache/ibatis/reflection/factory/package-info.java",
+      "src/main/java/org/apache/ibatis/reflection/invoker/AmbiguousMethodInvoker.java",
+      "src/main/java/org/apache/ibatis/reflection/invoker/GetFieldInvoker.java",
+      "src/main/java/org/apache/ibatis/reflection/invoker/Invoker.java",
+      "src/main/java/org/apache/ibatis/reflection/invoker/MethodInvoker.java",
+      "src/main/java/org/apache/ibatis/reflection/invoker/SetFieldInvoker.java",
+      "src/main/java/org/apache/ibatis/reflection/invoker/package-info.java",
+      "src/main/java/org/apache/ibatis/reflection/package-info.java",
+      "src/main/java/org/apache/ibatis/reflection/property/PropertyCopier.java",
+      "src/main/java/org/apache/ibatis/reflection/property/PropertyNamer.java",
+      "src/main/java/org/apache/ibatis/reflection/property/PropertyTokenizer.java",
+      "src/main/java/org/apache/ibatis/reflection/property/package-info.java",
+      "src/main/java/org/apache/ibatis/reflection/wrapper/BaseWrapper.java",
+      "src/main/java/org/apache/ibatis/reflection/wrapper/BeanWrapper.java",
+      "src/main/java/org/apache/ibatis/reflection/wrapper/CollectionWrapper.java",
+      "src/main/java/org/apache/ibatis/reflection/wrapper/DefaultObjectWrapperFactory.java",
+      "src/main/java/org/apache/ibatis/reflection/wrapper/MapWrapper.java",
+      "src/main/java/org/apache/ibatis/reflection/wrapper/ObjectWrapper.java",
+      "src/main/java/org/apache/ibatis/reflection/wrapper/ObjectWrapperFactory.java",
+      "src/main/java/org/apache/ibatis/reflection/wrapper/package-info.java",
+      "src/main/java/org/apache/ibatis/scripting/LanguageDriver.java",
+      "src/main/java/org/apache/ibatis/scripting/LanguageDriverRegistry.java",
+      "src/main/java/org/apache/ibatis/scripting/ScriptingException.java",
+      "src/main/java/org/apache/ibatis/scripting/defaults/DefaultParameterHandler.java",
+      "src/main/java/org/apache/ibatis/scripting/defaults/RawLanguageDriver.java",
+      "src/main/java/org/apache/ibatis/scripting/defaults/RawSqlSource.java",
+      "src/main/java/org/apache/ibatis/scripting/defaults/package-info.java",
+      "src/main/java/org/apache/ibatis/scripting/package-info.java",
+      "src/main/java/org/apache/ibatis/scripting/xmltags/ChooseSqlNode.java",
+      "src/main/java/org/apache/ibatis/scripting/xmltags/DynamicContext.java",
+      "src/main/java/org/apache/ibatis/scripting/xmltags/DynamicSqlSource.java",
+      "src/main/java/org/apache/ibatis/scripting/xmltags/ExpressionEvaluator.java",
+      "src/main/java/org/apache/ibatis/scripting/xmltags/ForEachSqlNode.java",
+      "src/main/java/org/apache/ibatis/scripting/xmltags/IfSqlNode.java",
+      "src/main/java/org/apache/ibatis/scripting/xmltags/MixedSqlNode.java",
+      "src/main/java/org/apache/ibatis/scripting/xmltags/OgnlCache.java",
+      "src/main/java/org/apache/ibatis/scripting/xmltags/OgnlClassResolver.java",
+      "src/main/java/org/apache/ibatis/scripting/xmltags/OgnlMemberAccess.java",
+      "src/main/java/org/apache/ibatis/scripting/xmltags/SetSqlNode.java",
+      "src/main/java/org/apache/ibatis/scripting/xmltags/SqlNode.java",
+      "src/main/java/org/apache/ibatis/scripting/xmltags/StaticTextSqlNode.java",
+      "src/main/java/org/apache/ibatis/scripting/xmltags/TextSqlNode.java",
+      "src/main/java/org/apache/ibatis/scripting/xmltags/TrimSqlNode.java",
+      "src/main/java/org/apache/ibatis/scripting/xmltags/VarDeclSqlNode.java",
+      "src/main/java/org/apache/ibatis/scripting/xmltags/WhereSqlNode.java",
+      "src/main/java/org/apache/ibatis/scripting/xmltags/XMLLanguageDriver.java",
+      "src/main/java/org/apache/ibatis/scripting/xmltags/XMLScriptBuilder.java",
+      "src/main/java/org/apache/ibatis/scripting/xmltags/package-info.java",
+      "src/main/java/org/apache/ibatis/session/AutoMappingBehavior.java",
+      "src/main/java/org/apache/ibatis/session/AutoMappingUnknownColumnBehavior.java",
+      "src/main/java/org/apache/ibatis/session/Configuration.java",
+      "src/main/java/org/apache/ibatis/session/ExecutorType.java",
+      "src/main/java/org/apache/ibatis/session/LocalCacheScope.java",
+      "src/main/java/org/apache/ibatis/session/ResultContext.java",
+      "src/main/java/org/apache/ibatis/session/ResultHandler.java",
+      "src/main/java/org/apache/ibatis/session/RowBounds.java",
+      "src/main/java/org/apache/ibatis/session/SqlSession.java",
+      "src/main/java/org/apache/ibatis/session/SqlSessionException.java",
+      "src/main/java/org/apache/ibatis/session/SqlSessionFactory.java",
+      "src/main/java/org/apache/ibatis/session/SqlSessionFactoryBuilder.java",
+      "src/main/java/org/apache/ibatis/session/SqlSessionManager.java",
+      "src/main/java/org/apache/ibatis/session/TransactionIsolationLevel.java",
+      "src/main/java/org/apache/ibatis/session/defaults/DefaultSqlSession.java",
+      "src/main/java/org/apache/ibatis/session/defaults/DefaultSqlSessionFactory.java",
+      "src/main/java/org/apache/ibatis/session/defaults/package-info.java",
+      "src/main/java/org/apache/ibatis/session/package-info.java",
+      "src/main/java/org/apache/ibatis/transaction/Transaction.java",
+      "src/main/java/org/apache/ibatis/transaction/TransactionException.java",
+      "src/main/java/org/apache/ibatis/transaction/TransactionFactory.java",
+      "src/main/java/org/apache/ibatis/transaction/jdbc/JdbcTransaction.java",
+      "src/main/java/org/apache/ibatis/transaction/jdbc/JdbcTransactionFactory.java",
+      "src/main/java/org/apache/ibatis/transaction/jdbc/package-info.java",
+      "src/main/java/org/apache/ibatis/transaction/managed/ManagedTransaction.java",
+      "src/main/java/org/apache/ibatis/transaction/managed/ManagedTransactionFactory.java",
+      "src/main/java/org/apache/ibatis/transaction/managed/package-info.java",
+      "src/main/java/org/apache/ibatis/transaction/package-info.java",
+      "src/main/java/org/apache/ibatis/type/Alias.java",
+      "src/main/java/org/apache/ibatis/type/ArrayTypeHandler.java",
+      "src/main/java/org/apache/ibatis/type/BaseTypeHandler.java",
+      "src/main/java/org/apache/ibatis/type/BigDecimalTypeHandler.java",
+      "src/main/java/org/apache/ibatis/type/BigIntegerTypeHandler.java",
+      "src/main/java/org/apache/ibatis/type/BlobByteObjectArrayTypeHandler.java",
+      "src/main/java/org/apache/ibatis/type/BlobInputStreamTypeHandler.java",
+      "src/main/java/org/apache/ibatis/type/BlobTypeHandler.java",
+      "src/main/java/org/apache/ibatis/type/BooleanTypeHandler.java",
+      "src/main/java/org/apache/ibatis/type/ByteArrayTypeHandler.java",
+      "src/main/java/org/apache/ibatis/type/ByteArrayUtils.java",
+      "src/main/java/org/apache/ibatis/type/ByteObjectArrayTypeHandler.java",
+      "src/main/java/org/apache/ibatis/type/ByteTypeHandler.java",
+      "src/main/java/org/apache/ibatis/type/CharacterTypeHandler.java",
+      "src/main/java/org/apache/ibatis/type/ClobReaderTypeHandler.java",
+      "src/main/java/org/apache/ibatis/type/ClobTypeHandler.java",
+      "src/main/java/org/apache/ibatis/type/ConflictedTypeHandler.java",
+      "src/main/java/org/apache/ibatis/type/DateOnlyTypeHandler.java",
+      "src/main/java/org/apache/ibatis/type/DateTypeHandler.java",
+      "src/main/java/org/apache/ibatis/type/DoubleTypeHandler.java",
+      "src/main/java/org/apache/ibatis/type/EnumOrdinalTypeHandler.java",
+      "src/main/java/org/apache/ibatis/type/EnumTypeHandler.java",
+      "src/main/java/org/apache/ibatis/type/FloatTypeHandler.java",
+      "src/main/java/org/apache/ibatis/type/InstantTypeHandler.java",
+      "src/main/java/org/apache/ibatis/type/IntegerTypeHandler.java",
+      "src/main/java/org/apache/ibatis/type/JapaneseDateTypeHandler.java",
+      "src/main/java/org/apache/ibatis/type/JdbcType.java",
+      "src/main/java/org/apache/ibatis/type/LocalDateTimeTypeHandler.java",
+      "src/main/java/org/apache/ibatis/type/LocalDateTypeHandler.java",
+      "src/main/java/org/apache/ibatis/type/LocalTimeTypeHandler.java",
+      "src/main/java/org/apache/ibatis/type/LongTypeHandler.java",
+      "src/main/java/org/apache/ibatis/type/MappedJdbcTypes.java",
+      "src/main/java/org/apache/ibatis/type/MappedTypes.java",
+      "src/main/java/org/apache/ibatis/type/MonthTypeHandler.java",
+      "src/main/java/org/apache/ibatis/type/NClobTypeHandler.java",
+      "src/main/java/org/apache/ibatis/type/NStringTypeHandler.java",
+      "src/main/java/org/apache/ibatis/type/ObjectTypeHandler.java",
+      "src/main/java/org/apache/ibatis/type/OffsetDateTimeTypeHandler.java",
+      "src/main/java/org/apache/ibatis/type/OffsetTimeTypeHandler.java",
+      "src/main/java/org/apache/ibatis/type/ShortTypeHandler.java",
+      "src/main/java/org/apache/ibatis/type/SimpleTypeRegistry.java",
+      "src/main/java/org/apache/ibatis/type/SqlDateTypeHandler.java",
+      "src/main/java/org/apache/ibatis/type/SqlTimeTypeHandler.java",
+      "src/main/java/org/apache/ibatis/type/SqlTimestampTypeHandler.java",
+      "src/main/java/org/apache/ibatis/type/SqlxmlTypeHandler.java",
+      "src/main/java/org/apache/ibatis/type/StringTypeHandler.java",
+      "src/main/java/org/apache/ibatis/type/TimeOnlyTypeHandler.java",
+      "src/main/java/org/apache/ibatis/type/TypeAliasRegistry.java",
+      "src/main/java/org/apache/ibatis/type/TypeException.java",
+      "src/main/java/org/apache/ibatis/type/TypeHandler.java",
+      "src/main/java/org/apache/ibatis/type/TypeHandlerRegistry.java",
+      "src/main/java/org/apache/ibatis/type/TypeReference.java",
+      "src/main/java/org/apache/ibatis/type/UnknownTypeHandler.java",
+      "src/main/java/org/apache/ibatis/type/YearMonthTypeHandler.java",
+      "src/main/java/org/apache/ibatis/type/YearTypeHandler.java",
+      "src/main/java/org/apache/ibatis/type/ZonedDateTimeTypeHandler.java",
+      "src/main/java/org/apache/ibatis/type/package-info.java",
+      "src/main/resources/org/apache/ibatis/builder/xml/mybatis-3-config.dtd",
+      "src/main/resources/org/apache/ibatis/builder/xml/mybatis-3-mapper.dtd",
+      "src/main/resources/org/apache/ibatis/builder/xml/mybatis-config.xsd",
+      "src/main/resources/org/apache/ibatis/builder/xml/mybatis-mapper.xsd",
+      "src/site/es/markdown/getting-started.md",
+      "src/site/es/markdown/index.md",
+      "src/site/es/markdown/logging.md",
+      "src/site/es/resources/css/site.css",
+      "src/site/es/xdoc/configuration.xml",
+      "src/site/es/xdoc/dynamic-sql.xml",
+      "src/site/es/xdoc/java-api.xml",
+      "src/site/es/xdoc/sqlmap-xml.xml",
+      "src/site/es/xdoc/statement-builders.xml",
+      "src/site/fr/markdown/getting-started.md",
+      "src/site/fr/resources/css/site.css",
+      "src/site/ja/markdown/getting-started.md",
+      "src/site/ja/markdown/index.md",
+      "src/site/ja/markdown/logging.md",
+      "src/site/ja/resources/css/site.css",
+      "src/site/ja/xdoc/configuration.xml",
+      "src/site/ja/xdoc/dynamic-sql.xml",
+      "src/site/ja/xdoc/java-api.xml",
+      "src/site/ja/xdoc/sqlmap-xml.xml",
+      "src/site/ja/xdoc/statement-builders.xml",
+      "src/site/ko/markdown/getting-started.md",
+      "src/site/ko/markdown/index.md",
+      "src/site/ko/markdown/logging.md",
+      "src/site/ko/resources/css/site.css",
+      "src/site/ko/xdoc/configuration.xml",
+      "src/site/ko/xdoc/dynamic-sql.xml",
+      "src/site/ko/xdoc/java-api.xml",
+      "src/site/ko/xdoc/sqlmap-xml.xml",
+      "src/site/ko/xdoc/statement-builders.xml",
+      "src/site/markdown/configuration.md",
+      "src/site/markdown/dynamic-sql.md",
+      "src/site/markdown/getting-started.md",
+      "src/site/markdown/index.md",
+      "src/site/markdown/java-api.md",
+      "src/site/markdown/logging.md",
+      "src/site/markdown/sqlmap-xml.md",
+      "src/site/markdown/statement-builders.md",
+      "src/site/pdf.xml",
+      "src/site/resources/css/site.css",
+      "src/site/resources/images/en.png",
+      "src/site/resources/images/es.png",
+      "src/site/resources/images/fr.png",
+      "src/site/resources/images/ja.png",
+      "src/site/resources/images/ko.png",
+      "src/site/resources/images/zh.png",
+      "src/site/site.xml",
+      "src/site/site_es.xml",
+      "src/site/site_fr.xml",
+      "src/site/site_ja.xml",
+      "src/site/site_ko.xml",
+      "src/site/site_zh.xml",
+      "src/site/zh_CN/markdown/getting-started.md",
+      "src/site/zh_CN/markdown/index.md",
+      "src/site/zh_CN/markdown/logging.md",
+      "src/site/zh_CN/resources/css/site.css",
+      "src/site/zh_CN/xdoc/configuration.xml",
+      "src/site/zh_CN/xdoc/dynamic-sql.xml",
+      "src/site/zh_CN/xdoc/java-api.xml",
+      "src/site/zh_CN/xdoc/sqlmap-xml.xml",
+      "src/site/zh_CN/xdoc/statement-builders.xml",
+      "third_party_apis_full_methods.json"
+    ]
+  },
+  "time": {
+    "rules": [],
+    "rules_parse_time": 12.452574968338013,
+    "profiling_times": {
+      "config_time": 36.725873947143555,
+      "core_time": 45.47884488105774,
+      "ignores_time": 0.14716887474060059,
+      "total_time": 82.38358688354492
+    },
+    "parsing_time": {
+      "total_time": 0.0,
+      "per_file_time": {
+        "mean": 0.0,
+        "std_dev": 0.0
+      },
+      "very_slow_stats": {
+        "time_ratio": 0.0,
+        "count_ratio": 0.0
+      },
+      "very_slow_files": []
+    },
+    "scanning_time": {
+      "total_time": 0.0,
+      "per_file_time": {
+        "mean": 0.0,
+        "std_dev": 0.0
+      },
+      "very_slow_stats": {
+        "time_ratio": 0.0,
+        "count_ratio": 0.0
+      },
+      "very_slow_files": []
+    },
+    "matching_time": {
+      "total_time": 0.0,
+      "per_file_and_rule_time": {
+        "mean": 0.0,
+        "std_dev": 0.0
+      },
+      "very_slow_stats": {
+        "time_ratio": 0.0,
+        "count_ratio": 0.0
+      },
+      "very_slow_rules_on_files": []
+    },
+    "tainting_time": {
+      "total_time": 0.0,
+      "per_def_and_rule_time": {
+        "mean": 0.0,
+        "std_dev": 0.0
+      },
+      "very_slow_stats": {
+        "time_ratio": 0.0,
+        "count_ratio": 0.0
+      },
+      "very_slow_rules_on_defs": []
+    },
+    "fixpoint_timeouts": [
+      {
+        "error_type": "Fixpoint timeout",
+        "severity": "warn",
+        "message": "Fixpoint timeout while performing taint analysis at src/main/java/org/apache/ibatis/datasource/pooled/PooledDataSource.java:435:27 [rules: 2, first: java.lang.security.audit.formatted-sql-string.formatted-sql-string]",
+        "location": {
+          "path": "src/main/java/org/apache/ibatis/datasource/pooled/PooledDataSource.java",
+          "start": {
+            "line": 435,
+            "col": 28,
+            "offset": 13248
+          },
+          "end": {
+            "line": 435,
+            "col": 41,
+            "offset": 13261
+          }
+        }
+      },
+      {
+        "error_type": "Fixpoint timeout",
+        "severity": "warn",
+        "message": "Fixpoint timeout while performing taint analysis at src/main/java/org/apache/ibatis/executor/resultset/DefaultResultSetHandler.java:796:9 [rules: 5, first: java.spring.security.spring-sqli-deepsemgrep.spring-sqli-deepsemgrep]",
+        "location": {
+          "path": "src/main/java/org/apache/ibatis/executor/resultset/DefaultResultSetHandler.java",
+          "start": {
+            "line": 796,
+            "col": 10,
+            "offset": 34062
+          },
+          "end": {
+            "line": 796,
+            "col": 41,
+            "offset": 34093
+          }
+        }
+      }
+    ],
+    "prefiltering": {
+      "project_level_time": 0.0,
+      "file_level_time": 0.0,
+      "rules_with_project_prefilters_ratio": 0.0,
+      "rules_with_file_prefilters_ratio": 0.0,
+      "rules_selected_ratio": 0.0,
+      "rules_matched_ratio": 0.0
+    },
+    "targets": [],
+    "total_bytes": 0,
+    "max_memory_bytes": 10634940864
+  },
+  "engine_requested": "PRO",
+  "interfile_languages_used": [],
+  "skipped_rules": [],
+  "subprojects": [
+    {
+      "dependency_sources": [
+        "pom.xml"
+      ],
+      "resolved": true,
+      "resolved_stats": {
+        "resolution_method": "DynamicResolution",
+        "dependency_count": 58,
+        "ecosystem": "maven"
+      }
+    }
+  ],
+  "profiling_results": []
+}

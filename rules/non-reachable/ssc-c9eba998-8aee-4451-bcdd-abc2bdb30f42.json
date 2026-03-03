@@ -1,0 +1,151 @@
+{
+  "advisories": [
+    {
+      "ruleId": "ssc-c9eba998-8aee-4451-bcdd-abc2bdb30f42",
+      "title": "Injection in org.apache.derby:derby",
+      "description": "Affected versions of org.apache.derby:derby are vulnerable to Improper Neutralization Of Special Elements In Output Used By A Downstream Component ('Injection') / Improper Control Of Generation Of Code ('Code Injection'). An attacker can supply a username that bypasses LDAP authentication checks, allowing them to perform various malicious actions such as filling up the disk with junk databases, executing malware, and accessing sensitive data, functions and procedures.",
+      "ecosystem": "maven",
+      "severity": "CRITICAL",
+      "references": {
+        "cveIds": [
+          "CVE-2022-46337"
+        ],
+        "cweIds": [
+          "CWE-74: Improper Neutralization of Special Elements in Output Used by a Downstream Component ('Injection')",
+          "CWE-94: Improper Control of Generation of Code ('Code Injection')"
+        ],
+        "owaspIds": [
+          "A03:2021 - Injection",
+          "A05:2025 - Injection",
+          "A06:2021 - Vulnerable and Outdated Components"
+        ],
+        "urls": [
+          "https://github.com/advisories/GHSA-rcjc-c4pj-xxrp",
+          "https://nvd.nist.gov/vuln/detail/CVE-2022-46337"
+        ]
+      },
+      "announcedAt": "2023-11-20T09:30:31Z",
+      "ruleText": {
+        "id": "ssc-c9eba998-8aee-4451-bcdd-abc2bdb30f42",
+        "message": "Affected versions of org.apache.derby:derby are vulnerable to Improper Neutralization Of Special Elements In Output Used By A Downstream Component ('Injection') / Improper Control Of Generation Of Code ('Code Injection'). An attacker can supply a username that bypasses LDAP authentication checks, allowing them to perform various malicious actions such as filling up the disk with junk databases, executing malware, and accessing sensitive data, functions and procedures.",
+        "severity": "CRITICAL",
+        "metadata": {
+          "confidence": "HIGH",
+          "category": "security",
+          "cve": "CVE-2022-46337",
+          "cwe": [
+            "CWE-74: Improper Neutralization of Special Elements in Output Used by a Downstream Component ('Injection')",
+            "CWE-94: Improper Control of Generation of Code ('Code Injection')"
+          ],
+          "ghsa": "GHSA-rcjc-c4pj-xxrp",
+          "owasp": [
+            "A03:2021 - Injection",
+            "A05:2025 - Injection",
+            "A06:2021 - Vulnerable and Outdated Components"
+          ],
+          "publish-date": "2023-11-20T09:30:31Z",
+          "references": [
+            "https://github.com/advisories/GHSA-rcjc-c4pj-xxrp",
+            "https://nvd.nist.gov/vuln/detail/CVE-2022-46337"
+          ],
+          "sca-fix-versions": [
+            {
+              "org.apache.derby:derby": "10.17.1.0"
+            },
+            {
+              "org.apache.derby:derby": "10.16.1.2"
+            },
+            {
+              "org.apache.derby:derby": "10.15.2.1"
+            },
+            {
+              "org.apache.derby:derby": "10.14.3"
+            }
+          ],
+          "sca-kind": "upgrade-only",
+          "sca-schema": 20230302,
+          "sca-severity": "CRITICAL",
+          "sca-vuln-database-identifier": "CVE-2022-46337",
+          "technology": [
+            "java",
+            "kotlin",
+            "scala"
+          ],
+          "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+          "vulnerability_class": [
+            "Code Injection",
+            "Other"
+          ],
+          "semgrep.dev": {
+            "rule": {
+              "r_id": 94131,
+              "rv_id": 1242175,
+              "rule_id": "lBU49KZ",
+              "version_id": "ZRTK193",
+              "url": "https://semgrep.dev/orgs/-/supply-chain/advisories?q=ssc-c9eba998-8aee-4451-bcdd-abc2bdb30f42",
+              "origin": "custom"
+            }
+          }
+        },
+        "r2c-internal-project-depends-on": {
+          "depends-on-either": [
+            {
+              "namespace": "maven",
+              "package": "org.apache.derby:derby",
+              "version": ">=10.1.1.0, <10.14.3"
+            },
+            {
+              "namespace": "maven",
+              "package": "org.apache.derby:derby",
+              "version": ">=10.15.0.0, <10.15.2.1"
+            },
+            {
+              "namespace": "maven",
+              "package": "org.apache.derby:derby",
+              "version": ">=10.16.0.0, <10.16.1.2"
+            },
+            {
+              "namespace": "maven",
+              "package": "org.apache.derby:derby",
+              "version": ">=10.17.0.0, <10.17.1.0"
+            }
+          ]
+        },
+        "languages": [
+          "java",
+          "kotlin",
+          "scala"
+        ]
+      },
+      "reachability": "ALWAYS_REACHABLE",
+      "vulnerableDependencies": [
+        {
+          "name": "org.apache.derby:derby",
+          "versionSpecifier": ">=10.1.1.0, <10.14.3"
+        }
+      ],
+      "safeDependencies": [
+        {
+          "name": "org.apache.derby:derby",
+          "versionSpecifier": "10.17.1.0"
+        },
+        {
+          "name": "org.apache.derby:derby",
+          "versionSpecifier": "10.16.1.2"
+        },
+        {
+          "name": "org.apache.derby:derby",
+          "versionSpecifier": "10.15.2.1"
+        },
+        {
+          "name": "org.apache.derby:derby",
+          "versionSpecifier": "10.14.3"
+        }
+      ],
+      "cve": "CVE-2022-46337",
+      "ghsa": "GHSA-rcjc-c4pj-xxrp",
+      "reachableIf": ""
+    }
+  ],
+  "totalCount": "1"
+}

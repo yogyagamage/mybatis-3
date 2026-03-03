@@ -1,0 +1,112 @@
+{
+  "advisories": [
+    {
+      "ruleId": "ssc-parity-3df5adc2111084715c62654597cec0e926de367a",
+      "title": "Improper Input Validation in ch.qos.logback:logback-core",
+      "description": "Affected versions of ch.qos.logback:logback-core are vulnerable to Improper Input Validation.",
+      "ecosystem": "maven",
+      "severity": "LOW",
+      "references": {
+        "cveIds": [
+          "CVE-2026-1225"
+        ],
+        "cweIds": [
+          "CWE-20: Improper Input Validation"
+        ],
+        "owaspIds": [
+          "A03:2021 - Injection",
+          "A05:2025 - Injection",
+          "A06:2021 - Vulnerable and Outdated Components"
+        ],
+        "urls": [
+          "https://github.com/advisories/GHSA-qqpg-mvqg-649v",
+          "https://nvd.nist.gov/vuln/detail/CVE-2026-1225"
+        ]
+      },
+      "announcedAt": "2026-01-22T12:31:22Z",
+      "ruleText": {
+        "id": "ssc-parity-3df5adc2111084715c62654597cec0e926de367a",
+        "message": "Affected versions of ch.qos.logback:logback-core are vulnerable to Improper Input Validation.",
+        "severity": "INFO",
+        "metadata": {
+          "confidence": "LOW",
+          "category": "security",
+          "cve": "CVE-2026-1225",
+          "cwe": [
+            "CWE-20: Improper Input Validation"
+          ],
+          "ghsa": "GHSA-qqpg-mvqg-649v",
+          "owasp": [
+            "A03:2021 - Injection",
+            "A05:2025 - Injection",
+            "A06:2021 - Vulnerable and Outdated Components"
+          ],
+          "publish-date": "2026-01-22T12:31:22Z",
+          "references": [
+            "https://github.com/advisories/GHSA-qqpg-mvqg-649v",
+            "https://nvd.nist.gov/vuln/detail/CVE-2026-1225"
+          ],
+          "sca-fix-versions": [
+            {
+              "ch.qos.logback:logback-core": "1.5.25"
+            }
+          ],
+          "sca-kind": "legacy",
+          "sca-schema": 20230302,
+          "sca-severity": "LOW",
+          "sca-vuln-database-identifier": "CVE-2026-1225",
+          "technology": [
+            "java",
+            "kotlin",
+            "scala"
+          ],
+          "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+          "vulnerability_class": [
+            "Improper Validation"
+          ],
+          "semgrep.dev": {
+            "rule": {
+              "r_id": 275124,
+              "rv_id": 1266657,
+              "rule_id": "PeUWjZ3",
+              "version_id": "pZT0WNo",
+              "url": "https://semgrep.dev/orgs/-/supply-chain/advisories?q=ssc-parity-3df5adc2111084715c62654597cec0e926de367a",
+              "origin": "custom"
+            }
+          }
+        },
+        "r2c-internal-project-depends-on": {
+          "depends-on-either": [
+            {
+              "namespace": "maven",
+              "package": "ch.qos.logback:logback-core",
+              "version": "<1.5.25"
+            }
+          ]
+        },
+        "languages": [
+          "java",
+          "kotlin",
+          "scala"
+        ]
+      },
+      "reachability": "VERSION_SPECIFIER",
+      "vulnerableDependencies": [
+        {
+          "name": "ch.qos.logback:logback-core",
+          "versionSpecifier": "<1.5.25"
+        }
+      ],
+      "safeDependencies": [
+        {
+          "name": "ch.qos.logback:logback-core",
+          "versionSpecifier": "1.5.25"
+        }
+      ],
+      "cve": "CVE-2026-1225",
+      "ghsa": "GHSA-qqpg-mvqg-649v",
+      "reachableIf": ""
+    }
+  ],
+  "totalCount": "1"
+}
