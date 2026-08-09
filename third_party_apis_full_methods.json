@@ -1,0 +1,1119 @@
+{
+  "fullMethodsPaths": [
+    {
+      "entryPoint": "org.apache.ibatis.logging.log4j2.Log4j2LoggerImpl.trace(java.lang.String)",
+      "thirdPartyMethod": "org.apache.logging.log4j.Logger.trace(org.apache.logging.log4j.Marker, java.lang.String)",
+      "directCaller": "org.apache.ibatis.logging.log4j2.Log4j2LoggerImpl.trace(java.lang.String)",
+      "path": [
+        "org.apache.ibatis.logging.log4j2.Log4j2LoggerImpl.trace(java.lang.String)",
+        "org.apache.logging.log4j.Logger.trace(org.apache.logging.log4j.Marker, java.lang.String)"
+      ],
+      "methodSources": [
+        "@Override\npublic void trace(String s) // PATH: Test should invoke the next Logger.trace(...) [step in execution path]\n{\n    log.trace(MARKER, s);\n}"
+      ],
+      "constructors": [
+        "public Log4j2LoggerImpl(Logger logger) {\n    log = logger;\n}"
+      ],
+      "fieldDeclarations": [
+        "private static final Marker MARKER = MarkerManager.getMarker(LogFactory.MARKER);",
+        "private final Logger log;"
+      ],
+      "setters": [
+        "@Override\npublic void debug(String s) {\n    log.debug(MARKER, s);\n}",
+        "@Override\npublic void error(String s) {\n    log.error(MARKER, s);\n}",
+        "@Override\npublic void error(String s, Throwable e) {\n    log.error(MARKER, s, e);\n}",
+        "@Override\npublic void trace(String s) {\n    log.trace(MARKER, s);\n}",
+        "@Override\npublic void warn(String s) {\n    log.warn(MARKER, s);\n}"
+      ],
+      "imports": [
+        "org.apache.logging.log4j.Logger",
+        "org.apache.logging.log4j.Marker"
+      ],
+      "testTemplate": "package org.apache.ibatis.logging.log4j2;\n\npublic class Log4j2LoggerImpltrace_LoggertraceFikaTest {\n\n    @Test\n    public void testTrace() {\n    }\n}",
+      "conditionCount": 0,
+      "callCount": 1,
+      "covered": true
+    },
+    {
+      "entryPoint": "org.apache.ibatis.logging.log4j2.Log4j2LoggerImpl.error(java.lang.String)",
+      "thirdPartyMethod": "org.apache.logging.log4j.Logger.error(org.apache.logging.log4j.Marker, java.lang.String)",
+      "directCaller": "org.apache.ibatis.logging.log4j2.Log4j2LoggerImpl.error(java.lang.String)",
+      "path": [
+        "org.apache.ibatis.logging.log4j2.Log4j2LoggerImpl.error(java.lang.String)",
+        "org.apache.logging.log4j.Logger.error(org.apache.logging.log4j.Marker, java.lang.String)"
+      ],
+      "methodSources": [
+        "@Override\npublic void error(String s) // PATH: Test should invoke the next Logger.error(...) [step in execution path]\n{\n    log.error(MARKER, s);\n}"
+      ],
+      "constructors": [
+        "public Log4j2LoggerImpl(Logger logger) {\n    log = logger;\n}"
+      ],
+      "fieldDeclarations": [
+        "private static final Marker MARKER = MarkerManager.getMarker(LogFactory.MARKER);",
+        "private final Logger log;"
+      ],
+      "setters": [
+        "@Override\npublic void debug(String s) {\n    log.debug(MARKER, s);\n}",
+        "@Override\npublic void error(String s) {\n    log.error(MARKER, s);\n}",
+        "@Override\npublic void error(String s, Throwable e) {\n    log.error(MARKER, s, e);\n}",
+        "@Override\npublic void trace(String s) {\n    log.trace(MARKER, s);\n}",
+        "@Override\npublic void warn(String s) {\n    log.warn(MARKER, s);\n}"
+      ],
+      "imports": [
+        "org.apache.logging.log4j.Logger",
+        "org.apache.logging.log4j.Marker"
+      ],
+      "testTemplate": "package org.apache.ibatis.logging.log4j2;\n\npublic class Log4j2LoggerImplerror_LoggererrorFikaTest {\n\n    @Test\n    public void testError() {\n    }\n}",
+      "conditionCount": 0,
+      "callCount": 1,
+      "covered": true
+    },
+    {
+      "entryPoint": "org.apache.ibatis.logging.commons.JakartaCommonsLoggingImpl.debug(java.lang.String)",
+      "thirdPartyMethod": "org.apache.commons.logging.Log.debug(java.lang.Object)",
+      "directCaller": "org.apache.ibatis.logging.commons.JakartaCommonsLoggingImpl.debug(java.lang.String)",
+      "path": [
+        "org.apache.ibatis.logging.commons.JakartaCommonsLoggingImpl.debug(java.lang.String)",
+        "org.apache.commons.logging.Log.debug(java.lang.Object)"
+      ],
+      "methodSources": [
+        "@Override\npublic void debug(String s) // PATH: Test should invoke the next Log.debug(...) [step in execution path]\n{\n    log.debug(s);\n}"
+      ],
+      "constructors": [
+        "public JakartaCommonsLoggingImpl(String clazz) {\n    log = LogFactory.getLog(clazz);\n}"
+      ],
+      "fieldDeclarations": [
+        "private final Log log;"
+      ],
+      "setters": [
+        "@Override\npublic void debug(String s) {\n    log.debug(s);\n}",
+        "@Override\npublic void error(String s) {\n    log.error(s);\n}",
+        "@Override\npublic void error(String s, Throwable e) {\n    log.error(s, e);\n}",
+        "@Override\npublic void trace(String s) {\n    log.trace(s);\n}",
+        "@Override\npublic void warn(String s) {\n    log.warn(s);\n}"
+      ],
+      "imports": [
+        "org.apache.commons.logging.Log",
+        "org.apache.commons.logging.LogFactory"
+      ],
+      "testTemplate": "package org.apache.ibatis.logging.commons;\n\npublic class JakartaCommonsLoggingImpldebug_LogdebugFikaTest {\n\n    @Test\n    public void testDebug() {\n    }\n}",
+      "conditionCount": 0,
+      "callCount": 1,
+      "covered": true
+    },
+    {
+      "entryPoint": "org.apache.ibatis.logging.commons.JakartaCommonsLoggingImpl.warn(java.lang.String)",
+      "thirdPartyMethod": "org.apache.commons.logging.Log.warn(java.lang.Object)",
+      "directCaller": "org.apache.ibatis.logging.commons.JakartaCommonsLoggingImpl.warn(java.lang.String)",
+      "path": [
+        "org.apache.ibatis.logging.commons.JakartaCommonsLoggingImpl.warn(java.lang.String)",
+        "org.apache.commons.logging.Log.warn(java.lang.Object)"
+      ],
+      "methodSources": [
+        "@Override\npublic void warn(String s) // PATH: Test should invoke the next Log.warn(...) [step in execution path]\n{\n    log.warn(s);\n}"
+      ],
+      "constructors": [
+        "public JakartaCommonsLoggingImpl(String clazz) {\n    log = LogFactory.getLog(clazz);\n}"
+      ],
+      "fieldDeclarations": [
+        "private final Log log;"
+      ],
+      "setters": [
+        "@Override\npublic void debug(String s) {\n    log.debug(s);\n}",
+        "@Override\npublic void error(String s) {\n    log.error(s);\n}",
+        "@Override\npublic void error(String s, Throwable e) {\n    log.error(s, e);\n}",
+        "@Override\npublic void trace(String s) {\n    log.trace(s);\n}",
+        "@Override\npublic void warn(String s) {\n    log.warn(s);\n}"
+      ],
+      "imports": [
+        "org.apache.commons.logging.Log",
+        "org.apache.commons.logging.LogFactory"
+      ],
+      "testTemplate": "package org.apache.ibatis.logging.commons;\n\npublic class JakartaCommonsLoggingImplwarn_LogwarnFikaTest {\n\n    @Test\n    public void testWarn() {\n    }\n}",
+      "conditionCount": 0,
+      "callCount": 1,
+      "covered": true
+    },
+    {
+      "entryPoint": "org.apache.ibatis.logging.log4j2.Log4j2AbstractLoggerImpl.<init>(org.apache.logging.log4j.spi.AbstractLogger)",
+      "thirdPartyMethod": "org.apache.logging.log4j.spi.ExtendedLoggerWrapper.<init>(org.apache.logging.log4j.spi.ExtendedLogger, java.lang.String, org.apache.logging.log4j.message.MessageFactory)",
+      "directCaller": "org.apache.ibatis.logging.log4j2.Log4j2AbstractLoggerImpl.<init>(org.apache.logging.log4j.spi.AbstractLogger)",
+      "path": [
+        "org.apache.ibatis.logging.log4j2.Log4j2AbstractLoggerImpl.<init>(org.apache.logging.log4j.spi.AbstractLogger)",
+        "org.apache.logging.log4j.spi.ExtendedLoggerWrapper.<init>(org.apache.logging.log4j.spi.ExtendedLogger, java.lang.String, org.apache.logging.log4j.message.MessageFactory)"
+      ],
+      "methodSources": [
+        "public Log4j2AbstractLoggerImpl(AbstractLogger abstractLogger) {\n    log = new ExtendedLoggerWrapper(abstractLogger, abstractLogger.getName(), abstractLogger.getMessageFactory());\n}"
+      ],
+      "constructors": [
+        "public Log4j2AbstractLoggerImpl(AbstractLogger abstractLogger) {\n    log = new ExtendedLoggerWrapper(abstractLogger, abstractLogger.getName(), abstractLogger.getMessageFactory());\n}"
+      ],
+      "fieldDeclarations": [
+        "private static final Marker MARKER = MarkerManager.getMarker(LogFactory.MARKER);",
+        "private static final String FQCN = Log4j2Impl.class.getName();",
+        "private final ExtendedLoggerWrapper log;"
+      ],
+      "setters": [
+        "@Override\npublic void debug(String s) {\n    log.logIfEnabled(FQCN, Level.DEBUG, MARKER, ((Message) (new SimpleMessage(s))), null);\n}",
+        "@Override\npublic void error(String s) {\n    log.logIfEnabled(FQCN, Level.ERROR, MARKER, ((Message) (new SimpleMessage(s))), null);\n}",
+        "@Override\npublic void error(String s, Throwable e) {\n    log.logIfEnabled(FQCN, Level.ERROR, MARKER, ((Message) (new SimpleMessage(s))), e);\n}",
+        "@Override\npublic void trace(String s) {\n    log.logIfEnabled(FQCN, Level.TRACE, MARKER, ((Message) (new SimpleMessage(s))), null);\n}",
+        "@Override\npublic void warn(String s) {\n    log.logIfEnabled(FQCN, Level.WARN, MARKER, ((Message) (new SimpleMessage(s))), null);\n}"
+      ],
+      "imports": [
+        "org.apache.logging.log4j.Level",
+        "org.apache.logging.log4j.Marker",
+        "org.apache.logging.log4j.message.Message",
+        "org.apache.logging.log4j.message.MessageFactory",
+        "org.apache.logging.log4j.message.SimpleMessage",
+        "org.apache.logging.log4j.spi.AbstractLogger",
+        "org.apache.logging.log4j.spi.ExtendedLogger",
+        "org.apache.logging.log4j.spi.ExtendedLoggerWrapper"
+      ],
+      "testTemplate": "package org.apache.ibatis.logging.log4j2;\n\npublic class Log4j2AbstractLoggerImplmethod_ExtendedLoggerWrappermethodFikaTest {\n\n    @Test\n    public void testMethod() {\n    }\n}",
+      "conditionCount": 0,
+      "callCount": 1,
+      "covered": true
+    },
+    {
+      "entryPoint": "org.apache.ibatis.logging.log4j2.Log4j2AbstractLoggerImpl.isTraceEnabled()",
+      "thirdPartyMethod": "org.apache.logging.log4j.spi.ExtendedLoggerWrapper.isTraceEnabled()",
+      "directCaller": "org.apache.ibatis.logging.log4j2.Log4j2AbstractLoggerImpl.isTraceEnabled()",
+      "path": [
+        "org.apache.ibatis.logging.log4j2.Log4j2AbstractLoggerImpl.isTraceEnabled()",
+        "org.apache.logging.log4j.spi.ExtendedLoggerWrapper.isTraceEnabled()"
+      ],
+      "methodSources": [
+        "@Override\npublic boolean isTraceEnabled() {\n    return log.isTraceEnabled();\n}"
+      ],
+      "constructors": [
+        "public Log4j2AbstractLoggerImpl(AbstractLogger abstractLogger) {\n    log = new ExtendedLoggerWrapper(abstractLogger, abstractLogger.getName(), abstractLogger.getMessageFactory());\n}"
+      ],
+      "fieldDeclarations": [
+        "private static final Marker MARKER = MarkerManager.getMarker(LogFactory.MARKER);",
+        "private static final String FQCN = Log4j2Impl.class.getName();",
+        "private final ExtendedLoggerWrapper log;"
+      ],
+      "setters": [
+        "@Override\npublic void debug(String s) {\n    log.logIfEnabled(FQCN, Level.DEBUG, MARKER, ((Message) (new SimpleMessage(s))), null);\n}",
+        "@Override\npublic void error(String s) {\n    log.logIfEnabled(FQCN, Level.ERROR, MARKER, ((Message) (new SimpleMessage(s))), null);\n}",
+        "@Override\npublic void error(String s, Throwable e) {\n    log.logIfEnabled(FQCN, Level.ERROR, MARKER, ((Message) (new SimpleMessage(s))), e);\n}",
+        "@Override\npublic void trace(String s) {\n    log.logIfEnabled(FQCN, Level.TRACE, MARKER, ((Message) (new SimpleMessage(s))), null);\n}",
+        "@Override\npublic void warn(String s) {\n    log.logIfEnabled(FQCN, Level.WARN, MARKER, ((Message) (new SimpleMessage(s))), null);\n}"
+      ],
+      "imports": [
+        "org.apache.logging.log4j.Level",
+        "org.apache.logging.log4j.Marker",
+        "org.apache.logging.log4j.message.Message",
+        "org.apache.logging.log4j.message.MessageFactory",
+        "org.apache.logging.log4j.message.SimpleMessage",
+        "org.apache.logging.log4j.spi.AbstractLogger",
+        "org.apache.logging.log4j.spi.ExtendedLogger",
+        "org.apache.logging.log4j.spi.ExtendedLoggerWrapper"
+      ],
+      "testTemplate": "package org.apache.ibatis.logging.log4j2;\n\npublic class Log4j2AbstractLoggerImplisTraceEnabled_ExtendedLoggerWrapperisTraceEnabledFikaTest {\n\n    @Test\n    public void testIsTraceEnabled() {\n    }\n}",
+      "conditionCount": 0,
+      "callCount": 1,
+      "covered": true
+    },
+    {
+      "entryPoint": "org.apache.ibatis.logging.log4j.Log4jImpl.<init>(java.lang.String)",
+      "thirdPartyMethod": "org.apache.log4j.Logger.getLogger(java.lang.String)",
+      "directCaller": "org.apache.ibatis.logging.log4j.Log4jImpl.<init>(java.lang.String)",
+      "path": [
+        "org.apache.ibatis.logging.log4j.Log4jImpl.<init>(java.lang.String)",
+        "org.apache.log4j.Logger.getLogger(java.lang.String)"
+      ],
+      "methodSources": [
+        "public (String clazz) {\n    // PATH: Test should invoke the next Logger.getLogger(...) [step in execution path]\n    log = Logger.getLogger(clazz);\n}"
+      ],
+      "constructors": [
+        "public Log4jImpl(String clazz) {\n    log = Logger.getLogger(clazz);\n}"
+      ],
+      "fieldDeclarations": [
+        "private static final String FQCN = Log4jImpl.class.getName();",
+        "private final Logger log;"
+      ],
+      "setters": [
+        "@Override\npublic void debug(String s) {\n    log.log(FQCN, Level.DEBUG, s, null);\n}",
+        "@Override\npublic void error(String s) {\n    log.log(FQCN, Level.ERROR, s, null);\n}",
+        "@Override\npublic void error(String s, Throwable e) {\n    log.log(FQCN, Level.ERROR, s, e);\n}",
+        "@Override\npublic void trace(String s) {\n    log.log(FQCN, Level.TRACE, s, null);\n}",
+        "@Override\npublic void warn(String s) {\n    log.log(FQCN, Level.WARN, s, null);\n}"
+      ],
+      "imports": [
+        "org.apache.log4j.Category",
+        "org.apache.log4j.Level",
+        "org.apache.log4j.Logger",
+        "org.apache.log4j.Priority"
+      ],
+      "testTemplate": "package org.apache.ibatis.logging.log4j;\n\npublic class Log4jImplmethod_LoggergetLoggerFikaTest {\n\n    @Test\n    public void testMethod() {\n    }\n}",
+      "conditionCount": 0,
+      "callCount": 1,
+      "covered": true
+    },
+    {
+      "entryPoint": "org.apache.ibatis.logging.commons.JakartaCommonsLoggingImpl.<init>(java.lang.String)",
+      "thirdPartyMethod": "org.apache.commons.logging.LogFactory.getLog(java.lang.String)",
+      "directCaller": "org.apache.ibatis.logging.commons.JakartaCommonsLoggingImpl.<init>(java.lang.String)",
+      "path": [
+        "org.apache.ibatis.logging.commons.JakartaCommonsLoggingImpl.<init>(java.lang.String)",
+        "org.apache.commons.logging.LogFactory.getLog(java.lang.String)"
+      ],
+      "methodSources": [
+        "public (String clazz) {\n    // PATH: Test should invoke the next LogFactory.getLog(...) [step in execution path]\n    log = LogFactory.getLog(clazz);\n}"
+      ],
+      "constructors": [
+        "public JakartaCommonsLoggingImpl(String clazz) {\n    log = LogFactory.getLog(clazz);\n}"
+      ],
+      "fieldDeclarations": [
+        "private final Log log;"
+      ],
+      "setters": [
+        "@Override\npublic void debug(String s) {\n    log.debug(s);\n}",
+        "@Override\npublic void error(String s) {\n    log.error(s);\n}",
+        "@Override\npublic void error(String s, Throwable e) {\n    log.error(s, e);\n}",
+        "@Override\npublic void trace(String s) {\n    log.trace(s);\n}",
+        "@Override\npublic void warn(String s) {\n    log.warn(s);\n}"
+      ],
+      "imports": [
+        "org.apache.commons.logging.Log",
+        "org.apache.commons.logging.LogFactory"
+      ],
+      "testTemplate": "package org.apache.ibatis.logging.commons;\n\npublic class JakartaCommonsLoggingImplmethod_LogFactorygetLogFikaTest {\n\n    @Test\n    public void testMethod() {\n    }\n}",
+      "conditionCount": 0,
+      "callCount": 1,
+      "covered": true
+    },
+    {
+      "entryPoint": "org.apache.ibatis.executor.loader.cglib.CglibProxyFactory.EnhancedDeserializationProxyImpl.intercept(java.lang.Object, java.lang.reflect.Method, java.lang.Object[], net.sf.cglib.proxy.MethodProxy)",
+      "thirdPartyMethod": "net.sf.cglib.proxy.MethodProxy.invokeSuper(java.lang.Object, java.lang.Object[])",
+      "directCaller": "org.apache.ibatis.executor.loader.cglib.CglibProxyFactory.EnhancedDeserializationProxyImpl.intercept(java.lang.Object, java.lang.reflect.Method, java.lang.Object[], net.sf.cglib.proxy.MethodProxy)",
+      "path": [
+        "org.apache.ibatis.executor.loader.cglib.CglibProxyFactory.EnhancedDeserializationProxyImpl.intercept(java.lang.Object, java.lang.reflect.Method, java.lang.Object[], net.sf.cglib.proxy.MethodProxy)",
+        "net.sf.cglib.proxy.MethodProxy.invokeSuper(java.lang.Object, java.lang.Object[])"
+      ],
+      "methodSources": [
+        "@Override\npublic Object intercept(Object enhanced, Method method, Object[] args, MethodProxy methodProxy) throws Throwable {\n    final Object o = super.invoke(enhanced, method, args);\n    // PATH: Test should invoke the next MethodProxy.invokeSuper(...) [step in execution path]\n    return o instanceof AbstractSerialStateHolder ? o : methodProxy.invokeSuper(o, args);\n}"
+      ],
+      "constructors": [
+        "private EnhancedDeserializationProxyImpl(Class<?> type, Map<String, ResultLoaderMap.LoadPair> unloadedProperties, ObjectFactory objectFactory, List<Class<?>> constructorArgTypes, List<Object> constructorArgs) {\n    super(type, unloadedProperties, objectFactory, constructorArgTypes, constructorArgs);\n}"
+      ],
+      "fieldDeclarations": [],
+      "setters": [],
+      "imports": [
+        "net.sf.cglib.proxy.MethodProxy",
+        "org.apache.ibatis.executor.loader.AbstractEnhancedDeserializationProxy",
+        "org.apache.ibatis.executor.loader.AbstractSerialStateHolder",
+        "org.apache.ibatis.executor.loader.ResultLoaderMap",
+        "org.apache.ibatis.executor.loader.ResultLoaderMap.LoadPair",
+        "org.apache.ibatis.reflection.factory.ObjectFactory"
+      ],
+      "testTemplate": "package org.apache.ibatis.executor.loader.cglib;\n\npublic class EnhancedDeserializationProxyImplintercept_MethodProxyinvokeSuperFikaTest {\n\n    @Test\n    public void testIntercept() {\n    }\n}",
+      "conditionCount": 1,
+      "callCount": 1,
+      "covered": false
+    },
+    {
+      "entryPoint": "org.apache.ibatis.logging.log4j2.Log4j2Impl.<init>(java.lang.String)",
+      "thirdPartyMethod": "org.apache.logging.log4j.LogManager.getLogger(java.lang.String)",
+      "directCaller": "org.apache.ibatis.logging.log4j2.Log4j2Impl.<init>(java.lang.String)",
+      "path": [
+        "org.apache.ibatis.logging.log4j2.Log4j2Impl.<init>(java.lang.String)",
+        "org.apache.logging.log4j.LogManager.getLogger(java.lang.String)"
+      ],
+      "methodSources": [
+        "public (String clazz) {\n    // PATH: Test should invoke the next LogManager.getLogger(...) [step in execution path]\n    Logger logger = LogManager.getLogger(clazz);\n    if (logger instanceof AbstractLogger) {\n        log = new Log4j2AbstractLoggerImpl(((AbstractLogger) (logger)));\n    } else {\n        log = new Log4j2LoggerImpl(logger);\n    }\n}"
+      ],
+      "constructors": [
+        "public Log4j2Impl(String clazz) {\n    Logger logger = LogManager.getLogger(clazz);\n    if (logger instanceof AbstractLogger) {\n        log = new Log4j2AbstractLoggerImpl(((AbstractLogger) (logger)));\n    } else {\n        log = new Log4j2LoggerImpl(logger);\n    }\n}"
+      ],
+      "fieldDeclarations": [
+        "private final Log log;"
+      ],
+      "setters": [
+        "@Override\npublic void debug(String s) {\n    log.debug(s);\n}",
+        "@Override\npublic void error(String s) {\n    log.error(s);\n}",
+        "@Override\npublic void error(String s, Throwable e) {\n    log.error(s, e);\n}",
+        "@Override\npublic void trace(String s) {\n    log.trace(s);\n}",
+        "@Override\npublic void warn(String s) {\n    log.warn(s);\n}"
+      ],
+      "imports": [
+        "org.apache.ibatis.logging.Log",
+        "org.apache.logging.log4j.LogManager",
+        "org.apache.logging.log4j.Logger",
+        "org.apache.logging.log4j.spi.AbstractLogger"
+      ],
+      "testTemplate": "package org.apache.ibatis.logging.log4j2;\n\npublic class Log4j2Implmethod_LogManagergetLoggerFikaTest {\n\n    @Test\n    public void testMethod() {\n    }\n}",
+      "conditionCount": 1,
+      "callCount": 1,
+      "covered": true
+    },
+    {
+      "entryPoint": "org.apache.ibatis.executor.loader.cglib.CglibProxyFactory.EnhancedResultObjectProxyImpl.intercept(java.lang.Object, java.lang.reflect.Method, java.lang.Object[], net.sf.cglib.proxy.MethodProxy)",
+      "thirdPartyMethod": "net.sf.cglib.proxy.MethodProxy.invokeSuper(java.lang.Object, java.lang.Object[])",
+      "directCaller": "org.apache.ibatis.executor.loader.cglib.CglibProxyFactory.EnhancedResultObjectProxyImpl.intercept(java.lang.Object, java.lang.reflect.Method, java.lang.Object[], net.sf.cglib.proxy.MethodProxy)",
+      "path": [
+        "org.apache.ibatis.executor.loader.cglib.CglibProxyFactory.EnhancedResultObjectProxyImpl.intercept(java.lang.Object, java.lang.reflect.Method, java.lang.Object[], net.sf.cglib.proxy.MethodProxy)",
+        "net.sf.cglib.proxy.MethodProxy.invokeSuper(java.lang.Object, java.lang.Object[])"
+      ],
+      "methodSources": [
+        "@Override\npublic Object intercept(Object enhanced, Method method, Object[] args, MethodProxy methodProxy) throws Throwable {\n    final String methodName = method.getName();\n    lock.lock();\n    try {\n        if (WRITE_REPLACE_METHOD.equals(methodName)) {\n            Object original;\n            if (constructorArgTypes.isEmpty()) {\n                original = objectFactory.create(type);\n            } else {\n                original = objectFactory.create(type, constructorArgTypes, constructorArgs);\n            }\n            PropertyCopier.copyBeanProperties(type, enhanced, original);\n            if (lazyLoader.size() > 0) {\n                return new CglibSerialStateHolder(original, lazyLoader.getProperties(), objectFactory, constructorArgTypes, constructorArgs);\n            } else {\n                return original;\n            }\n        }\n        if ((lazyLoader.size() > 0) && (!FINALIZE_METHOD.equals(methodName))) {\n            if (aggressive || lazyLoadTriggerMethods.contains(methodName)) {\n                lazyLoader.loadAll();\n            } else if (PropertyNamer.isSetter(methodName)) {\n                final String property = PropertyNamer.methodToProperty(methodName);\n                lazyLoader.remove(property);\n            } else if (PropertyNamer.isGetter(methodName)) {\n                final String property = PropertyNamer.methodToProperty(methodName);\n                if (lazyLoader.hasLoader(property)) {\n                    lazyLoader.load(property);\n                }\n            }\n        }\n        // PATH: Test should invoke the next MethodProxy.invokeSuper(...) [step in execution path]\n        return methodProxy.invokeSuper(enhanced, args);\n    } catch (Throwable t) {\n        throw ExceptionUtil.unwrapThrowable(t);\n    } finally {\n        lock.unlock();\n    }\n}"
+      ],
+      "constructors": [
+        "private EnhancedResultObjectProxyImpl(Class<?> type, ResultLoaderMap lazyLoader, Configuration configuration, ObjectFactory objectFactory, List<Class<?>> constructorArgTypes, List<Object> constructorArgs) {\n    this.type = type;\n    this.lazyLoader = lazyLoader;\n    this.aggressive = configuration.isAggressiveLazyLoading();\n    this.lazyLoadTriggerMethods = configuration.getLazyLoadTriggerMethods();\n    this.objectFactory = objectFactory;\n    this.constructorArgTypes = constructorArgTypes;\n    this.constructorArgs = constructorArgs;\n}"
+      ],
+      "fieldDeclarations": [
+        "private final Class<?> type;",
+        "private final ResultLoaderMap lazyLoader;",
+        "private final boolean aggressive;",
+        "private final Set<String> lazyLoadTriggerMethods;",
+        "private final ObjectFactory objectFactory;",
+        "private final List<Class<?>> constructorArgTypes;",
+        "private final List<Object> constructorArgs;",
+        "private final ReentrantLock lock = new ReentrantLock();"
+      ],
+      "setters": [],
+      "imports": [
+        "net.sf.cglib.proxy.MethodProxy",
+        "org.apache.ibatis.executor.loader.ResultLoaderMap",
+        "org.apache.ibatis.executor.loader.ResultLoaderMap.LoadPair",
+        "org.apache.ibatis.executor.loader.cglib.CglibProxyFactory.EnhancedResultObjectProxyImpl",
+        "org.apache.ibatis.reflection.ExceptionUtil",
+        "org.apache.ibatis.reflection.factory.ObjectFactory",
+        "org.apache.ibatis.reflection.property.PropertyCopier",
+        "org.apache.ibatis.reflection.property.PropertyNamer",
+        "org.apache.ibatis.session.Configuration"
+      ],
+      "testTemplate": "package org.apache.ibatis.executor.loader.cglib;\n\npublic class EnhancedResultObjectProxyImplintercept_MethodProxyinvokeSuperFikaTest {\n\n    @Test\n    public void testIntercept() {\n    }\n}",
+      "conditionCount": 8,
+      "callCount": 1,
+      "covered": false
+    },
+    {
+      "entryPoint": "org.apache.ibatis.logging.log4j2.Log4j2Impl.isTraceEnabled()",
+      "thirdPartyMethod": "org.apache.logging.log4j.Logger.isTraceEnabled()",
+      "directCaller": "org.apache.ibatis.logging.log4j2.Log4j2LoggerImpl.isTraceEnabled()",
+      "path": [
+        "org.apache.ibatis.logging.log4j2.Log4j2Impl.isTraceEnabled()",
+        "org.apache.ibatis.logging.log4j2.Log4j2LoggerImpl.isTraceEnabled()",
+        "org.apache.logging.log4j.Logger.isTraceEnabled()"
+      ],
+      "methodSources": [
+        "@Override\npublic boolean isTraceEnabled() {\n    // PATH: Test should invoke the next Log4j2LoggerImpl.isTraceEnabled(...) [step in execution path]\n    return log.isTraceEnabled();\n}",
+        "@Override\npublic boolean isTraceEnabled() {\n    // PATH: Test should invoke the next Logger.isTraceEnabled(...) [step in execution path]\n    return log.isTraceEnabled();\n}"
+      ],
+      "constructors": [
+        "public Log4j2Impl(String clazz) {\n    Logger logger = LogManager.getLogger(clazz);\n    if (logger instanceof AbstractLogger) {\n        log = new Log4j2AbstractLoggerImpl(((AbstractLogger) (logger)));\n    } else {\n        log = new Log4j2LoggerImpl(logger);\n    }\n}"
+      ],
+      "fieldDeclarations": [
+        "private final Log log;"
+      ],
+      "setters": [
+        "@Override\npublic void debug(String s) {\n    log.debug(s);\n}",
+        "@Override\npublic void error(String s) {\n    log.error(s);\n}",
+        "@Override\npublic void error(String s, Throwable e) {\n    log.error(s, e);\n}",
+        "@Override\npublic void trace(String s) {\n    log.trace(s);\n}",
+        "@Override\npublic void warn(String s) {\n    log.warn(s);\n}"
+      ],
+      "imports": [
+        "org.apache.ibatis.logging.Log",
+        "org.apache.logging.log4j.LogManager",
+        "org.apache.logging.log4j.Logger",
+        "org.apache.logging.log4j.spi.AbstractLogger"
+      ],
+      "testTemplate": "package org.apache.ibatis.logging.log4j2;\n\npublic class Log4j2Impl_Log4j2LoggerImplisTraceEnabled_LoggerisTraceEnabledFikaTest {\n\n    @Test\n    public void testIsTraceEnabled() {\n    }\n}",
+      "conditionCount": 0,
+      "callCount": 1,
+      "covered": false
+    },
+    {
+      "entryPoint": "org.apache.ibatis.logging.log4j2.Log4j2Impl.error(java.lang.String, java.lang.Throwable)",
+      "thirdPartyMethod": "org.apache.logging.log4j.Logger.error(org.apache.logging.log4j.Marker, java.lang.String, java.lang.Throwable)",
+      "directCaller": "org.apache.ibatis.logging.log4j2.Log4j2LoggerImpl.error(java.lang.String, java.lang.Throwable)",
+      "path": [
+        "org.apache.ibatis.logging.log4j2.Log4j2Impl.error(java.lang.String, java.lang.Throwable)",
+        "org.apache.ibatis.logging.log4j2.Log4j2LoggerImpl.error(java.lang.String, java.lang.Throwable)",
+        "org.apache.logging.log4j.Logger.error(org.apache.logging.log4j.Marker, java.lang.String, java.lang.Throwable)"
+      ],
+      "methodSources": [
+        "@Override\npublic void error(String s, Throwable e) // PATH: Test should invoke the next Log4j2LoggerImpl.error(...) [step in execution path]\n{\n    log.error(s, e);\n}",
+        "@Override\npublic void error(String s, Throwable e) // PATH: Test should invoke the next Logger.error(...) [step in execution path]\n{\n    log.error(MARKER, s, e);\n}"
+      ],
+      "constructors": [
+        "public Log4j2Impl(String clazz) {\n    Logger logger = LogManager.getLogger(clazz);\n    if (logger instanceof AbstractLogger) {\n        log = new Log4j2AbstractLoggerImpl(((AbstractLogger) (logger)));\n    } else {\n        log = new Log4j2LoggerImpl(logger);\n    }\n}"
+      ],
+      "fieldDeclarations": [
+        "private final Log log;"
+      ],
+      "setters": [
+        "@Override\npublic void debug(String s) {\n    log.debug(s);\n}",
+        "@Override\npublic void error(String s) {\n    log.error(s);\n}",
+        "@Override\npublic void error(String s, Throwable e) {\n    log.error(s, e);\n}",
+        "@Override\npublic void trace(String s) {\n    log.trace(s);\n}",
+        "@Override\npublic void warn(String s) {\n    log.warn(s);\n}"
+      ],
+      "imports": [
+        "org.apache.ibatis.logging.Log",
+        "org.apache.logging.log4j.LogManager",
+        "org.apache.logging.log4j.Logger",
+        "org.apache.logging.log4j.Marker",
+        "org.apache.logging.log4j.spi.AbstractLogger"
+      ],
+      "testTemplate": "package org.apache.ibatis.logging.log4j2;\n\npublic class Log4j2Impl_Log4j2LoggerImplerror_LoggererrorFikaTest {\n\n    @Test\n    public void testError() {\n    }\n}",
+      "conditionCount": 0,
+      "callCount": 1,
+      "covered": false
+    },
+    {
+      "entryPoint": "org.apache.ibatis.executor.loader.cglib.CglibProxyFactory.EnhancedResultObjectProxyImpl.createProxy(java.lang.Object, org.apache.ibatis.executor.loader.ResultLoaderMap, org.apache.ibatis.session.Configuration, org.apache.ibatis.reflection.factory.ObjectFactory, java.util.List, java.util.List)",
+      "thirdPartyMethod": "net.sf.cglib.proxy.Enhancer.setSuperclass(java.lang.Class)",
+      "directCaller": "org.apache.ibatis.executor.loader.cglib.CglibProxyFactory.createStaticProxy(java.lang.Class, net.sf.cglib.proxy.Callback, java.util.List, java.util.List)",
+      "path": [
+        "org.apache.ibatis.executor.loader.cglib.CglibProxyFactory.EnhancedResultObjectProxyImpl.createProxy(java.lang.Object, org.apache.ibatis.executor.loader.ResultLoaderMap, org.apache.ibatis.session.Configuration, org.apache.ibatis.reflection.factory.ObjectFactory, java.util.List, java.util.List)",
+        "org.apache.ibatis.executor.loader.cglib.CglibProxyFactory.createStaticProxy(java.lang.Class, net.sf.cglib.proxy.Callback, java.util.List, java.util.List)",
+        "net.sf.cglib.proxy.Enhancer.setSuperclass(java.lang.Class)"
+      ],
+      "methodSources": [
+        "public static Object createProxy(Object target, ResultLoaderMap lazyLoader, Configuration configuration, ObjectFactory objectFactory, List<Class<?>> constructorArgTypes, List<Object> constructorArgs) {\n    final Class<?> type = target.getClass();\n    EnhancedResultObjectProxyImpl callback = new EnhancedResultObjectProxyImpl(type, lazyLoader, configuration, objectFactory, constructorArgTypes, constructorArgs);\n    // PATH: Test should invoke the next CglibProxyFactory.createStaticProxy(...) [step in execution path]\n    Object enhanced = createStaticProxy(type, callback, constructorArgTypes, constructorArgs);\n    PropertyCopier.copyBeanProperties(type, target, enhanced);\n    return enhanced;\n}",
+        "static Object createStaticProxy(Class<?> type, Callback callback, List<Class<?>> constructorArgTypes, List<Object> constructorArgs) // PATH: Test should invoke the next Enhancer.setSuperclass(...) [step in execution path]\n{\n    LogHolder.log.warn(\"CglibProxyFactory is deprecated. Use another proxy factory implementation.\");\n    Enhancer enhancer = new Enhancer();\n    enhancer.setCallback(callback);\n    enhancer.setSuperclass(type);\n    try {\n        type.getDeclaredMethod(WRITE_REPLACE_METHOD);\n        // ObjectOutputStream will call writeReplace of objects returned by writeReplace\n        if (LogHolder.log.isDebugEnabled()) {\n            LogHolder.log.debug(((WRITE_REPLACE_METHOD + \" method was found on bean \") + type) + \", make sure it returns this\");\n        }\n    } catch (NoSuchMethodException e) {\n        enhancer.setInterfaces(new Class[]{ WriteReplaceInterface.class });\n    } catch (SecurityException e) {\n        // nothing to do here\n    }\n    Object enhanced;\n    if (constructorArgTypes.isEmpty()) {\n        enhanced = enhancer.create();\n    } else {\n        Class<?>[] typesArray = constructorArgTypes.toArray(new Class[constructorArgTypes.size()]);\n        Object[] valuesArray = constructorArgs.toArray(new Object[constructorArgs.size()]);\n        enhanced = enhancer.create(typesArray, valuesArray);\n    }\n    return enhanced;\n}"
+      ],
+      "constructors": [
+        "private EnhancedResultObjectProxyImpl(Class<?> type, ResultLoaderMap lazyLoader, Configuration configuration, ObjectFactory objectFactory, List<Class<?>> constructorArgTypes, List<Object> constructorArgs) {\n    this.type = type;\n    this.lazyLoader = lazyLoader;\n    this.aggressive = configuration.isAggressiveLazyLoading();\n    this.lazyLoadTriggerMethods = configuration.getLazyLoadTriggerMethods();\n    this.objectFactory = objectFactory;\n    this.constructorArgTypes = constructorArgTypes;\n    this.constructorArgs = constructorArgs;\n}"
+      ],
+      "fieldDeclarations": [
+        "private final Class<?> type;",
+        "private final ResultLoaderMap lazyLoader;",
+        "private final boolean aggressive;",
+        "private final Set<String> lazyLoadTriggerMethods;",
+        "private final ObjectFactory objectFactory;",
+        "private final List<Class<?>> constructorArgTypes;",
+        "private final List<Object> constructorArgs;",
+        "private final ReentrantLock lock = new ReentrantLock();"
+      ],
+      "setters": [],
+      "imports": [
+        "net.sf.cglib.proxy.Callback",
+        "net.sf.cglib.proxy.Enhancer",
+        "net.sf.cglib.proxy.MethodProxy",
+        "org.apache.ibatis.executor.loader.ResultLoaderMap",
+        "org.apache.ibatis.executor.loader.ResultLoaderMap.LoadPair",
+        "org.apache.ibatis.executor.loader.WriteReplaceInterface",
+        "org.apache.ibatis.executor.loader.cglib.CglibProxyFactory.EnhancedResultObjectProxyImpl",
+        "org.apache.ibatis.executor.loader.cglib.CglibProxyFactory.LogHolder",
+        "org.apache.ibatis.logging.Log",
+        "org.apache.ibatis.reflection.ExceptionUtil",
+        "org.apache.ibatis.reflection.factory.ObjectFactory",
+        "org.apache.ibatis.reflection.property.PropertyCopier",
+        "org.apache.ibatis.reflection.property.PropertyNamer",
+        "org.apache.ibatis.session.Configuration"
+      ],
+      "testTemplate": "package org.apache.ibatis.executor.loader.cglib;\n\npublic class EnhancedResultObjectProxyImpl_CglibProxyFactorycreateStaticProxy_EnhancersetSuperclassFikaTest {\n\n    @Test\n    public void testCreateProxy() {\n    }\n}",
+      "conditionCount": 2,
+      "callCount": 1,
+      "covered": false
+    },
+    {
+      "entryPoint": "org.apache.ibatis.executor.loader.cglib.CglibProxyFactory.EnhancedResultObjectProxyImpl.createProxy(java.lang.Object, org.apache.ibatis.executor.loader.ResultLoaderMap, org.apache.ibatis.session.Configuration, org.apache.ibatis.reflection.factory.ObjectFactory, java.util.List, java.util.List)",
+      "thirdPartyMethod": "net.sf.cglib.proxy.Enhancer.<init>()",
+      "directCaller": "org.apache.ibatis.executor.loader.cglib.CglibProxyFactory.createStaticProxy(java.lang.Class, net.sf.cglib.proxy.Callback, java.util.List, java.util.List)",
+      "path": [
+        "org.apache.ibatis.executor.loader.cglib.CglibProxyFactory.EnhancedResultObjectProxyImpl.createProxy(java.lang.Object, org.apache.ibatis.executor.loader.ResultLoaderMap, org.apache.ibatis.session.Configuration, org.apache.ibatis.reflection.factory.ObjectFactory, java.util.List, java.util.List)",
+        "org.apache.ibatis.executor.loader.cglib.CglibProxyFactory.createStaticProxy(java.lang.Class, net.sf.cglib.proxy.Callback, java.util.List, java.util.List)",
+        "net.sf.cglib.proxy.Enhancer.<init>()"
+      ],
+      "methodSources": [
+        "public static Object createProxy(Object target, ResultLoaderMap lazyLoader, Configuration configuration, ObjectFactory objectFactory, List<Class<?>> constructorArgTypes, List<Object> constructorArgs) {\n    final Class<?> type = target.getClass();\n    EnhancedResultObjectProxyImpl callback = new EnhancedResultObjectProxyImpl(type, lazyLoader, configuration, objectFactory, constructorArgTypes, constructorArgs);\n    // PATH: Test should invoke the next CglibProxyFactory.createStaticProxy(...) [step in execution path]\n    Object enhanced = createStaticProxy(type, callback, constructorArgTypes, constructorArgs);\n    PropertyCopier.copyBeanProperties(type, target, enhanced);\n    return enhanced;\n}",
+        "static Object createStaticProxy(Class<?> type, Callback callback, List<Class<?>> constructorArgTypes, List<Object> constructorArgs) // PATH: Test should invoke the next new Enhancer(...) [step in execution path]\n{\n    LogHolder.log.warn(\"CglibProxyFactory is deprecated. Use another proxy factory implementation.\");\n    Enhancer enhancer = new Enhancer();\n    enhancer.setCallback(callback);\n    enhancer.setSuperclass(type);\n    try {\n        type.getDeclaredMethod(WRITE_REPLACE_METHOD);\n        // ObjectOutputStream will call writeReplace of objects returned by writeReplace\n        if (LogHolder.log.isDebugEnabled()) {\n            LogHolder.log.debug(((WRITE_REPLACE_METHOD + \" method was found on bean \") + type) + \", make sure it returns this\");\n        }\n    } catch (NoSuchMethodException e) {\n        enhancer.setInterfaces(new Class[]{ WriteReplaceInterface.class });\n    } catch (SecurityException e) {\n        // nothing to do here\n    }\n    Object enhanced;\n    if (constructorArgTypes.isEmpty()) {\n        enhanced = enhancer.create();\n    } else {\n        Class<?>[] typesArray = constructorArgTypes.toArray(new Class[constructorArgTypes.size()]);\n        Object[] valuesArray = constructorArgs.toArray(new Object[constructorArgs.size()]);\n        enhanced = enhancer.create(typesArray, valuesArray);\n    }\n    return enhanced;\n}"
+      ],
+      "constructors": [
+        "private EnhancedResultObjectProxyImpl(Class<?> type, ResultLoaderMap lazyLoader, Configuration configuration, ObjectFactory objectFactory, List<Class<?>> constructorArgTypes, List<Object> constructorArgs) {\n    this.type = type;\n    this.lazyLoader = lazyLoader;\n    this.aggressive = configuration.isAggressiveLazyLoading();\n    this.lazyLoadTriggerMethods = configuration.getLazyLoadTriggerMethods();\n    this.objectFactory = objectFactory;\n    this.constructorArgTypes = constructorArgTypes;\n    this.constructorArgs = constructorArgs;\n}"
+      ],
+      "fieldDeclarations": [
+        "private final Class<?> type;",
+        "private final ResultLoaderMap lazyLoader;",
+        "private final boolean aggressive;",
+        "private final Set<String> lazyLoadTriggerMethods;",
+        "private final ObjectFactory objectFactory;",
+        "private final List<Class<?>> constructorArgTypes;",
+        "private final List<Object> constructorArgs;",
+        "private final ReentrantLock lock = new ReentrantLock();"
+      ],
+      "setters": [],
+      "imports": [
+        "net.sf.cglib.proxy.Callback",
+        "net.sf.cglib.proxy.Enhancer",
+        "net.sf.cglib.proxy.MethodProxy",
+        "org.apache.ibatis.executor.loader.ResultLoaderMap",
+        "org.apache.ibatis.executor.loader.ResultLoaderMap.LoadPair",
+        "org.apache.ibatis.executor.loader.WriteReplaceInterface",
+        "org.apache.ibatis.executor.loader.cglib.CglibProxyFactory.EnhancedResultObjectProxyImpl",
+        "org.apache.ibatis.executor.loader.cglib.CglibProxyFactory.LogHolder",
+        "org.apache.ibatis.logging.Log",
+        "org.apache.ibatis.reflection.ExceptionUtil",
+        "org.apache.ibatis.reflection.factory.ObjectFactory",
+        "org.apache.ibatis.reflection.property.PropertyCopier",
+        "org.apache.ibatis.reflection.property.PropertyNamer",
+        "org.apache.ibatis.session.Configuration"
+      ],
+      "testTemplate": "package org.apache.ibatis.executor.loader.cglib;\n\npublic class EnhancedResultObjectProxyImpl_CglibProxyFactorycreateStaticProxy_EnhancermethodFikaTest {\n\n    @Test\n    public void testCreateProxy() {\n    }\n}",
+      "conditionCount": 2,
+      "callCount": 5,
+      "covered": false
+    },
+    {
+      "entryPoint": "org.apache.ibatis.logging.log4j2.Log4j2Impl.trace(java.lang.String)",
+      "thirdPartyMethod": "org.apache.commons.logging.Log.trace(java.lang.Object)",
+      "directCaller": "org.apache.ibatis.logging.commons.JakartaCommonsLoggingImpl.trace(java.lang.String)",
+      "path": [
+        "org.apache.ibatis.logging.log4j2.Log4j2Impl.trace(java.lang.String)",
+        "org.apache.ibatis.logging.slf4j.Slf4jImpl.trace(java.lang.String)",
+        "org.apache.ibatis.logging.commons.JakartaCommonsLoggingImpl.trace(java.lang.String)",
+        "org.apache.commons.logging.Log.trace(java.lang.Object)"
+      ],
+      "methodSources": [
+        "@Override\npublic void trace(String s) // PATH: Test should invoke the next Slf4jImpl.trace(...) [step in execution path]\n{\n    log.trace(s);\n}",
+        "@Override\npublic void trace(String s) // PATH: Test should invoke the next JakartaCommonsLoggingImpl.trace(...) [step in execution path]\n{\n    log.trace(s);\n}",
+        "@Override\npublic void trace(String s) // PATH: Test should invoke the next Log.trace(...) [step in execution path]\n{\n    log.trace(s);\n}"
+      ],
+      "constructors": [
+        "public Log4j2Impl(String clazz) {\n    Logger logger = LogManager.getLogger(clazz);\n    if (logger instanceof AbstractLogger) {\n        log = new Log4j2AbstractLoggerImpl(((AbstractLogger) (logger)));\n    } else {\n        log = new Log4j2LoggerImpl(logger);\n    }\n}"
+      ],
+      "fieldDeclarations": [
+        "private final Log log;"
+      ],
+      "setters": [
+        "@Override\npublic void debug(String s) {\n    log.debug(s);\n}",
+        "@Override\npublic void error(String s) {\n    log.error(s);\n}",
+        "@Override\npublic void error(String s, Throwable e) {\n    log.error(s, e);\n}",
+        "@Override\npublic void trace(String s) {\n    log.trace(s);\n}",
+        "@Override\npublic void warn(String s) {\n    log.warn(s);\n}"
+      ],
+      "imports": [
+        "org.apache.commons.logging.Log",
+        "org.apache.ibatis.logging.Log",
+        "org.apache.ibatis.logging.commons.JakartaCommonsLoggingImpl",
+        "org.apache.ibatis.logging.slf4j.Slf4jImpl",
+        "org.apache.logging.log4j.LogManager",
+        "org.apache.logging.log4j.Logger",
+        "org.apache.logging.log4j.spi.AbstractLogger"
+      ],
+      "testTemplate": "package org.apache.ibatis.logging.log4j2;\n\npublic class Log4j2Impl_JakartaCommonsLoggingImpltrace_LogtraceFikaTest {\n\n    @Test\n    public void testTrace() {\n    }\n}",
+      "conditionCount": 0,
+      "callCount": 1,
+      "covered": false
+    },
+    {
+      "entryPoint": "org.apache.ibatis.logging.slf4j.Slf4jImpl.error(java.lang.String)",
+      "thirdPartyMethod": "org.apache.logging.log4j.MarkerManager.getMarker(java.lang.String)",
+      "directCaller": "org.apache.ibatis.logging.log4j2.Log4j2LoggerImpl.<clinit>()",
+      "path": [
+        "org.apache.ibatis.logging.slf4j.Slf4jImpl.error(java.lang.String)",
+        "org.apache.ibatis.logging.log4j2.Log4j2LoggerImpl.error(java.lang.String)",
+        "org.apache.ibatis.logging.log4j2.Log4j2LoggerImpl.<clinit>()",
+        "org.apache.logging.log4j.MarkerManager.getMarker(java.lang.String)"
+      ],
+      "methodSources": [
+        "@Override\npublic void error(String s) // PATH: Test should invoke the next Log4j2LoggerImpl.error(...) [step in execution path]\n{\n    log.error(s);\n}",
+        "@Override\npublic void error(String s) {\n    log.error(MARKER, s);\n}",
+        "org.apache.ibatis.logging.log4j2.Log4j2LoggerImpl\n\n// Static field initializations\nprivate static final Marker MARKER = MarkerManager.getMarker(LogFactory.MARKER);\n"
+      ],
+      "constructors": [
+        "public Slf4jImpl(String clazz) {\n    Logger logger = LoggerFactory.getLogger(clazz);\n    if (logger instanceof LocationAwareLogger) {\n        try {\n            // check for slf4j >= 1.6 method signature\n            logger.getClass().getMethod(\"log\", Marker.class, String.class, int.class, String.class, Object[].class, Throwable.class);\n            log = new Slf4jLocationAwareLoggerImpl(((LocationAwareLogger) (logger)));\n            return;\n        } catch (SecurityException | NoSuchMethodException e) {\n            // fail-back to Slf4jLoggerImpl\n        }\n    }\n    // Logger is not LocationAwareLogger or slf4j version < 1.6\n    log = new Slf4jLoggerImpl(logger);\n}"
+      ],
+      "fieldDeclarations": [
+        "private Log log;"
+      ],
+      "setters": [
+        "@Override\npublic void debug(String s) {\n    log.debug(s);\n}",
+        "@Override\npublic void error(String s) {\n    log.error(s);\n}",
+        "@Override\npublic void error(String s, Throwable e) {\n    log.error(s, e);\n}",
+        "@Override\npublic void trace(String s) {\n    log.trace(s);\n}",
+        "@Override\npublic void warn(String s) {\n    log.warn(s);\n}"
+      ],
+      "imports": [
+        "org.apache.ibatis.logging.Log",
+        "org.apache.ibatis.logging.LogFactory",
+        "org.apache.ibatis.logging.log4j2.Log4j2LoggerImpl",
+        "org.apache.logging.log4j.Logger",
+        "org.apache.logging.log4j.Marker",
+        "org.apache.logging.log4j.MarkerManager",
+        "org.slf4j.Logger",
+        "org.slf4j.LoggerFactory",
+        "org.slf4j.Marker",
+        "org.slf4j.spi.LocationAwareLogger"
+      ],
+      "testTemplate": "package org.apache.ibatis.logging.slf4j;\n\npublic class Slf4jImpl_Log4j2LoggerImplmethod_MarkerManagergetMarkerFikaTest {\n\n    @Test\n    public void testError() {\n    }\n}",
+      "conditionCount": 0,
+      "callCount": 1,
+      "covered": false
+    },
+    {
+      "entryPoint": "org.apache.ibatis.executor.loader.cglib.CglibProxyFactory.createProxy(java.lang.Object, org.apache.ibatis.executor.loader.ResultLoaderMap, org.apache.ibatis.session.Configuration, org.apache.ibatis.reflection.factory.ObjectFactory, java.util.List, java.util.List)",
+      "thirdPartyMethod": "net.sf.cglib.proxy.Enhancer.create(java.lang.Class[], java.lang.Object[])",
+      "directCaller": "org.apache.ibatis.executor.loader.cglib.CglibProxyFactory.createStaticProxy(java.lang.Class, net.sf.cglib.proxy.Callback, java.util.List, java.util.List)",
+      "path": [
+        "org.apache.ibatis.executor.loader.cglib.CglibProxyFactory.createProxy(java.lang.Object, org.apache.ibatis.executor.loader.ResultLoaderMap, org.apache.ibatis.session.Configuration, org.apache.ibatis.reflection.factory.ObjectFactory, java.util.List, java.util.List)",
+        "org.apache.ibatis.executor.loader.cglib.CglibProxyFactory.EnhancedResultObjectProxyImpl.createProxy(java.lang.Object, org.apache.ibatis.executor.loader.ResultLoaderMap, org.apache.ibatis.session.Configuration, org.apache.ibatis.reflection.factory.ObjectFactory, java.util.List, java.util.List)",
+        "org.apache.ibatis.executor.loader.cglib.CglibProxyFactory.createStaticProxy(java.lang.Class, net.sf.cglib.proxy.Callback, java.util.List, java.util.List)",
+        "net.sf.cglib.proxy.Enhancer.create(java.lang.Class[], java.lang.Object[])"
+      ],
+      "methodSources": [
+        "@Override\npublic Object createProxy(Object target, ResultLoaderMap lazyLoader, Configuration configuration, ObjectFactory objectFactory, List<Class<?>> constructorArgTypes, List<Object> constructorArgs) {\n    // PATH: Test should invoke the next CglibProxyFactory$EnhancedResultObjectProxyImpl.createProxy(...) [step in execution path]\n    return EnhancedResultObjectProxyImpl.createProxy(target, lazyLoader, configuration, objectFactory, constructorArgTypes, constructorArgs);\n}",
+        "public static Object createProxy(Object target, ResultLoaderMap lazyLoader, Configuration configuration, ObjectFactory objectFactory, List<Class<?>> constructorArgTypes, List<Object> constructorArgs) {\n    final Class<?> type = target.getClass();\n    EnhancedResultObjectProxyImpl callback = new EnhancedResultObjectProxyImpl(type, lazyLoader, configuration, objectFactory, constructorArgTypes, constructorArgs);\n    // PATH: Test should invoke the next CglibProxyFactory.createStaticProxy(...) [step in execution path]\n    Object enhanced = createStaticProxy(type, callback, constructorArgTypes, constructorArgs);\n    PropertyCopier.copyBeanProperties(type, target, enhanced);\n    return enhanced;\n}",
+        "static Object createStaticProxy(Class<?> type, Callback callback, List<Class<?>> constructorArgTypes, List<Object> constructorArgs) {\n    LogHolder.log.warn(\"CglibProxyFactory is deprecated. Use another proxy factory implementation.\");\n    Enhancer enhancer = new Enhancer();\n    enhancer.setCallback(callback);\n    enhancer.setSuperclass(type);\n    try {\n        type.getDeclaredMethod(WRITE_REPLACE_METHOD);\n        // ObjectOutputStream will call writeReplace of objects returned by writeReplace\n        if (LogHolder.log.isDebugEnabled()) {\n            LogHolder.log.debug(((WRITE_REPLACE_METHOD + \" method was found on bean \") + type) + \", make sure it returns this\");\n        }\n    } catch (NoSuchMethodException e) {\n        enhancer.setInterfaces(new Class[]{ WriteReplaceInterface.class });\n    } catch (SecurityException e) {\n        // nothing to do here\n    }\n    Object enhanced;\n    if (constructorArgTypes.isEmpty()) {\n        // PATH: Test should invoke the next Enhancer.create(...) [step in execution path]\n        enhanced = enhancer.create();\n    } else {\n        Class<?>[] typesArray = constructorArgTypes.toArray(new Class[constructorArgTypes.size()]);\n        Object[] valuesArray = constructorArgs.toArray(new Object[constructorArgs.size()]);\n        enhanced = enhancer.create(typesArray, valuesArray);\n    }\n    return enhanced;\n}"
+      ],
+      "constructors": [
+        "public CglibProxyFactory() {\n    try {\n        Resources.classForName(\"net.sf.cglib.proxy.Enhancer\");\n    } catch (Throwable e) {\n        throw new IllegalStateException(\"Cannot enable lazy loading because CGLIB is not available. Add CGLIB to your classpath.\", e);\n    }\n}",
+        "private EnhancedResultObjectProxyImpl(Class<?> type, ResultLoaderMap lazyLoader, Configuration configuration, ObjectFactory objectFactory, List<Class<?>> constructorArgTypes, List<Object> constructorArgs) {\n    this.type = type;\n    this.lazyLoader = lazyLoader;\n    this.aggressive = configuration.isAggressiveLazyLoading();\n    this.lazyLoadTriggerMethods = configuration.getLazyLoadTriggerMethods();\n    this.objectFactory = objectFactory;\n    this.constructorArgTypes = constructorArgTypes;\n    this.constructorArgs = constructorArgs;\n}",
+        "private EnhancedDeserializationProxyImpl(Class<?> type, Map<String, ResultLoaderMap.LoadPair> unloadedProperties, ObjectFactory objectFactory, List<Class<?>> constructorArgTypes, List<Object> constructorArgs) {\n    super(type, unloadedProperties, objectFactory, constructorArgTypes, constructorArgs);\n}",
+        "LogHolder() {\n}"
+      ],
+      "fieldDeclarations": [
+        "private static final String FINALIZE_METHOD = \"finalize\";",
+        "private static final String WRITE_REPLACE_METHOD = \"writeReplace\";"
+      ],
+      "setters": [],
+      "imports": [
+        "net.sf.cglib.proxy.Callback",
+        "net.sf.cglib.proxy.Enhancer",
+        "org.apache.ibatis.executor.loader.AbstractEnhancedDeserializationProxy",
+        "org.apache.ibatis.executor.loader.ResultLoaderMap",
+        "org.apache.ibatis.executor.loader.ResultLoaderMap.LoadPair",
+        "org.apache.ibatis.executor.loader.WriteReplaceInterface",
+        "org.apache.ibatis.executor.loader.cglib.CglibProxyFactory.EnhancedResultObjectProxyImpl",
+        "org.apache.ibatis.executor.loader.cglib.CglibProxyFactory.LogHolder",
+        "org.apache.ibatis.io.Resources",
+        "org.apache.ibatis.logging.Log",
+        "org.apache.ibatis.reflection.factory.ObjectFactory",
+        "org.apache.ibatis.reflection.property.PropertyCopier",
+        "org.apache.ibatis.session.Configuration"
+      ],
+      "testTemplate": "package org.apache.ibatis.executor.loader.cglib;\n\npublic class CglibProxyFactorycreateStaticProxy_EnhancercreateFikaTest {\n\n    @Test\n    public void testCreateProxy() {\n    }\n}",
+      "conditionCount": 2,
+      "callCount": 2,
+      "covered": false
+    },
+    {
+      "entryPoint": "org.apache.ibatis.executor.loader.cglib.CglibProxyFactory.createDeserializationProxy(java.lang.Object, java.util.Map, org.apache.ibatis.reflection.factory.ObjectFactory, java.util.List, java.util.List)",
+      "thirdPartyMethod": "net.sf.cglib.proxy.Enhancer.create()",
+      "directCaller": "org.apache.ibatis.executor.loader.cglib.CglibProxyFactory.createStaticProxy(java.lang.Class, net.sf.cglib.proxy.Callback, java.util.List, java.util.List)",
+      "path": [
+        "org.apache.ibatis.executor.loader.cglib.CglibProxyFactory.createDeserializationProxy(java.lang.Object, java.util.Map, org.apache.ibatis.reflection.factory.ObjectFactory, java.util.List, java.util.List)",
+        "org.apache.ibatis.executor.loader.cglib.CglibProxyFactory.EnhancedDeserializationProxyImpl.createProxy(java.lang.Object, java.util.Map, org.apache.ibatis.reflection.factory.ObjectFactory, java.util.List, java.util.List)",
+        "org.apache.ibatis.executor.loader.cglib.CglibProxyFactory.createStaticProxy(java.lang.Class, net.sf.cglib.proxy.Callback, java.util.List, java.util.List)",
+        "net.sf.cglib.proxy.Enhancer.create()"
+      ],
+      "methodSources": [
+        "public Object createDeserializationProxy(Object target, Map<String, ResultLoaderMap.LoadPair> unloadedProperties, ObjectFactory objectFactory, List<Class<?>> constructorArgTypes, List<Object> constructorArgs) {\n    // PATH: Test should invoke the next CglibProxyFactory$EnhancedDeserializationProxyImpl.createProxy(...) [step in execution path]\n    return EnhancedDeserializationProxyImpl.createProxy(target, unloadedProperties, objectFactory, constructorArgTypes, constructorArgs);\n}",
+        "public static Object createProxy(Object target, Map<String, ResultLoaderMap.LoadPair> unloadedProperties, ObjectFactory objectFactory, List<Class<?>> constructorArgTypes, List<Object> constructorArgs) {\n    final Class<?> type = target.getClass();\n    EnhancedDeserializationProxyImpl callback = new EnhancedDeserializationProxyImpl(type, unloadedProperties, objectFactory, constructorArgTypes, constructorArgs);\n    // PATH: Test should invoke the next CglibProxyFactory.createStaticProxy(...) [step in execution path]\n    Object enhanced = createStaticProxy(type, callback, constructorArgTypes, constructorArgs);\n    PropertyCopier.copyBeanProperties(type, target, enhanced);\n    return enhanced;\n}",
+        "static Object createStaticProxy(Class<?> type, Callback callback, List<Class<?>> constructorArgTypes, List<Object> constructorArgs) {\n    LogHolder.log.warn(\"CglibProxyFactory is deprecated. Use another proxy factory implementation.\");\n    Enhancer enhancer = new Enhancer();\n    enhancer.setCallback(callback);\n    enhancer.setSuperclass(type);\n    try {\n        type.getDeclaredMethod(WRITE_REPLACE_METHOD);\n        // ObjectOutputStream will call writeReplace of objects returned by writeReplace\n        if (LogHolder.log.isDebugEnabled()) {\n            LogHolder.log.debug(((WRITE_REPLACE_METHOD + \" method was found on bean \") + type) + \", make sure it returns this\");\n        }\n    } catch (NoSuchMethodException e) {\n        enhancer.setInterfaces(new Class[]{ WriteReplaceInterface.class });\n    } catch (SecurityException e) {\n        // nothing to do here\n    }\n    Object enhanced;\n    if (constructorArgTypes.isEmpty()) {\n        // PATH: Test should invoke the next Enhancer.create(...) [step in execution path]\n        enhanced = enhancer.create();\n    } else {\n        Class<?>[] typesArray = constructorArgTypes.toArray(new Class[constructorArgTypes.size()]);\n        Object[] valuesArray = constructorArgs.toArray(new Object[constructorArgs.size()]);\n        enhanced = enhancer.create(typesArray, valuesArray);\n    }\n    return enhanced;\n}"
+      ],
+      "constructors": [
+        "public CglibProxyFactory() {\n    try {\n        Resources.classForName(\"net.sf.cglib.proxy.Enhancer\");\n    } catch (Throwable e) {\n        throw new IllegalStateException(\"Cannot enable lazy loading because CGLIB is not available. Add CGLIB to your classpath.\", e);\n    }\n}",
+        "private EnhancedResultObjectProxyImpl(Class<?> type, ResultLoaderMap lazyLoader, Configuration configuration, ObjectFactory objectFactory, List<Class<?>> constructorArgTypes, List<Object> constructorArgs) {\n    this.type = type;\n    this.lazyLoader = lazyLoader;\n    this.aggressive = configuration.isAggressiveLazyLoading();\n    this.lazyLoadTriggerMethods = configuration.getLazyLoadTriggerMethods();\n    this.objectFactory = objectFactory;\n    this.constructorArgTypes = constructorArgTypes;\n    this.constructorArgs = constructorArgs;\n}",
+        "private EnhancedDeserializationProxyImpl(Class<?> type, Map<String, ResultLoaderMap.LoadPair> unloadedProperties, ObjectFactory objectFactory, List<Class<?>> constructorArgTypes, List<Object> constructorArgs) {\n    super(type, unloadedProperties, objectFactory, constructorArgTypes, constructorArgs);\n}",
+        "LogHolder() {\n}"
+      ],
+      "fieldDeclarations": [
+        "private static final String FINALIZE_METHOD = \"finalize\";",
+        "private static final String WRITE_REPLACE_METHOD = \"writeReplace\";"
+      ],
+      "setters": [],
+      "imports": [
+        "net.sf.cglib.proxy.Callback",
+        "net.sf.cglib.proxy.Enhancer",
+        "org.apache.ibatis.executor.loader.AbstractEnhancedDeserializationProxy",
+        "org.apache.ibatis.executor.loader.ResultLoaderMap",
+        "org.apache.ibatis.executor.loader.ResultLoaderMap.LoadPair",
+        "org.apache.ibatis.executor.loader.WriteReplaceInterface",
+        "org.apache.ibatis.executor.loader.cglib.CglibProxyFactory.EnhancedDeserializationProxyImpl",
+        "org.apache.ibatis.executor.loader.cglib.CglibProxyFactory.EnhancedResultObjectProxyImpl",
+        "org.apache.ibatis.executor.loader.cglib.CglibProxyFactory.LogHolder",
+        "org.apache.ibatis.io.Resources",
+        "org.apache.ibatis.logging.Log",
+        "org.apache.ibatis.reflection.factory.ObjectFactory",
+        "org.apache.ibatis.reflection.property.PropertyCopier",
+        "org.apache.ibatis.session.Configuration"
+      ],
+      "testTemplate": "package org.apache.ibatis.executor.loader.cglib;\n\npublic class CglibProxyFactorycreateStaticProxy_EnhancercreateFikaTest {\n\n    @Test\n    public void testCreateDeserializationProxy() {\n    }\n}",
+      "conditionCount": 2,
+      "callCount": 2,
+      "covered": false
+    },
+    {
+      "entryPoint": "org.apache.ibatis.executor.loader.cglib.CglibProxyFactory.createDeserializationProxy(java.lang.Object, java.util.Map, org.apache.ibatis.reflection.factory.ObjectFactory, java.util.List, java.util.List)",
+      "thirdPartyMethod": "net.sf.cglib.proxy.Enhancer.setCallback(net.sf.cglib.proxy.Callback)",
+      "directCaller": "org.apache.ibatis.executor.loader.cglib.CglibProxyFactory.createStaticProxy(java.lang.Class, net.sf.cglib.proxy.Callback, java.util.List, java.util.List)",
+      "path": [
+        "org.apache.ibatis.executor.loader.cglib.CglibProxyFactory.createDeserializationProxy(java.lang.Object, java.util.Map, org.apache.ibatis.reflection.factory.ObjectFactory, java.util.List, java.util.List)",
+        "org.apache.ibatis.executor.loader.cglib.CglibProxyFactory.EnhancedDeserializationProxyImpl.createProxy(java.lang.Object, java.util.Map, org.apache.ibatis.reflection.factory.ObjectFactory, java.util.List, java.util.List)",
+        "org.apache.ibatis.executor.loader.cglib.CglibProxyFactory.createStaticProxy(java.lang.Class, net.sf.cglib.proxy.Callback, java.util.List, java.util.List)",
+        "net.sf.cglib.proxy.Enhancer.setCallback(net.sf.cglib.proxy.Callback)"
+      ],
+      "methodSources": [
+        "public Object createDeserializationProxy(Object target, Map<String, ResultLoaderMap.LoadPair> unloadedProperties, ObjectFactory objectFactory, List<Class<?>> constructorArgTypes, List<Object> constructorArgs) {\n    // PATH: Test should invoke the next CglibProxyFactory$EnhancedDeserializationProxyImpl.createProxy(...) [step in execution path]\n    return EnhancedDeserializationProxyImpl.createProxy(target, unloadedProperties, objectFactory, constructorArgTypes, constructorArgs);\n}",
+        "public static Object createProxy(Object target, Map<String, ResultLoaderMap.LoadPair> unloadedProperties, ObjectFactory objectFactory, List<Class<?>> constructorArgTypes, List<Object> constructorArgs) {\n    final Class<?> type = target.getClass();\n    EnhancedDeserializationProxyImpl callback = new EnhancedDeserializationProxyImpl(type, unloadedProperties, objectFactory, constructorArgTypes, constructorArgs);\n    // PATH: Test should invoke the next CglibProxyFactory.createStaticProxy(...) [step in execution path]\n    Object enhanced = createStaticProxy(type, callback, constructorArgTypes, constructorArgs);\n    PropertyCopier.copyBeanProperties(type, target, enhanced);\n    return enhanced;\n}",
+        "static Object createStaticProxy(Class<?> type, Callback callback, List<Class<?>> constructorArgTypes, List<Object> constructorArgs) // PATH: Test should invoke the next Enhancer.setCallback(...) [step in execution path]\n{\n    LogHolder.log.warn(\"CglibProxyFactory is deprecated. Use another proxy factory implementation.\");\n    Enhancer enhancer = new Enhancer();\n    enhancer.setCallback(callback);\n    enhancer.setSuperclass(type);\n    try {\n        type.getDeclaredMethod(WRITE_REPLACE_METHOD);\n        // ObjectOutputStream will call writeReplace of objects returned by writeReplace\n        if (LogHolder.log.isDebugEnabled()) {\n            LogHolder.log.debug(((WRITE_REPLACE_METHOD + \" method was found on bean \") + type) + \", make sure it returns this\");\n        }\n    } catch (NoSuchMethodException e) {\n        enhancer.setInterfaces(new Class[]{ WriteReplaceInterface.class });\n    } catch (SecurityException e) {\n        // nothing to do here\n    }\n    Object enhanced;\n    if (constructorArgTypes.isEmpty()) {\n        enhanced = enhancer.create();\n    } else {\n        Class<?>[] typesArray = constructorArgTypes.toArray(new Class[constructorArgTypes.size()]);\n        Object[] valuesArray = constructorArgs.toArray(new Object[constructorArgs.size()]);\n        enhanced = enhancer.create(typesArray, valuesArray);\n    }\n    return enhanced;\n}"
+      ],
+      "constructors": [
+        "public CglibProxyFactory() {\n    try {\n        Resources.classForName(\"net.sf.cglib.proxy.Enhancer\");\n    } catch (Throwable e) {\n        throw new IllegalStateException(\"Cannot enable lazy loading because CGLIB is not available. Add CGLIB to your classpath.\", e);\n    }\n}",
+        "private EnhancedResultObjectProxyImpl(Class<?> type, ResultLoaderMap lazyLoader, Configuration configuration, ObjectFactory objectFactory, List<Class<?>> constructorArgTypes, List<Object> constructorArgs) {\n    this.type = type;\n    this.lazyLoader = lazyLoader;\n    this.aggressive = configuration.isAggressiveLazyLoading();\n    this.lazyLoadTriggerMethods = configuration.getLazyLoadTriggerMethods();\n    this.objectFactory = objectFactory;\n    this.constructorArgTypes = constructorArgTypes;\n    this.constructorArgs = constructorArgs;\n}",
+        "private EnhancedDeserializationProxyImpl(Class<?> type, Map<String, ResultLoaderMap.LoadPair> unloadedProperties, ObjectFactory objectFactory, List<Class<?>> constructorArgTypes, List<Object> constructorArgs) {\n    super(type, unloadedProperties, objectFactory, constructorArgTypes, constructorArgs);\n}",
+        "LogHolder() {\n}"
+      ],
+      "fieldDeclarations": [
+        "private static final String FINALIZE_METHOD = \"finalize\";",
+        "private static final String WRITE_REPLACE_METHOD = \"writeReplace\";"
+      ],
+      "setters": [],
+      "imports": [
+        "net.sf.cglib.proxy.Callback",
+        "net.sf.cglib.proxy.Enhancer",
+        "org.apache.ibatis.executor.loader.AbstractEnhancedDeserializationProxy",
+        "org.apache.ibatis.executor.loader.ResultLoaderMap",
+        "org.apache.ibatis.executor.loader.ResultLoaderMap.LoadPair",
+        "org.apache.ibatis.executor.loader.WriteReplaceInterface",
+        "org.apache.ibatis.executor.loader.cglib.CglibProxyFactory.EnhancedDeserializationProxyImpl",
+        "org.apache.ibatis.executor.loader.cglib.CglibProxyFactory.EnhancedResultObjectProxyImpl",
+        "org.apache.ibatis.executor.loader.cglib.CglibProxyFactory.LogHolder",
+        "org.apache.ibatis.io.Resources",
+        "org.apache.ibatis.logging.Log",
+        "org.apache.ibatis.reflection.factory.ObjectFactory",
+        "org.apache.ibatis.reflection.property.PropertyCopier",
+        "org.apache.ibatis.session.Configuration"
+      ],
+      "testTemplate": "package org.apache.ibatis.executor.loader.cglib;\n\npublic class CglibProxyFactorycreateStaticProxy_EnhancersetCallbackFikaTest {\n\n    @Test\n    public void testCreateDeserializationProxy() {\n    }\n}",
+      "conditionCount": 2,
+      "callCount": 1,
+      "covered": false
+    },
+    {
+      "entryPoint": "org.apache.ibatis.executor.loader.cglib.CglibProxyFactory.createDeserializationProxy(java.lang.Object, java.util.Map, org.apache.ibatis.reflection.factory.ObjectFactory, java.util.List, java.util.List)",
+      "thirdPartyMethod": "net.sf.cglib.proxy.Enhancer.setInterfaces(java.lang.Class[])",
+      "directCaller": "org.apache.ibatis.executor.loader.cglib.CglibProxyFactory.createStaticProxy(java.lang.Class, net.sf.cglib.proxy.Callback, java.util.List, java.util.List)",
+      "path": [
+        "org.apache.ibatis.executor.loader.cglib.CglibProxyFactory.createDeserializationProxy(java.lang.Object, java.util.Map, org.apache.ibatis.reflection.factory.ObjectFactory, java.util.List, java.util.List)",
+        "org.apache.ibatis.executor.loader.cglib.CglibProxyFactory.EnhancedDeserializationProxyImpl.createProxy(java.lang.Object, java.util.Map, org.apache.ibatis.reflection.factory.ObjectFactory, java.util.List, java.util.List)",
+        "org.apache.ibatis.executor.loader.cglib.CglibProxyFactory.createStaticProxy(java.lang.Class, net.sf.cglib.proxy.Callback, java.util.List, java.util.List)",
+        "net.sf.cglib.proxy.Enhancer.setInterfaces(java.lang.Class[])"
+      ],
+      "methodSources": [
+        "public Object createDeserializationProxy(Object target, Map<String, ResultLoaderMap.LoadPair> unloadedProperties, ObjectFactory objectFactory, List<Class<?>> constructorArgTypes, List<Object> constructorArgs) {\n    // PATH: Test should invoke the next CglibProxyFactory$EnhancedDeserializationProxyImpl.createProxy(...) [step in execution path]\n    return EnhancedDeserializationProxyImpl.createProxy(target, unloadedProperties, objectFactory, constructorArgTypes, constructorArgs);\n}",
+        "public static Object createProxy(Object target, Map<String, ResultLoaderMap.LoadPair> unloadedProperties, ObjectFactory objectFactory, List<Class<?>> constructorArgTypes, List<Object> constructorArgs) {\n    final Class<?> type = target.getClass();\n    EnhancedDeserializationProxyImpl callback = new EnhancedDeserializationProxyImpl(type, unloadedProperties, objectFactory, constructorArgTypes, constructorArgs);\n    // PATH: Test should invoke the next CglibProxyFactory.createStaticProxy(...) [step in execution path]\n    Object enhanced = createStaticProxy(type, callback, constructorArgTypes, constructorArgs);\n    PropertyCopier.copyBeanProperties(type, target, enhanced);\n    return enhanced;\n}",
+        "static Object createStaticProxy(Class<?> type, Callback callback, List<Class<?>> constructorArgTypes, List<Object> constructorArgs) {\n    LogHolder.log.warn(\"CglibProxyFactory is deprecated. Use another proxy factory implementation.\");\n    Enhancer enhancer = new Enhancer();\n    enhancer.setCallback(callback);\n    enhancer.setSuperclass(type);\n    try {\n        type.getDeclaredMethod(WRITE_REPLACE_METHOD);\n        // ObjectOutputStream will call writeReplace of objects returned by writeReplace\n        if (LogHolder.log.isDebugEnabled()) {\n            LogHolder.log.debug(((WRITE_REPLACE_METHOD + \" method was found on bean \") + type) + \", make sure it returns this\");\n        }\n    } catch (NoSuchMethodException e) // PATH: Test should invoke the next Enhancer.setInterfaces(...) [step in execution path]\n    {\n        enhancer.setInterfaces(new Class[]{ WriteReplaceInterface.class });\n    } catch (SecurityException e) {\n        // nothing to do here\n    }\n    Object enhanced;\n    if (constructorArgTypes.isEmpty()) {\n        enhanced = enhancer.create();\n    } else {\n        Class<?>[] typesArray = constructorArgTypes.toArray(new Class[constructorArgTypes.size()]);\n        Object[] valuesArray = constructorArgs.toArray(new Object[constructorArgs.size()]);\n        enhanced = enhancer.create(typesArray, valuesArray);\n    }\n    return enhanced;\n}"
+      ],
+      "constructors": [
+        "public CglibProxyFactory() {\n    try {\n        Resources.classForName(\"net.sf.cglib.proxy.Enhancer\");\n    } catch (Throwable e) {\n        throw new IllegalStateException(\"Cannot enable lazy loading because CGLIB is not available. Add CGLIB to your classpath.\", e);\n    }\n}",
+        "private EnhancedResultObjectProxyImpl(Class<?> type, ResultLoaderMap lazyLoader, Configuration configuration, ObjectFactory objectFactory, List<Class<?>> constructorArgTypes, List<Object> constructorArgs) {\n    this.type = type;\n    this.lazyLoader = lazyLoader;\n    this.aggressive = configuration.isAggressiveLazyLoading();\n    this.lazyLoadTriggerMethods = configuration.getLazyLoadTriggerMethods();\n    this.objectFactory = objectFactory;\n    this.constructorArgTypes = constructorArgTypes;\n    this.constructorArgs = constructorArgs;\n}",
+        "private EnhancedDeserializationProxyImpl(Class<?> type, Map<String, ResultLoaderMap.LoadPair> unloadedProperties, ObjectFactory objectFactory, List<Class<?>> constructorArgTypes, List<Object> constructorArgs) {\n    super(type, unloadedProperties, objectFactory, constructorArgTypes, constructorArgs);\n}",
+        "LogHolder() {\n}"
+      ],
+      "fieldDeclarations": [
+        "private static final String FINALIZE_METHOD = \"finalize\";",
+        "private static final String WRITE_REPLACE_METHOD = \"writeReplace\";"
+      ],
+      "setters": [],
+      "imports": [
+        "net.sf.cglib.proxy.Callback",
+        "net.sf.cglib.proxy.Enhancer",
+        "org.apache.ibatis.executor.loader.AbstractEnhancedDeserializationProxy",
+        "org.apache.ibatis.executor.loader.ResultLoaderMap",
+        "org.apache.ibatis.executor.loader.ResultLoaderMap.LoadPair",
+        "org.apache.ibatis.executor.loader.WriteReplaceInterface",
+        "org.apache.ibatis.executor.loader.cglib.CglibProxyFactory.EnhancedDeserializationProxyImpl",
+        "org.apache.ibatis.executor.loader.cglib.CglibProxyFactory.EnhancedResultObjectProxyImpl",
+        "org.apache.ibatis.executor.loader.cglib.CglibProxyFactory.LogHolder",
+        "org.apache.ibatis.io.Resources",
+        "org.apache.ibatis.logging.Log",
+        "org.apache.ibatis.reflection.factory.ObjectFactory",
+        "org.apache.ibatis.reflection.property.PropertyCopier",
+        "org.apache.ibatis.session.Configuration"
+      ],
+      "testTemplate": "package org.apache.ibatis.executor.loader.cglib;\n\npublic class CglibProxyFactorycreateStaticProxy_EnhancersetInterfacesFikaTest {\n\n    @Test\n    public void testCreateDeserializationProxy() {\n    }\n}",
+      "conditionCount": 2,
+      "callCount": 1,
+      "covered": false
+    },
+    {
+      "entryPoint": "org.apache.ibatis.executor.loader.ResultLoaderMap.addLoader(java.lang.String, org.apache.ibatis.reflection.MetaObject, org.apache.ibatis.executor.loader.ResultLoader)",
+      "thirdPartyMethod": "org.apache.logging.log4j.Logger.isDebugEnabled()",
+      "directCaller": "org.apache.ibatis.logging.log4j2.Log4j2LoggerImpl.isDebugEnabled()",
+      "path": [
+        "org.apache.ibatis.executor.loader.ResultLoaderMap.addLoader(java.lang.String, org.apache.ibatis.reflection.MetaObject, org.apache.ibatis.executor.loader.ResultLoader)",
+        "org.apache.ibatis.executor.loader.ResultLoaderMap.LoadPair.<init>(java.lang.String, org.apache.ibatis.reflection.MetaObject, org.apache.ibatis.executor.loader.ResultLoader)",
+        "org.apache.ibatis.logging.log4j2.Log4j2LoggerImpl.isDebugEnabled()",
+        "org.apache.logging.log4j.Logger.isDebugEnabled()"
+      ],
+      "methodSources": [
+        "public void addLoader(String property, MetaObject metaResultObject, ResultLoader resultLoader) {\n    String upperFirst = getUppercaseFirstProperty(property);\n    if ((!upperFirst.equalsIgnoreCase(property)) && loaderMap.containsKey(upperFirst)) {\n        throw new ExecutorException((((\"Nested lazy loaded result property '\" + property) + \"' for query id '\") + resultLoader.mappedStatement.getId()) + \" already exists in the result map. The leftmost property of all lazy loaded properties must be unique within a result map.\");\n    }\n    loaderMap.put(upperFirst, new LoadPair(property, metaResultObject, resultLoader));\n}",
+        "private (final String property, MetaObject metaResultObject, ResultLoader resultLoader) {\n    this.property = property;\n    this.metaResultObject = metaResultObject;\n    this.resultLoader = resultLoader;\n    /* Save required information only if original object can be serialized. */\n    if ((metaResultObject != null) && (metaResultObject.getOriginalObject() instanceof Serializable)) {\n        final Object mappedStatementParameter = resultLoader.parameterObject;\n        /* @todo May the parameter be null? */\n        if (mappedStatementParameter instanceof Serializable) {\n            this.mappedStatement = resultLoader.mappedStatement.getId();\n            this.mappedParameter = ((Serializable) (mappedStatementParameter));\n            this.configurationFactory = resultLoader.configuration.getConfigurationFactory();\n        } else {\n            Log log = this.getLogger();\n            // PATH: Test should invoke the next Log4j2LoggerImpl.isDebugEnabled(...) [step in execution path]\n            if (log.isDebugEnabled()) {\n                log.debug((((((\"Property [\" + this.property) + \"] of [\") + metaResultObject.getOriginalObject().getClass()) + \"] cannot be loaded \") + \"after deserialization. Make sure it's loaded before serializing \") + \"forenamed object.\");\n            }\n        }\n    }\n}",
+        "@Override\npublic boolean isDebugEnabled() {\n    // PATH: Test should invoke the next Logger.isDebugEnabled(...) [step in execution path]\n    return log.isDebugEnabled();\n}"
+      ],
+      "constructors": [
+        "ResultLoaderMap() {\n}",
+        "private LoadPair(final String property, MetaObject metaResultObject, ResultLoader resultLoader) {\n    this.property = property;\n    this.metaResultObject = metaResultObject;\n    this.resultLoader = resultLoader;\n    /* Save required information only if original object can be serialized. */\n    if ((metaResultObject != null) && (metaResultObject.getOriginalObject() instanceof Serializable)) {\n        final Object mappedStatementParameter = resultLoader.parameterObject;\n        /* @todo May the parameter be null? */\n        if (mappedStatementParameter instanceof Serializable) {\n            this.mappedStatement = resultLoader.mappedStatement.getId();\n            this.mappedParameter = ((Serializable) (mappedStatementParameter));\n            this.configurationFactory = resultLoader.configuration.getConfigurationFactory();\n        } else {\n            Log log = this.getLogger();\n            if (log.isDebugEnabled()) {\n                log.debug((((((\"Property [\" + this.property) + \"] of [\") + metaResultObject.getOriginalObject().getClass()) + \"] cannot be loaded \") + \"after deserialization. Make sure it's loaded before serializing \") + \"forenamed object.\");\n            }\n        }\n    }\n}",
+        "public ClosedExecutor() {\n    super(null, null);\n}"
+      ],
+      "fieldDeclarations": [
+        "private final Map<String, LoadPair> loaderMap = new HashMap<>();"
+      ],
+      "setters": [
+        "public void addLoader(String property, MetaObject metaResultObject, ResultLoader resultLoader) {\n    String upperFirst = getUppercaseFirstProperty(property);\n    if ((!upperFirst.equalsIgnoreCase(property)) && loaderMap.containsKey(upperFirst)) {\n        throw new ExecutorException((((\"Nested lazy loaded result property '\" + property) + \"' for query id '\") + resultLoader.mappedStatement.getId()) + \" already exists in the result map. The leftmost property of all lazy loaded properties must be unique within a result map.\");\n    }\n    loaderMap.put(upperFirst, new LoadPair(property, metaResultObject, resultLoader));\n}",
+        "public void loadAll() throws SQLException {\n    final Set<String> methodNameSet = loaderMap.keySet();\n    String[] methodNames = methodNameSet.toArray(new String[methodNameSet.size()]);\n    for (String methodName : methodNames) {\n        load(methodName);\n    }\n}",
+        "public void remove(String property) {\n    loaderMap.remove(property.toUpperCase(Locale.ENGLISH));\n}"
+      ],
+      "imports": [
+        "org.apache.ibatis.executor.BaseExecutor",
+        "org.apache.ibatis.executor.ExecutorException",
+        "org.apache.ibatis.executor.loader.ResultLoaderMap.LoadPair",
+        "org.apache.ibatis.logging.Log",
+        "org.apache.ibatis.logging.log4j2.Log4j2LoggerImpl",
+        "org.apache.ibatis.mapping.MappedStatement",
+        "org.apache.ibatis.reflection.MetaObject",
+        "org.apache.ibatis.session.Configuration",
+        "org.apache.ibatis.transaction.Transaction",
+        "org.apache.logging.log4j.Logger"
+      ],
+      "testTemplate": "package org.apache.ibatis.executor.loader;\n\npublic class ResultLoaderMap_Log4j2LoggerImplisDebugEnabled_LoggerisDebugEnabledFikaTest {\n\n    @Test\n    public void testAddLoader() {\n    }\n}",
+      "conditionCount": 4,
+      "callCount": 1,
+      "covered": false
+    },
+    {
+      "entryPoint": "org.apache.ibatis.io.ResolverUtil.find(org.apache.ibatis.io.ResolverUtil.Test, java.lang.String)",
+      "thirdPartyMethod": "org.apache.logging.log4j.Logger.warn(org.apache.logging.log4j.Marker, java.lang.String)",
+      "directCaller": "org.apache.ibatis.logging.log4j2.Log4j2LoggerImpl.warn(java.lang.String)",
+      "path": [
+        "org.apache.ibatis.io.ResolverUtil.find(org.apache.ibatis.io.ResolverUtil.Test, java.lang.String)",
+        "org.apache.ibatis.io.ResolverUtil.addIfMatching(org.apache.ibatis.io.ResolverUtil.Test, java.lang.String)",
+        "org.apache.ibatis.logging.log4j2.Log4j2LoggerImpl.warn(java.lang.String)",
+        "org.apache.logging.log4j.Logger.warn(org.apache.logging.log4j.Marker, java.lang.String)"
+      ],
+      "methodSources": [
+        "/**\n * Scans for classes starting at the package provided and descending into subpackages. Each class is offered up to the\n * Test as it is discovered, and if the Test returns true the class is retained. Accumulated classes can be fetched by\n * calling {@link #getClasses()}.\n *\n * @param test\n * \t\tan instance of {@link Test} that will be used to filter classes\n * @param packageName\n * \t\tthe name of the package from which to start scanning for classes, e.g. {@code net.sourceforge.stripes}\n * @return the resolver util\n */\npublic ResolverUtil<T> find(Test test, String packageName) {\n    String path = getPackagePath(packageName);\n    try {\n        List<String> children = VFS.getInstance().list(path);\n        for (String child : children) {\n            if (child.endsWith(\".class\")) // PATH: Test should invoke the next ResolverUtil.addIfMatching(...) [step in execution path]\n            {\n                addIfMatching(test, child);\n            }\n        }\n    } catch (IOException ioe) {\n        log.error(\"Could not read package: \" + packageName, ioe);\n    }\n    return this;\n}",
+        "/**\n * Add the class designated by the fully qualified class name provided to the set of resolved classes if and only if\n * it is approved by the Test supplied.\n *\n * @param test\n * \t\tthe test used to determine if the class matches\n * @param fqn\n * \t\tthe fully qualified name of a class\n */\n@SuppressWarnings(\"unchecked\")\nprotected void addIfMatching(Test test, String fqn) {\n    try {\n        String externalName = fqn.substring(0, fqn.indexOf('.')).replace('/', '.');\n        ClassLoader loader = getClassLoader();\n        if (log.isDebugEnabled()) {\n            log.debug((((\"Checking to see if class \" + externalName) + \" matches criteria [\") + test) + \"]\");\n        }\n        Class<?> type = loader.loadClass(externalName);\n        if (test.matches(type)) {\n            matches.add(((Class<T>) (type)));\n        }\n    } catch (Throwable t) // PATH: Test should invoke the next Log4j2LoggerImpl.warn(...) [step in execution path]\n    {\n        log.warn((((((\"Could not examine class '\" + fqn) + \"'\") + \" due to a \") + t.getClass().getName()) + \" with message: \") + t.getMessage());\n    }\n}",
+        "@Override\npublic void warn(String s) // PATH: Test should invoke the next Logger.warn(...) [step in execution path]\n{\n    log.warn(MARKER, s);\n}"
+      ],
+      "constructors": [
+        "ResolverUtil() {\n}",
+        "/**\n * Constructs an IsA test using the supplied Class as the parent class/interface.\n *\n * @param parentType\n * \t\tthe parent type\n */\npublic IsA(Class<?> parentType) {\n    this.parent = parentType;\n}",
+        "/**\n * Constructs an AnnotatedWith test for the specified annotation type.\n *\n * @param annotation\n * \t\tthe annotation\n */\npublic AnnotatedWith(Class<? extends Annotation> annotation) {\n    this.annotation = annotation;\n}"
+      ],
+      "fieldDeclarations": [
+        "/**\n * An instance of Log to use for logging in this class.\n */\nprivate static final Log log = LogFactory.getLog(ResolverUtil.class);",
+        "/**\n * The set of matches being accumulated.\n */\nprivate Set<Class<? extends T>> matches = new HashSet<>();",
+        "/**\n * The ClassLoader to use when looking for classes. If null then the ClassLoader returned by\n * Thread.currentThread().getContextClassLoader() will be used.\n */\nprivate ClassLoader classloader;"
+      ],
+      "setters": [
+        "/**\n * Add the class designated by the fully qualified class name provided to the set of resolved classes if and only if\n * it is approved by the Test supplied.\n *\n * @param test\n * \t\tthe test used to determine if the class matches\n * @param fqn\n * \t\tthe fully qualified name of a class\n */\n@SuppressWarnings(\"unchecked\")\nprotected void addIfMatching(Test test, String fqn) {\n    try {\n        String externalName = fqn.substring(0, fqn.indexOf('.')).replace('/', '.');\n        ClassLoader loader = getClassLoader();\n        if (log.isDebugEnabled()) {\n            log.debug((((\"Checking to see if class \" + externalName) + \" matches criteria [\") + test) + \"]\");\n        }\n        Class<?> type = loader.loadClass(externalName);\n        if (test.matches(type)) {\n            matches.add(((Class<T>) (type)));\n        }\n    } catch (Throwable t) {\n        log.warn((((((\"Could not examine class '\" + fqn) + \"'\") + \" due to a \") + t.getClass().getName()) + \" with message: \") + t.getMessage());\n    }\n}",
+        "/**\n * Sets an explicit ClassLoader that should be used when scanning for classes. If none is set then the context\n * classloader will be used.\n *\n * @param classloader\n * \t\ta ClassLoader to use when scanning for classes\n */\npublic void setClassLoader(ClassLoader classloader) {\n    this.classloader = classloader;\n}"
+      ],
+      "imports": [
+        "org.apache.ibatis.io.ResolverUtil.AnnotatedWith",
+        "org.apache.ibatis.io.ResolverUtil.IsA",
+        "org.apache.ibatis.io.ResolverUtil.Test",
+        "org.apache.ibatis.logging.Log",
+        "org.apache.ibatis.logging.log4j2.Log4j2LoggerImpl",
+        "org.apache.logging.log4j.Logger",
+        "org.apache.logging.log4j.Marker"
+      ],
+      "testTemplate": "package org.apache.ibatis.io;\n\npublic class ResolverUtil_Log4j2LoggerImplwarn_LoggerwarnFikaTest {\n\n    @Test\n    public void testFind() {\n    }\n}",
+      "conditionCount": 4,
+      "callCount": 1,
+      "covered": false
+    },
+    {
+      "entryPoint": "org.apache.ibatis.logging.jdbc.ResultSetLogger.invoke(java.lang.Object, java.lang.reflect.Method, java.lang.Object[])",
+      "thirdPartyMethod": "org.apache.log4j.Logger.isTraceEnabled()",
+      "directCaller": "org.apache.ibatis.logging.log4j.Log4jImpl.isTraceEnabled()",
+      "path": [
+        "org.apache.ibatis.logging.jdbc.ResultSetLogger.invoke(java.lang.Object, java.lang.reflect.Method, java.lang.Object[])",
+        "org.apache.ibatis.logging.jdbc.ResultSetLogger.printColumnHeaders(java.sql.ResultSetMetaData, int)",
+        "org.apache.ibatis.logging.jdbc.BaseJdbcLogger.trace(java.lang.String, boolean)",
+        "org.apache.ibatis.logging.log4j.Log4jImpl.isTraceEnabled()",
+        "org.apache.log4j.Logger.isTraceEnabled()"
+      ],
+      "methodSources": [
+        "@Override\npublic Object invoke(Object proxy, Method method, Object[] params) throws Throwable {\n    try {\n        if (Object.class.equals(method.getDeclaringClass())) {\n            return method.invoke(this, params);\n        }\n        Object o = method.invoke(rs, params);\n        if (\"next\".equals(method.getName())) {\n            if (((Boolean) (o))) {\n                rows++;\n                if (isTraceEnabled()) {\n                    ResultSetMetaData rsmd = rs.getMetaData();\n                    final int columnCount = rsmd.getColumnCount();\n                    if (first) // PATH: Test should invoke the next ResultSetLogger.printColumnHeaders(...) [step in execution path]\n                    {\n                        first = false;\n                        printColumnHeaders(rsmd, columnCount);\n                    }\n                    printColumnValues(columnCount);\n                }\n            } else {\n                debug(\"     Total: \" + rows, false);\n            }\n        }\n        clearColumnInfo();\n        return o;\n    } catch (Throwable t) {\n        throw ExceptionUtil.unwrapThrowable(t);\n    }\n}",
+        "private void printColumnHeaders(ResultSetMetaData rsmd, int columnCount) throws SQLException // PATH: Test should invoke the next BaseJdbcLogger.trace(...) [step in execution path]\n{\n    StringJoiner row = new StringJoiner(\", \", \"   Columns: \", \"\");\n    for (int i = 1; i <= columnCount; i++) {\n        if (BLOB_TYPES.contains(rsmd.getColumnType(i))) {\n            blobColumns.add(i);\n        }\n        row.add(rsmd.getColumnLabel(i));\n    }\n    trace(row.toString(), false);\n}",
+        "protected void trace(String text, boolean input) {\n    // PATH: Test should invoke the next Log4jImpl.isTraceEnabled(...) [step in execution path]\n    if (statementLog.isTraceEnabled()) {\n        statementLog.trace(prefix(input) + text);\n    }\n}",
+        "@Override\npublic boolean isTraceEnabled() {\n    // PATH: Test should invoke the next Logger.isTraceEnabled(...) [step in execution path]\n    return log.isTraceEnabled();\n}"
+      ],
+      "constructors": [
+        "private ResultSetLogger(ResultSet rs, Log statementLog, int queryStack) {\n    super(statementLog, queryStack);\n    this.rs = rs;\n}"
+      ],
+      "fieldDeclarations": [
+        "private static final Set<Integer> BLOB_TYPES = new HashSet<>();",
+        "private boolean first = true;",
+        "private int rows;",
+        "private final ResultSet rs;",
+        "private final Set<Integer> blobColumns = new HashSet<>();"
+      ],
+      "setters": [
+        "private void printColumnHeaders(ResultSetMetaData rsmd, int columnCount) throws SQLException {\n    StringJoiner row = new StringJoiner(\", \", \"   Columns: \", \"\");\n    for (int i = 1; i <= columnCount; i++) {\n        if (BLOB_TYPES.contains(rsmd.getColumnType(i))) {\n            blobColumns.add(i);\n        }\n        row.add(rsmd.getColumnLabel(i));\n    }\n    trace(row.toString(), false);\n}",
+        "private void printColumnValues(int columnCount) {\n    StringJoiner row = new StringJoiner(\", \", \"       Row: \", \"\");\n    for (int i = 1; i <= columnCount; i++) {\n        try {\n            if (blobColumns.contains(i)) {\n                row.add(\"<<BLOB>>\");\n            } else {\n                row.add(rs.getString(i));\n            }\n        } catch (SQLException e) {\n            // generally can't call getString() on a BLOB column\n            row.add(\"<<Cannot Display>>\");\n        }\n    }\n    trace(row.toString(), false);\n}"
+      ],
+      "imports": [
+        "org.apache.ibatis.logging.Log",
+        "org.apache.ibatis.logging.log4j.Log4jImpl",
+        "org.apache.ibatis.reflection.ExceptionUtil",
+        "org.apache.log4j.Logger"
+      ],
+      "testTemplate": "package org.apache.ibatis.logging.jdbc;\n\npublic class ResultSetLogger_Log4jImplisTraceEnabled_LoggerisTraceEnabledFikaTest {\n\n    @Test\n    public void testInvoke() {\n    }\n}",
+      "conditionCount": 8,
+      "callCount": 1,
+      "covered": false
+    },
+    {
+      "entryPoint": "org.apache.ibatis.logging.jdbc.ResultSetLogger.invoke(java.lang.Object, java.lang.reflect.Method, java.lang.Object[])",
+      "thirdPartyMethod": "org.apache.commons.logging.Log.isTraceEnabled()",
+      "directCaller": "org.apache.ibatis.logging.commons.JakartaCommonsLoggingImpl.isTraceEnabled()",
+      "path": [
+        "org.apache.ibatis.logging.jdbc.ResultSetLogger.invoke(java.lang.Object, java.lang.reflect.Method, java.lang.Object[])",
+        "org.apache.ibatis.logging.jdbc.ResultSetLogger.printColumnHeaders(java.sql.ResultSetMetaData, int)",
+        "org.apache.ibatis.logging.jdbc.BaseJdbcLogger.trace(java.lang.String, boolean)",
+        "org.apache.ibatis.logging.commons.JakartaCommonsLoggingImpl.isTraceEnabled()",
+        "org.apache.commons.logging.Log.isTraceEnabled()"
+      ],
+      "methodSources": [
+        "@Override\npublic Object invoke(Object proxy, Method method, Object[] params) throws Throwable {\n    try {\n        if (Object.class.equals(method.getDeclaringClass())) {\n            return method.invoke(this, params);\n        }\n        Object o = method.invoke(rs, params);\n        if (\"next\".equals(method.getName())) {\n            if (((Boolean) (o))) {\n                rows++;\n                if (isTraceEnabled()) {\n                    ResultSetMetaData rsmd = rs.getMetaData();\n                    final int columnCount = rsmd.getColumnCount();\n                    if (first) // PATH: Test should invoke the next ResultSetLogger.printColumnHeaders(...) [step in execution path]\n                    {\n                        first = false;\n                        printColumnHeaders(rsmd, columnCount);\n                    }\n                    printColumnValues(columnCount);\n                }\n            } else {\n                debug(\"     Total: \" + rows, false);\n            }\n        }\n        clearColumnInfo();\n        return o;\n    } catch (Throwable t) {\n        throw ExceptionUtil.unwrapThrowable(t);\n    }\n}",
+        "private void printColumnHeaders(ResultSetMetaData rsmd, int columnCount) throws SQLException // PATH: Test should invoke the next BaseJdbcLogger.trace(...) [step in execution path]\n{\n    StringJoiner row = new StringJoiner(\", \", \"   Columns: \", \"\");\n    for (int i = 1; i <= columnCount; i++) {\n        if (BLOB_TYPES.contains(rsmd.getColumnType(i))) {\n            blobColumns.add(i);\n        }\n        row.add(rsmd.getColumnLabel(i));\n    }\n    trace(row.toString(), false);\n}",
+        "protected void trace(String text, boolean input) {\n    // PATH: Test should invoke the next JakartaCommonsLoggingImpl.isTraceEnabled(...) [step in execution path]\n    if (statementLog.isTraceEnabled()) {\n        statementLog.trace(prefix(input) + text);\n    }\n}",
+        "@Override\npublic boolean isTraceEnabled() {\n    // PATH: Test should invoke the next Log.isTraceEnabled(...) [step in execution path]\n    return log.isTraceEnabled();\n}"
+      ],
+      "constructors": [
+        "private ResultSetLogger(ResultSet rs, Log statementLog, int queryStack) {\n    super(statementLog, queryStack);\n    this.rs = rs;\n}"
+      ],
+      "fieldDeclarations": [
+        "private static final Set<Integer> BLOB_TYPES = new HashSet<>();",
+        "private boolean first = true;",
+        "private int rows;",
+        "private final ResultSet rs;",
+        "private final Set<Integer> blobColumns = new HashSet<>();"
+      ],
+      "setters": [
+        "private void printColumnHeaders(ResultSetMetaData rsmd, int columnCount) throws SQLException {\n    StringJoiner row = new StringJoiner(\", \", \"   Columns: \", \"\");\n    for (int i = 1; i <= columnCount; i++) {\n        if (BLOB_TYPES.contains(rsmd.getColumnType(i))) {\n            blobColumns.add(i);\n        }\n        row.add(rsmd.getColumnLabel(i));\n    }\n    trace(row.toString(), false);\n}",
+        "private void printColumnValues(int columnCount) {\n    StringJoiner row = new StringJoiner(\", \", \"       Row: \", \"\");\n    for (int i = 1; i <= columnCount; i++) {\n        try {\n            if (blobColumns.contains(i)) {\n                row.add(\"<<BLOB>>\");\n            } else {\n                row.add(rs.getString(i));\n            }\n        } catch (SQLException e) {\n            // generally can't call getString() on a BLOB column\n            row.add(\"<<Cannot Display>>\");\n        }\n    }\n    trace(row.toString(), false);\n}"
+      ],
+      "imports": [
+        "org.apache.commons.logging.Log",
+        "org.apache.ibatis.logging.Log",
+        "org.apache.ibatis.logging.commons.JakartaCommonsLoggingImpl",
+        "org.apache.ibatis.reflection.ExceptionUtil"
+      ],
+      "testTemplate": "package org.apache.ibatis.logging.jdbc;\n\npublic class ResultSetLogger_JakartaCommonsLoggingImplisTraceEnabled_LogisTraceEnabledFikaTest {\n\n    @Test\n    public void testInvoke() {\n    }\n}",
+      "conditionCount": 8,
+      "callCount": 1,
+      "covered": false
+    },
+    {
+      "entryPoint": "org.apache.ibatis.transaction.jdbc.JdbcTransaction.getConnection()",
+      "thirdPartyMethod": "org.apache.logging.log4j.MarkerManager.getMarker(java.lang.String)",
+      "directCaller": "org.apache.ibatis.logging.log4j2.Log4j2AbstractLoggerImpl.<clinit>()",
+      "path": [
+        "org.apache.ibatis.transaction.jdbc.JdbcTransaction.getConnection()",
+        "org.apache.ibatis.transaction.jdbc.JdbcTransaction.openConnection()",
+        "org.apache.ibatis.transaction.jdbc.JdbcTransaction.setDesiredAutoCommit(boolean)",
+        "org.apache.ibatis.logging.log4j2.Log4j2AbstractLoggerImpl.debug(java.lang.String)",
+        "org.apache.ibatis.logging.log4j2.Log4j2AbstractLoggerImpl.<clinit>()",
+        "org.apache.logging.log4j.MarkerManager.getMarker(java.lang.String)"
+      ],
+      "methodSources": [
+        "@Override\npublic Connection getConnection() throws SQLException {\n    if (connection == null) // PATH: Test should invoke the next JdbcTransaction.openConnection(...) [step in execution path]\n    {\n        openConnection();\n    }\n    return connection;\n}",
+        "protected void openConnection() throws SQLException // PATH: Test should invoke the next JdbcTransaction.setDesiredAutoCommit(...) [step in execution path]\n{\n    if (log.isDebugEnabled()) {\n        log.debug(\"Opening JDBC Connection\");\n    }\n    connection = dataSource.getConnection();\n    if (level != null) {\n        connection.setTransactionIsolation(level.getLevel());\n    }\n    setDesiredAutoCommit(autoCommit);\n}",
+        "protected void setDesiredAutoCommit(boolean desiredAutoCommit) {\n    try {\n        if (connection.getAutoCommit() != desiredAutoCommit) {\n            if (log.isDebugEnabled()) // PATH: Test should invoke the next Log4j2AbstractLoggerImpl.debug(...) [step in execution path]\n            {\n                log.debug((((\"Setting autocommit to \" + desiredAutoCommit) + \" on JDBC Connection [\") + connection) + \"]\");\n            }\n            connection.setAutoCommit(desiredAutoCommit);\n        }\n    } catch (SQLException e) {\n        // Only a very poorly implemented driver would fail here,\n        // and there's not much we can do about that.\n        throw new TransactionException(((((\"Error configuring AutoCommit.  \" + \"Your driver may not support getAutoCommit() or setAutoCommit(). \") + \"Requested setting: \") + desiredAutoCommit) + \".  Cause: \") + e, e);\n    }\n}",
+        "@Override\npublic void debug(String s) {\n    log.logIfEnabled(FQCN, Level.DEBUG, MARKER, ((Message) (new SimpleMessage(s))), null);\n}",
+        "org.apache.ibatis.logging.log4j2.Log4j2AbstractLoggerImpl\n\n// Static field initializations\nprivate static final Marker MARKER = MarkerManager.getMarker(LogFactory.MARKER);\nprivate static final String FQCN = Log4j2Impl.class.getName();\n"
+      ],
+      "constructors": [
+        "public JdbcTransaction(DataSource ds, TransactionIsolationLevel desiredLevel, boolean desiredAutoCommit) {\n    this(ds, desiredLevel, desiredAutoCommit, false);\n}",
+        "public JdbcTransaction(DataSource ds, TransactionIsolationLevel desiredLevel, boolean desiredAutoCommit, boolean skipSetAutoCommitOnClose) {\n    dataSource = ds;\n    level = desiredLevel;\n    autoCommit = desiredAutoCommit;\n    this.skipSetAutoCommitOnClose = skipSetAutoCommitOnClose;\n}",
+        "public JdbcTransaction(Connection connection) {\n    this.connection = connection;\n}"
+      ],
+      "fieldDeclarations": [
+        "private static final Log log = LogFactory.getLog(JdbcTransaction.class);",
+        "protected Connection connection;",
+        "protected DataSource dataSource;",
+        "protected TransactionIsolationLevel level;",
+        "protected boolean autoCommit;",
+        "protected boolean skipSetAutoCommitOnClose;"
+      ],
+      "setters": [
+        "@Override\npublic void close() throws SQLException {\n    if (connection != null) {\n        resetAutoCommit();\n        if (log.isDebugEnabled()) {\n            log.debug((\"Closing JDBC Connection [\" + connection) + \"]\");\n        }\n        connection.close();\n    }\n}",
+        "@Override\npublic void commit() throws SQLException {\n    if ((connection != null) && (!connection.getAutoCommit())) {\n        if (log.isDebugEnabled()) {\n            log.debug((\"Committing JDBC Connection [\" + connection) + \"]\");\n        }\n        connection.commit();\n    }\n}",
+        "protected void openConnection() throws SQLException {\n    if (log.isDebugEnabled()) {\n        log.debug(\"Opening JDBC Connection\");\n    }\n    connection = dataSource.getConnection();\n    if (level != null) {\n        connection.setTransactionIsolation(level.getLevel());\n    }\n    setDesiredAutoCommit(autoCommit);\n}",
+        "protected void resetAutoCommit() {\n    try {\n        if ((!skipSetAutoCommitOnClose) && (!connection.getAutoCommit())) {\n            // MyBatis does not call commit/rollback on a connection if just selects were performed.\n            // Some databases start transactions with select statements\n            // and they mandate a commit/rollback before closing the connection.\n            // A workaround is setting the autocommit to true before closing the connection.\n            // Sybase throws an exception here.\n            if (log.isDebugEnabled()) {\n                log.debug((\"Resetting autocommit to true on JDBC Connection [\" + connection) + \"]\");\n            }\n            connection.setAutoCommit(true);\n        }\n    } catch (SQLException e) {\n        if (log.isDebugEnabled()) {\n            log.debug((\"Error resetting autocommit to true \" + \"before closing the connection.  Cause: \") + e);\n        }\n    }\n}",
+        "@Override\npublic void rollback() throws SQLException {\n    if ((connection != null) && (!connection.getAutoCommit())) {\n        if (log.isDebugEnabled()) {\n            log.debug((\"Rolling back JDBC Connection [\" + connection) + \"]\");\n        }\n        connection.rollback();\n    }\n}",
+        "protected void setDesiredAutoCommit(boolean desiredAutoCommit) {\n    try {\n        if (connection.getAutoCommit() != desiredAutoCommit) {\n            if (log.isDebugEnabled()) {\n                log.debug((((\"Setting autocommit to \" + desiredAutoCommit) + \" on JDBC Connection [\") + connection) + \"]\");\n            }\n            connection.setAutoCommit(desiredAutoCommit);\n        }\n    } catch (SQLException e) {\n        // Only a very poorly implemented driver would fail here,\n        // and there's not much we can do about that.\n        throw new TransactionException(((((\"Error configuring AutoCommit.  \" + \"Your driver may not support getAutoCommit() or setAutoCommit(). \") + \"Requested setting: \") + desiredAutoCommit) + \".  Cause: \") + e, e);\n    }\n}"
+      ],
+      "imports": [
+        "javax.sql.DataSource",
+        "org.apache.ibatis.logging.Log",
+        "org.apache.ibatis.logging.LogFactory",
+        "org.apache.ibatis.logging.log4j2.Log4j2AbstractLoggerImpl",
+        "org.apache.ibatis.logging.log4j2.Log4j2Impl",
+        "org.apache.ibatis.session.TransactionIsolationLevel",
+        "org.apache.ibatis.transaction.TransactionException",
+        "org.apache.logging.log4j.Level",
+        "org.apache.logging.log4j.Marker",
+        "org.apache.logging.log4j.MarkerManager",
+        "org.apache.logging.log4j.message.Message",
+        "org.apache.logging.log4j.message.SimpleMessage",
+        "org.apache.logging.log4j.spi.AbstractLogger",
+        "org.apache.logging.log4j.spi.ExtendedLoggerWrapper"
+      ],
+      "testTemplate": "package org.apache.ibatis.transaction.jdbc;\n\npublic class JdbcTransaction_Log4j2AbstractLoggerImplmethod_MarkerManagergetMarkerFikaTest {\n\n    @Test\n    public void testGetConnection() {\n    }\n}",
+      "conditionCount": 5,
+      "callCount": 1,
+      "covered": false
+    },
+    {
+      "entryPoint": "org.apache.ibatis.cache.decorators.SerializedCache.getObject(java.lang.Object)",
+      "thirdPartyMethod": "org.apache.logging.log4j.Logger.debug(org.apache.logging.log4j.Marker, java.lang.String)",
+      "directCaller": "org.apache.ibatis.logging.log4j2.Log4j2LoggerImpl.debug(java.lang.String)",
+      "path": [
+        "org.apache.ibatis.cache.decorators.SerializedCache.getObject(java.lang.Object)",
+        "org.apache.ibatis.cache.decorators.LruCache.getObject(java.lang.Object)",
+        "org.apache.ibatis.cache.decorators.BlockingCache.getObject(java.lang.Object)",
+        "org.apache.ibatis.cache.decorators.FifoCache.getObject(java.lang.Object)",
+        "org.apache.ibatis.cache.decorators.SoftCache.getObject(java.lang.Object)",
+        "org.apache.ibatis.cache.decorators.LoggingCache.getObject(java.lang.Object)",
+        "org.apache.ibatis.logging.log4j2.Log4j2LoggerImpl.debug(java.lang.String)",
+        "org.apache.logging.log4j.Logger.debug(org.apache.logging.log4j.Marker, java.lang.String)"
+      ],
+      "methodSources": [
+        "@Override\npublic Object getObject(Object key) {\n    // PATH: Test should invoke the next LruCache.getObject(...) [step in execution path]\n    Object object = delegate.getObject(key);\n    return object == null ? null : deserialize(((byte[]) (object)));\n}",
+        "@Override\npublic Object getObject(Object key) {\n    keyMap.get(key);// touch\n\n    // PATH: Test should invoke the next BlockingCache.getObject(...) [step in execution path]\n    return delegate.getObject(key);\n}",
+        "@Override\npublic Object getObject(Object key) {\n    acquireLock(key);\n    // PATH: Test should invoke the next FifoCache.getObject(...) [step in execution path]\n    Object value = delegate.getObject(key);\n    if (value != null) {\n        releaseLock(key);\n    }\n    return value;\n}",
+        "@Override\npublic Object getObject(Object key) {\n    // PATH: Test should invoke the next SoftCache.getObject(...) [step in execution path]\n    return delegate.getObject(key);\n}",
+        "@Override\npublic Object getObject(Object key) {\n    Object result = null;\n    // assumed delegate cache is totally managed by this cache\n    // PATH: Test should invoke the next LoggingCache.getObject(...) [step in execution path]\n    @SuppressWarnings(\"unchecked\")\n    SoftReference<Object> softReference = ((SoftReference<Object>) (delegate.getObject(key)));\n    if (softReference != null) {\n        result = softReference.get();\n        if (result == null) {\n            delegate.removeObject(key);\n        } else {\n            // See #586 (and #335) modifications need more than a read lock\n            lock.lock();\n            try {\n                hardLinksToAvoidGarbageCollection.addFirst(result);\n                if (hardLinksToAvoidGarbageCollection.size() > numberOfHardLinks) {\n                    hardLinksToAvoidGarbageCollection.removeLast();\n                }\n            } finally {\n                lock.unlock();\n            }\n        }\n    }\n    return result;\n}",
+        "@Override\npublic Object getObject(Object key) {\n    requests++;\n    final Object value = delegate.getObject(key);\n    if (value != null) {\n        hits++;\n    }\n    if (log.isDebugEnabled()) // PATH: Test should invoke the next Log4j2LoggerImpl.debug(...) [step in execution path]\n    {\n        log.debug(((\"Cache Hit Ratio [\" + getId()) + \"]: \") + getHitRatio());\n    }\n    return value;\n}",
+        "@Override\npublic void debug(String s) // PATH: Test should invoke the next Logger.debug(...) [step in execution path]\n{\n    log.debug(MARKER, s);\n}"
+      ],
+      "constructors": [
+        "public SerializedCache(Cache delegate) {\n    this.delegate = delegate;\n}",
+        "public CustomObjectInputStream(InputStream in) throws IOException {\n    super(in);\n}"
+      ],
+      "fieldDeclarations": [
+        "private final Cache delegate;"
+      ],
+      "setters": [
+        "@Override\npublic void clear() {\n    delegate.clear();\n}",
+        "@Override\npublic void putObject(Object key, Object object) {\n    if ((object != null) && (!(object instanceof Serializable))) {\n        throw new CacheException(\"SharedCache failed to make a copy of a non-serializable object: \" + object);\n    }\n    delegate.putObject(key, serialize(((Serializable) (object))));\n}"
+      ],
+      "imports": [
+        "org.apache.ibatis.cache.Cache",
+        "org.apache.ibatis.cache.CacheException",
+        "org.apache.ibatis.logging.Log",
+        "org.apache.ibatis.logging.log4j2.Log4j2LoggerImpl",
+        "org.apache.logging.log4j.Logger",
+        "org.apache.logging.log4j.Marker"
+      ],
+      "testTemplate": "package org.apache.ibatis.cache.decorators;\n\npublic class SerializedCache_Log4j2LoggerImpldebug_LoggerdebugFikaTest {\n\n    @Test\n    public void testGetObject() {\n    }\n}",
+      "conditionCount": 7,
+      "callCount": 1,
+      "covered": false
+    }
+  ]
+}
